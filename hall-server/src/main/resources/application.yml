@@ -1,0 +1,8 @@
+transport:
+  netty:
+    soSndbuf: 12
+    soRcvbuf: 23
+    tcpNoDelay: true
+    soKeepalive: true
+    writeBufferWaterMarkLow: 1024
+    writeBufferWaterMarkHigh: 2048
