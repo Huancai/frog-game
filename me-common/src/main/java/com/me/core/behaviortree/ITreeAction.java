@@ -11,23 +11,23 @@ public interface ITreeAction {
 	/**
 	 * 进入节点
 	 * 
-	 * @param intputParam
+	 * @param inputParam
 	 * @return
 	 */
-	void enter(final BTInputParam intputParam);
+	void enter(final BTInputParam inputParam);
 
 	/**
 	 * 离开节点
 	 * 
-	 * @param intputParam
+	 * @param inputParam
 	 * @return
 	 */
-	void exit(final BTInputParam intputParam);
+	void exit(final BTInputParam inputParam);
 
 	/**
 	 * 
-	 * @param intputParam
+	 * @param inputParam
 	 * @return
 	 */
-	boolean excute(final BTInputParam intputParam);
+	boolean execute(final BTInputParam inputParam);
 }

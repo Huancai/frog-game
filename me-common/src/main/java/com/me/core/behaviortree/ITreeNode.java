@@ -49,10 +49,9 @@ public interface ITreeNode {
 	/**
 	 * 行为树状态
 	 * 
-	 * @author vincent.wu
 	 *
 	 */
-	public static enum BTStatus {
+	enum BTStatus {
 		PENDING, // 正在执行
 		FINISH, // 成功
 		FAIL // 失败

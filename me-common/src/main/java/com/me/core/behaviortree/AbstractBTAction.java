@@ -30,26 +30,26 @@ public abstract class AbstractBTAction implements ITreeAction {
 	}
 
 	@Override
-	public void enter(BTInputParam intputParam) {
+	public void enter(BTInputParam inputParam) {
 	}
 
 	@Override
-	public void exit(BTInputParam intputParam) {
+	public void exit(BTInputParam inputParam) {
 	}
 
 	@Override
-	public boolean excute(BTInputParam intputParam) {
-		enter(intputParam);
-		tick(intputParam);
-		exit(intputParam);
+	public boolean execute(BTInputParam inputParam) {
+		enter(inputParam);
+		tick(inputParam);
+		exit(inputParam);
 		return true;
 	}
 
 	/**
 	 * 子类实现
 	 * 
-	 * @param intputParam
+	 * @param inputParam
 	 * @return
 	 */
-	public abstract boolean tick(BTInputParam intputParam);
+	public abstract boolean tick(BTInputParam inputParam);
 }

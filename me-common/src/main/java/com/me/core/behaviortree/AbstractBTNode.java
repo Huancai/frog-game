@@ -48,7 +48,6 @@ public abstract class AbstractBTNode implements ITreeNode {
 	/**
 	 * 设置参数
 	 * 
-	 * @param xmlParas
 	 */
 	public void setXmlParams(BTXMLParam xmlParams) {
 		this.xmlParams = xmlParams;
