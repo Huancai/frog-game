@@ -10,4 +10,8 @@ public class NettyBootstrap {
         this.nettyProperties = nettyProperties;
 
     }
+
+    private void initNetty(){
+
+    }
 }
