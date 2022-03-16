@@ -1,18 +1,8 @@
 package com.me.transports.netty;
 
-import com.me.common.util.Strings;
-import com.me.transport.AbstractSocketAcceptor;
+
 import com.me.transports.netty.codec.NettyCodecFactory;
 import com.me.transports.netty.session.NettyC2SSession;
-import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
-import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.util.concurrent.DefaultThreadFactory;
 
 import java.util.concurrent.ThreadFactory;
 

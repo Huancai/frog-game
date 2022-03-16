@@ -16,14 +16,12 @@
             <version>4.1.73.Final</version>
         </dependency>
 
+
         <dependency>
-            <groupId>me-game</groupId>
-            <artifactId>me-transports</artifactId>
+            <groupId>com.game</groupId>
+            <artifactId>me-transports-api</artifactId>
+            <version>0.0.1</version>
         </dependency>
     </dependencies>
-
-    <build>
-
-    </build>
 
 </project>

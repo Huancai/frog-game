@@ -1,6 +1,4 @@
-/**
- * game-me
- */
+
 package com.me.transport;
 
 import java.nio.ByteBuffer;

@@ -1,20 +1,10 @@
 package com.me.transports.netty;
 
 
-import com.me.common.util.Lists;
-import com.me.transport.Connector;
-import com.me.transport.UnresolvedAddress;
-import com.me.transport.event.IOEvent;
-import com.me.transport.event.IOEventListener;
 import com.me.transports.netty.codec.NettyCodecFactory;
-import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.*;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.nio.NioSocketChannel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import jdk.nashorn.internal.runtime.linker.Bootstrap;
 
-import java.util.List;
+import java.nio.channels.Channel;
 import java.util.concurrent.TimeUnit;
 
 
@@ -22,10 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @author wu_hc
  */
 public class NettySocketConnector implements Connector, IOEventListener {
-    /**
-     * 日志
-     */
-    protected final Logger log = LoggerFactory.getLogger(getClass());
+
 
     /**
      *
