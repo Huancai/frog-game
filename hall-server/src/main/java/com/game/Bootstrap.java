@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @EnableMeTransportNetty
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class AppBootstrap {
+public class Bootstrap {
 
     public static void main(String[] args) {
-        SpringApplication.run(AppBootstrap.class, args);
+        SpringApplication.run(Bootstrap.class, args);
     }
 
 }
