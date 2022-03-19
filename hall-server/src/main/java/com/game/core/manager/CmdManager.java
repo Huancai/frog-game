@@ -82,7 +82,7 @@ public class CmdManager implements InitializingBean {
             }
 
             cmdMap.put(cmd.code(), cmder);
-            log.info("c --------> s {}:{} register.", cmd.code(), cmder.getClass());
+            log.info("c --> s register ok,cmd:{}->class:{} .", cmd.code(), cmder.getClass());
         }
     }
 }

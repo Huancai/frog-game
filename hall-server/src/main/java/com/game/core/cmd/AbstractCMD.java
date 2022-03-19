@@ -11,7 +11,7 @@ import com.me.transport.Message;
  */
 public abstract class AbstractCMD<T extends GeneratedMessage> {
 
-    protected Parser<? extends GeneratedMessage> parser;
+    private Parser<? extends GeneratedMessage> parser;
 
     public void setParser(Parser<? extends GeneratedMessage> parser) {
         this.parser = parser;
