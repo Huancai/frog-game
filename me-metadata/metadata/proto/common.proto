@@ -1,0 +1,45 @@
+package self;
+option java_package = "metadata.pb";
+option java_outer_classname = "CommonMsgProto";
+
+message EmptyProto{
+}
+
+//通用错误
+message ErrorProto{
+    optional int32 code = 1;
+    optional string tip = 2;
+}
+
+message CommonIIProto{
+    optional int32 k = 1;
+    optional int32 v = 2;
+}
+
+message RuleProto{
+    repeated CommonIIProto rules = 1;
+}
+
+message ServerTimeProto{
+    optional int64 currentTime = 1;
+}
+
+message PlayerProto{
+    required int64 playerId = 1;
+    optional string playerName = 2;
+    optional int32 diamond = 3;
+    optional int32 coin = 4;
+    optional string iconUrl = 5;
+}
+
+message ClubCommonProto{
+    optional int32 clubId = 1;
+    optional int32 boxId = 2;
+    optional int32 tabIndex = 3;
+}
+
+message PlayerWealthSyncProto{
+    required int64 playerId = 1;
+    optional int32 diamond = 2;
+    optional int32 coin = 3;
+}

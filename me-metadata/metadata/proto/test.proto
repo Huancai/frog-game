@@ -1,0 +1,26 @@
+package self;
+option java_package = "metadata.pb";
+option java_outer_classname = "TestMsgProto";
+
+message HelloProro {
+    optional int32 xx1 = 1;
+    optional string xx2 = 2;
+}
+
+//请求测试 协议号6666
+message TestReqProto {
+    required int32 id = 1;
+    required string userName = 2;
+    required string passWorld = 3;
+    repeated HelloProro hellos = 4;
+}
+
+//返回测试 协议号6666
+message TestRspProto {
+    required int32 id = 1;
+    required string userName = 2;
+    required string passWorld = 3;
+    repeated HelloProro hellos = 4;
+    optional string msg = 5;
+}
+

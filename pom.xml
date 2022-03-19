@@ -75,6 +75,7 @@
         <module>me-common</module>
         <module>me-transports</module>
         <module>me-spring-boot-starters</module>
+        <module>me-metadata</module>
     </modules>
 
 </project>

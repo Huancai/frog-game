@@ -1,0 +1,122 @@
+package self;
+option java_package = "metadata.pb";
+option java_outer_classname = "ClubMsgProto";
+import "common.proto";
+
+message ClubReqProto {
+    optional ClubCommonProto base = 1;
+    optional ClubProto club = 2;
+    optional ClubBoxListReqProto boxReq = 3;
+    optional ClubBoxProto box = 4;
+}
+
+message ClubListProto {
+    repeated ClubProto clubs = 1;
+}
+
+//1俱乐部
+message ClubProto {
+    optional int32 clubId = 1;
+    optional string clubName = 2;
+    optional string subGameNames = 3;
+    optional int32 memberCount = 4;
+    optional string clubIcon = 5;
+    optional int64 settings = 6;
+}
+
+//2包厢
+message ClubBoxProto {
+    optional int32 clubId = 1;
+    optional int32 boxId = 2;
+    optional int32 maxPlayer = 3;
+    repeated ClubTableProto tables = 4;
+    optional RuleProto rule = 5;
+    optional int32 gameId = 6;
+    optional int32 inScore = 7;
+    optional int32 outScore = 8;
+    optional int32 ratio = 9;
+}
+
+//3桌子
+message ClubTableProto {
+    required int32 index = 1;
+    optional int32 roomId = 2;
+    optional int32 curRound = 3;
+    repeated ClubPlayerProto players = 4;
+    optional bool isHavePassport = 5; //桌子是否有密码
+}
+
+//4桌中人
+message ClubPlayerProto {
+    optional int64 playerId = 1;
+    optional string playerName = 2;
+    optional string icon = 3;
+    optional int32 seatIndex = 4;
+    optional int32 online = 5; //1在线0离线
+    optional int32 score = 6;
+}
+
+
+message MemberGroupProto {
+    required int32 clubId = 1;
+    repeated MemberProto members = 2;
+
+}
+//4桌中人
+message MemberProto {
+    optional int64 playerId = 1; //账号id
+    optional string playerName = 2; //角色名
+    optional string icon = 3; //玩家头像
+    optional int32 identity = 4;
+    optional int32 online = 5;
+    optional int64 inviterId = 6;
+}
+
+message ClubBoxListReqProto {
+    required int32 clubId = 1;
+    repeated int32 boxIds = 2;
+    optional bool detail = 3; //包含桌子
+}
+
+message ClubBoxListRspProto {
+    required int32 clubId = 1;
+    repeated ClubBoxProto boxs = 2;
+}
+
+message ClubEventProto {
+    optional ClubCommonProto base = 1;
+    optional int64 operator = 2;
+    repeated int64 targetIds = 3;
+    optional EventType type = 4;
+    optional int32 iv1 = 5;
+    optional int32 iv2 = 6;
+    optional int64 lv1 = 7;
+    optional int64 lv2 = 8;
+    optional string sv1 = 9;
+    optional string sv2 = 10;
+    enum EventType {
+
+        CLUB_C = 1;
+        CLUB_D = 2;
+        CLUB_U = 3;
+
+        BOX_C = 4;
+        BOX_D = 5;
+        BOX_U = 6;
+
+        MEMBER_C = 7;
+        MEMBER_D = 8;
+        MEMBER_U = 9;
+    }
+}
+
+
+message ClubTableSyncProto {
+    required int32 type = 1;
+    optional ClubCommonProto base = 2;
+    optional int32 roomId = 3;
+    optional int32 curRound = 4;
+    repeated ClubPlayerProto players = 5;
+    optional int32 createTime = 6; // 牌局开始时间
+    optional bool legalTable = 7;
+}

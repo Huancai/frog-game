@@ -1,0 +1,45 @@
+package self;
+option java_package = "metadata.pb";
+option java_outer_classname = "LoginMsgProto";
+import "common.proto";
+
+//c2s:1
+message LoginReq{
+	required int32 type = 1; //1PC2微信3token
+	optional WXInfo wxInfo = 2;
+	optional string token = 3; //自定义token
+	optional string testName = 4; //PC 登陆传入
+}
+
+//s2c:1
+message LoginRsp{
+	required int32 status = 1; //1成功 其他失败
+	optional string message = 2;
+	optional WXInfo wxInfo = 3;
+	optional string token = 4; //自定义token
+	optional PlayerProto player = 5;
+	optional int32 type = 6;
+}
+
+message WXInfo{
+    optional string unionId = 1;
+    optional string openId = 2;
+    optional string iconUrl = 3;
+    optional int32 sex = 4;
+	optional string nickName = 5;
+	optional string wxCode = 6;
+}
+
+message GameGroupProto{
+	repeated GameUnitProto gameUnits = 1;
+}
+
+message GameUnitProto{
+	required int32 gameId = 1;
+	required string gameName = 2;
+	optional string iconUrl = 3;
+	optional int32 status = 4;
+	optional int32 order = 5;
+	optional string path = 6;
+	optional string version = 7;
+}

@@ -1,0 +1,40 @@
+package self;
+option java_package = "metadata.pb";
+option java_outer_classname = "RoomMsgProto";
+import "common.proto";
+
+message RoomProto{
+    optional int32 gameId = 1;
+    optional RuleProto rules = 2;
+    optional ClubCommonProto clubInfo = 3;
+    optional PlayerProto owner = 4;
+    optional int32 createType = 5; //1代开 2俱乐部开
+    optional int32 roomId = 6;
+}
+
+message EnterOrExitRoomProto{
+    optional int32 roomId = 1;
+    optional int32 status = 2; //1进入(坐下) 2离开 3进入围观 4退出围观
+    optional PlayerProto player = 3;
+}
+
+message ReadyRoomProto{
+    optional int32 roomId = 1;
+    optional int32 status = 2; //1准备 0取消准备
+    optional PlayerProto player = 3;
+}
+
+message CommunicationProto{
+    required int32 type = 1; //1文字,表情 2语音
+    optional int32 itemId = 2;
+    optional bytes voice = 3;
+    optional int32 roomId = 4;
+}
+
+//订制
+message SelfCustomizeProto{
+    optional int32 roomId = 1;
+    optional int64 playerId = 2;
+    optional int32 cmd = 3;
+    optional bytes binaryBytes = 4;
+}
