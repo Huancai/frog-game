@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.game</groupId>
-    <artifactId>me-game</artifactId>
+    <groupId>com.me.game</groupId>
+    <artifactId>game</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
@@ -19,7 +19,7 @@
     </developers>
 
     <properties>
-        <revision>1.0-SNAPSHOT</revision>
+        <revision>1.0.01</revision>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>1.8</java.version>
@@ -32,28 +32,28 @@
         <dependencies>
 
             <dependency>
-                <groupId>com.game</groupId>
+                <groupId>com.me.game</groupId>
                 <artifactId>me-common</artifactId>
-                <version>${project.version}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
-                <groupId>com.game</groupId>
+                <groupId>com.me.game</groupId>
                 <artifactId>me-transports-netty-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <version>${revision}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.me</groupId>
+                <groupId>com.me.game</groupId>
                 <artifactId>me-transports-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.me</groupId>
+                <groupId>com.me.game</groupId>
                 <artifactId>me-transport-netty</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.game</groupId>
+                <groupId>com.me.game</groupId>
                 <artifactId>me-transports-netty-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
