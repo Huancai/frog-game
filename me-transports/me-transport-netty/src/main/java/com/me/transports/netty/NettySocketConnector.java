@@ -23,9 +23,7 @@ import java.util.concurrent.TimeUnit;
 public class NettySocketConnector implements Connector, IOEventListener {
 
     private Bootstrap bootstrap;
-
     private Channel channel;
-
     private final List<IOEventListener> ioEventListeners = new LinkedList<>();
 
     private boolean reConnect = true;
@@ -46,7 +44,6 @@ public class NettySocketConnector implements Connector, IOEventListener {
                 ch.pipeline().addLast("handler", new NettyConnectorHandler(NettySocketConnector.this, NettySocketConnector.this));
             }
         });
-
         bootstrap = b;
         return true;
     }

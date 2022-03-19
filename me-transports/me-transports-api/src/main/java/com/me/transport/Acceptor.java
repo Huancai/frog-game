@@ -1,5 +1,9 @@
 package com.me.transport;
 
+import com.me.transport.event.IOEventListener;
+
+import java.util.List;
+
 /**
  * @author wu_hc 【whuancai@163.com】
  */
@@ -30,4 +34,6 @@ public interface Acceptor {
      * @throws Exception
      */
     void start(boolean sync) throws Exception;
+
+    List<IOEventListener> listener();
 }
