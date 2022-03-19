@@ -10,7 +10,8 @@ public class Filed {
     static {
         map.put("tinyint", "boolean");
         map.put("bool", "boolean");
-        map.put("tinyint", "bit");
+        map.put("tinyint", "int");
+        map.put("smallint", "int");
 
         map.put("bigint", "long");
         map.put("int", "int");

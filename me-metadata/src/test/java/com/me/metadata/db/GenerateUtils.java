@@ -7,7 +7,9 @@ import freemarker.template.Template;
 import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Function;
 
 /**
@@ -15,6 +17,10 @@ import java.util.function.Function;
  * wu_hc
  */
 public class GenerateUtils {
+
+    private static final String[] tableNames = new String[]{
+            "t_club", "t_game"
+    };
 
     public static final String DB_NAME = "jy_game";
 
@@ -130,15 +136,21 @@ public class GenerateUtils {
     }
 
     public static void main(String[] args) throws Exception {
-        Table table = getTables("t_club");
 
-        Template template = FreeMarkerTemplateUtils.getTemplate("entity.ftl");
-        File file = new File(String.format("E:\\workspace\\me-game\\me-metadata\\src\\main\\java\\com\\me\\metadata\\db\\entity\\%s.java", table.getClassName()
-        ));
-        FileOutputStream fos = new FileOutputStream(file);
-        Writer out = new BufferedWriter(new OutputStreamWriter(fos, "utf-8"), 10240);
-        template.process(table, out);
+        Set<String> tables = new HashSet<>();
+        for (String tableName : tableNames) {
+            tables.add(tableName);
+        }
+        for (String tn : tables) {
+            Table table = getTables(tn);
+
+            Template template = FreeMarkerTemplateUtils.getTemplate("entity.ftl");
+            File file = new File(String.format("E:\\workspace\\me-game\\me-metadata\\src\\main\\java\\com\\me\\metadata\\db\\entity\\%s.java", table.getClassName()
+            ));
+            FileOutputStream fos = new FileOutputStream(file);
+            Writer out = new BufferedWriter(new OutputStreamWriter(fos, "utf-8"), 10240);
+            template.process(table, out);
+        }
     }
-
 
 }
