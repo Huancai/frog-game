@@ -1,6 +1,8 @@
 package com.game.module.bag.cmd;
 
 import com.game.core.cmd.AbstractCMD;
+import com.game.middleware.component.ComponentType;
+import com.game.module.bag.BagComponent;
 import com.game.module.misc.GamePlayer;
 import com.google.protobuf.GeneratedMessage;
 
@@ -13,5 +15,6 @@ public final class GetBagItemListCMD extends AbstractCMD<GeneratedMessage> {
     @Override
     protected void execute(GamePlayer player, GeneratedMessage message) {
 
+        BagComponent component = player.getComponent(ComponentType.BAG);
     }
 }
