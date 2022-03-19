@@ -22,6 +22,11 @@ public final class AcceptorListener implements IOEventListener {
 
         if (ioEvent.event() == IOEvent.Event.REGISTERED) {
 
+            return;
+        }
+
+        if (ioEvent.event() == IOEvent.Event.UNREGISTERED) {
+            return;
         }
     }
 }
