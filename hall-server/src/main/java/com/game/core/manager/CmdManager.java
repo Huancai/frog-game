@@ -9,6 +9,7 @@ import com.google.protobuf.Parser;
 import com.me.transport.Cmd;
 import com.me.transport.Message;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
@@ -24,7 +25,7 @@ import java.util.Set;
  */
 @Component
 @Slf4j
-public class CmdManager implements InitializingBean {
+public class CmdManager implements InitializingBean, DisposableBean {
 
     private static final Map<Short, AbstractCMD> cmdMap = new HashMap<>();
 
@@ -84,5 +85,10 @@ public class CmdManager implements InitializingBean {
             cmdMap.put(cmd.code(), cmder);
             log.info("c --> s register ok,cmd:{}->class:{} .", cmd.code(), cmder.getClass());
         }
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        cmdMap.clear();
     }
 }
