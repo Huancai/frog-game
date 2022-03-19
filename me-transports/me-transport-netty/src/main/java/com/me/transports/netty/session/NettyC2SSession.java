@@ -16,5 +16,4 @@ public final class NettyC2SSession extends AbstractNettySession {
         super(channel);
     }
 
-
 }

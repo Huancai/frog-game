@@ -1,7 +1,9 @@
 package com.game.core.cmd;
 
 import com.game.core.manager.CmdManager;
+import com.game.core.manager.SessionManager;
 import com.game.core.manager.SpringHolder;
+import com.game.module.misc.UnLoginSessionWrap;
 import com.me.transport.Message;
 import com.me.transport.event.IOEvent;
 import com.me.transport.event.IOEventListener;
@@ -23,7 +25,8 @@ public final class AcceptorListener implements IOEventListener {
         }
 
         if (ioEvent.event() == IOEvent.Event.REGISTERED) {
-
+            UnLoginSessionWrap session = new UnLoginSessionWrap(ioEvent.session());
+            SessionManager.getInstance().unLoginCache(session);
             return;
         }
 

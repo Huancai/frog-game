@@ -26,4 +26,8 @@ public class GamePlayer extends GameUnit {
 
         this.session.send(message);
     }
+
+    public long getId() {
+        return 0;
+    }
 }

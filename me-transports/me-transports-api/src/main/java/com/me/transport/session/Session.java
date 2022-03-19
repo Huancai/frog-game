@@ -23,6 +23,13 @@ public interface Session {
     void shutdownGracefully();
 
 
+    /**
+     * 会话ID
+     *
+     * @return
+     */
+    long getSessionId();
+
     enum SessionException {
         FREQUENT, // 访问过于频繁
         SEND_ERR, // 发送失败
