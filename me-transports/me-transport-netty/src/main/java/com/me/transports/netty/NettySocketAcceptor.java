@@ -1,8 +1,19 @@
 package com.me.transports.netty;
 
 
+import com.me.transport.AbstractSocketAcceptor;
 import com.me.transports.netty.codec.NettyCodecFactory;
 import com.me.transports.netty.session.NettyC2SSession;
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.util.concurrent.DefaultThreadFactory;
+import io.netty.util.internal.StringUtil;
 
 import java.util.concurrent.ThreadFactory;
 
@@ -59,15 +70,15 @@ public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession>
 
 //        checkNotNull(bootstrap, "You need to invoke doInit before!!");
 
-        ChannelFuture futrue;
-        if (Strings.isNullOrEmpty(this.inetHost)) {
-            futrue = bootstrap.bind(inetPort).sync();
+        ChannelFuture future;
+        if (StringUtil.isNullOrEmpty(this.inetHost)) {
+            future = bootstrap.bind(inetPort).sync();
         } else {
-            futrue = bootstrap.bind(inetHost, inetPort).sync();
+            future = bootstrap.bind(inetHost, inetPort).sync();
         }
 
         if (sync)
-            futrue.channel().closeFuture().sync();
+            future.channel().closeFuture().sync();
     }
 
     /**
