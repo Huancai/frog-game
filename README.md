@@ -19,3 +19,5 @@
 唯知于心中方寸之地，自得其乐，此生亦足
 矣。
 摘自《知乎》
+
+![井底小蛙](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimglf4.nosdn0.126.net%2Fimg%2FbXZoMStTenMvL25aUEtUZmZTVnpaUkpuTGQvVEpXVTB0M1lMbCt4NzJnNnRPZDBuMW13MW13PT0.jpg%3FimageView%26thumbnail%3D1680x0%26quality%3D96%26stripmeta%3D0%26type%3Djpg&refer=http%3A%2F%2Fimglf4.nosdn0.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650298832&t=63ce86d353837eba8fe01e6eab1fd120)
