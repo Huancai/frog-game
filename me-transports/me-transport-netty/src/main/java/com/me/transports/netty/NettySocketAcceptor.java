@@ -14,6 +14,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.concurrent.DefaultThreadFactory;
 import io.netty.util.internal.StringUtil;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.ThreadFactory;
 
@@ -21,6 +22,7 @@ import java.util.concurrent.ThreadFactory;
 /**
  * @author wu_hc 【whuancai@163.com】
  */
+@Slf4j
 public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession> {
 
     /**
@@ -78,6 +80,8 @@ public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession>
 
         if (sync)
             future.channel().closeFuture().sync();
+
+        log.info("Server Acceptor bind in PORT:{}", inetPort);
     }
 
     /**

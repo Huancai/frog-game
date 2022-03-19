@@ -20,7 +20,7 @@ public class AcceptorManager implements InitializingBean {
         Acceptor acceptor = new NettySocketAcceptor(8971);
         acceptor.doInit();
         acceptor.listener().add(new AcceptorListener());
-        acceptor.start(true);
+        acceptor.start(false);
     }
 
 }
