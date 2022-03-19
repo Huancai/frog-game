@@ -4,7 +4,7 @@ package com.game.middleware.component;
 import com.game.module.misc.GameUnit;
 
 /**
- * @author wu_hc
+ * @author wu_hc【whuancai@163.com】
  */
 public abstract class AbstractComponent {
 
