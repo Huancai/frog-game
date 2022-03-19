@@ -35,6 +35,9 @@ public abstract class AbstractNettySession extends AbstractSession {
     @Override
     public final void send(final Object message) {
         if (isActive()) {
+            if (!channel.isWritable()) {
+
+            }
             channel.writeAndFlush(message).addListener(new ChannelFutureListener() {
                 public void operationComplete(ChannelFuture future) throws Exception {
                     if (!future.isSuccess()) {

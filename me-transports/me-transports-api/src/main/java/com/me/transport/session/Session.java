@@ -30,6 +30,8 @@ public interface Session {
      */
     long getSessionId();
 
+    void access();
+
     enum SessionException {
         FREQUENT, // 访问过于频繁
         SEND_ERR, // 发送失败

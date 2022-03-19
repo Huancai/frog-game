@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author wu_hc 【whuancai@163.com】
@@ -16,7 +17,7 @@ public class SessionManager {
     private static final Map<Long, GamePlayer> players = new ConcurrentHashMap<>();
     private static final Map<Long, UnLoginSessionWrap> sessions = new ConcurrentHashMap<>();
 
-    ScheduledExecutorService threadPoolExecutor = Executors.newScheduledThreadPool(1);
+    ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(1);
 
     public static SessionManager M = new SessionManager();
 
@@ -26,6 +27,9 @@ public class SessionManager {
 
 
     private SessionManager() {
+        scheduledThreadPool.scheduleAtFixedRate(() -> {
+
+        }, 60, 10, TimeUnit.SECONDS);
     }
 
     /**

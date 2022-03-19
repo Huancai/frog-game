@@ -139,6 +139,7 @@ public class NettySocketConnector implements Connector, IOEventListener {
     /**
      * @return
      */
+    @Override
     public final List<IOEventListener> listener() {
         return this.ioEventListeners;
     }
