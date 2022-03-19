@@ -9,7 +9,11 @@ import com.game.module.misc.GameUnit;
 public abstract class AbstractComponent {
 
 
-    private GameUnit gameUnit;
+    protected GameUnit owner;
+
+    public AbstractComponent(GameUnit owner) {
+        this.owner = owner;
+    }
 
     /**
      * 准备数据
@@ -23,5 +27,15 @@ public abstract class AbstractComponent {
      */
     public void afterPrepareData() {
 
+    }
+
+    /**
+     * 拥有者
+     *
+     * @param <T>
+     * @return
+     */
+    public <T extends GameUnit> T getOwner() {
+        return (T) owner;
     }
 }

@@ -2,7 +2,7 @@ package com.game.core.cmd;
 
 import com.game.core.manager.CmdManager;
 import com.game.core.manager.SessionManager;
-import com.game.core.manager.SpringHolder;
+import com.game.core.manager.SpringManager;
 import com.game.module.misc.UnLoginSessionWrap;
 import com.me.transport.Message;
 import com.me.transport.event.IOEvent;
@@ -19,7 +19,7 @@ public final class AcceptorListener implements IOEventListener {
         if (ioEvent.event() == IOEvent.Event.READ) { //读事件
             Object attachment = ioEvent.attachment();
             if (attachment instanceof Message) {
-                SpringHolder.getContext().getBean(CmdManager.class).doExecuteCMD(null, (Message) attachment);
+                SpringManager.getContext().getBean(CmdManager.class).doExecuteCMD(null, (Message) attachment);
             }
             return;
         }

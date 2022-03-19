@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @author wu_hc 【whuancai@163.com】
  */
 @Component
-public class SpringHolder implements ApplicationContextAware {
+public class SpringManager implements ApplicationContextAware {
 
     private static ApplicationContext context;
 
@@ -20,5 +20,9 @@ public class SpringHolder implements ApplicationContextAware {
 
     public static ApplicationContext getContext() {
         return context;
+    }
+
+    public static <T> T getBean(Class<T> requiredType) {
+        return context.getBean(requiredType);
     }
 }
