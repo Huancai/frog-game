@@ -1,7 +1,7 @@
 package com.me.core.worker.select;
 
 import com.me.core.worker.Worker;
-import com.me.core.worker.WorkerLoopGroup.SelectStrategy;
+import com.me.core.worker.WorkerGroup.SelectStrategy;
 
 /**
  * @author wu_hc 【whuancai@163.com】
