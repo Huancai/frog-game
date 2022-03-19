@@ -19,7 +19,8 @@ import java.util.function.Function;
 public class GenerateUtils {
 
     private static final String[] tableNames = new String[]{
-            "t_club", "t_game"
+//            "t_club", "t_game"
+            "t_club_member","t_player"
     };
 
     public static final String DB_NAME = "jy_game";
