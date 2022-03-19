@@ -1,9 +1,9 @@
 package com.game.module.misc;
 
+import com.game.core.cmd.MsgSender;
 import com.me.metadata.db.entity.PlayerEntity;
+import com.me.transport.Message;
 import com.me.transport.session.Session;
-
-import java.util.Objects;
 
 /**
  * @author wu_hc
@@ -26,12 +26,16 @@ public class GamePlayer extends GameUnit {
         this.session = session;
     }
 
-    public void send(final Object message) {
-        if (Objects.isNull(this.session)) {
-            return;
-        }
+    public void send(Message message) {
+        MsgSender.send(message, session);
+    }
 
-        this.session.send(message);
+    public void send(short code, com.google.protobuf.GeneratedMessage generatedMessage) {
+        MsgSender.send(code, generatedMessage, session);
+    }
+
+    public void send(short code, com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        MsgSender.send(code, builder, session);
     }
 
     public long getId() {

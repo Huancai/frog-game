@@ -3,9 +3,12 @@ package com.me.core.net;
 /**
  * @author wu_hc 【whuancai@163.com】
  */
-public class OutCmd {
+public interface OutCmd {
+
+    short TEST = -6666;
+
     /**
      * pong
      */
-    int PONG = 1;
+    short PONG = 1;
 }

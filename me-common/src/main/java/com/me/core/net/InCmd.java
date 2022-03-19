@@ -5,6 +5,9 @@ package com.me.core.net;
  */
 public interface InCmd {
 
+    short TEST = -6666;
+
+
     /**
      * ping
      */
@@ -14,4 +17,5 @@ public interface InCmd {
      * 登录
      */
     short LOGIN = 2;
+
 }
