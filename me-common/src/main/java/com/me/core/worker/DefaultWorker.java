@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * @author wu_hc
+ * @author wu_hc 【whuancai@163.com】
  */
 public final class DefaultWorker extends AbstractWorker implements Worker {
 

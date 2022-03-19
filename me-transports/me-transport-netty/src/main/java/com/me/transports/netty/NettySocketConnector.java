@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * @author wu_hc
+ * @author wu_hc 【whuancai@163.com】
  */
 public class NettySocketConnector implements Connector, IOEventListener {
 

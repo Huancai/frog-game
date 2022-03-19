@@ -7,9 +7,8 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 选择/负载策略
  *
- * @author wu_hc
+ * @author wu_hc 【whuancai@163.com】
  */
 public final class DefaultChooserStrategyFactory implements ChooserStrategyFactory {
 

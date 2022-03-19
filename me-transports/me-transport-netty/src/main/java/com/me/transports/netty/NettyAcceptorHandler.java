@@ -10,6 +10,9 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.AttributeKey;
 
+/**
+ * @author wu_hc 【whuancai@163.com】
+ */
 public final class NettyAcceptorHandler extends SimpleChannelInboundHandler<Message> {
 
     final static AttributeKey<NettyC2SSession> key = AttributeKey.valueOf(SessionKey.acceptor_session);

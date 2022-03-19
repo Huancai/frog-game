@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadFactory;
 
 
 /**
- * @author wu_hc date: 2017年7月13日 上午11:17:40
+ * @author wu_hc 【whuancai@163.com】
  */
 public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession> {
 

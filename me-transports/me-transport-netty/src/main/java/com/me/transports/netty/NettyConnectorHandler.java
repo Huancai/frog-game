@@ -14,7 +14,7 @@ import io.netty.util.AttributeKey;
 /**
  * 消息处理器
  *
- * @author vincent.wu
+ * @author wu_hc 【whuancai@163.com】
  */
 public final class NettyConnectorHandler extends SimpleChannelInboundHandler<Message> {
 

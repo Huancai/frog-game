@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * DAO
  * 
- * @author huancai.wu
+ * @author wu_hc 【whuancai@163.com】
  *
  */
 public abstract class AbstractDAO<E extends AbstractEntity> {

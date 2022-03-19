@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Date;
 
 /**
- * @author wu_hc date: 2017年12月28日 下午11:57:49 <br/>
+ * @author wu_hc 【whuancai@163.com】
  */
 public class NettyWSServerHandler extends SimpleChannelInboundHandler<Object> {
     private static final Logger logger = LoggerFactory.getLogger(NettyWSServerHandler.class);

@@ -3,7 +3,7 @@ package com.me.core.worker;
 /**
  * 线程组
  *
- * @author wu_hc
+ * @author wu_hc 【whuancai@163.com】
  */
 public interface WorkerGroup {
 

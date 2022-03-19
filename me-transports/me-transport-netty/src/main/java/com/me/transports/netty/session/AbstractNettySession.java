@@ -10,7 +10,7 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 
 /**
- * @author wu_hc <b> Jul 23, 20175:56:31 PM </b>
+ * @author wu_hc 【whuancai@163.com】
  */
 public abstract class AbstractNettySession implements Session {
     /**

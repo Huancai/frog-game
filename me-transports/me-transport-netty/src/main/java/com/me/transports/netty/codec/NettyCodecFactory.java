@@ -11,7 +11,7 @@ import io.netty.util.AttributeKey;
 /**
  * Netty 编码,解码器工厂.
  * 
- * @author wu_hc
+ * @author wu_hc 【whuancai@163.com】
  */
 public final class NettyCodecFactory {
 	/**

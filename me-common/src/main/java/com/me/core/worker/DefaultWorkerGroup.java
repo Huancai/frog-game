@@ -5,7 +5,7 @@ import com.me.core.worker.select.DefaultChooserStrategyFactory;
 
 /**
  *
- * @author wu_hc
+ * @author wu_hc 【whuancai@163.com】
  */
 public class DefaultWorkerGroup implements WorkerLoopGroup {
 

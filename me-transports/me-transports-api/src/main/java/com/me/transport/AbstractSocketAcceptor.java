@@ -9,6 +9,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 
+/**
+ *
+ * @author wu_hc 【whuancai@163.com】
+ */
 public abstract class AbstractSocketAcceptor<T extends Session> implements Acceptor, IOEventListener {
 
     protected final int inetPort;

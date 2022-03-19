@@ -5,7 +5,7 @@ package com.me.transport;
 
 /**
  * 
- * @author wu_hc <b> Jul 25, 20178:37:23 PM </b>
+ * @author wu_hc 【whuancai@163.com】
  */
 public interface SessionKey {
 	String acceptor_session = "hello_acceptor_session";

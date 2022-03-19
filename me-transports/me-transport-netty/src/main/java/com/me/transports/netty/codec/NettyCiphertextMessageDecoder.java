@@ -8,6 +8,9 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import java.util.List;
 
 
+/**
+ * @author wu_hc 【whuancai@163.com】
+ */
 final class NettyCiphertextMessageDecoder extends ByteToMessageDecoder {
 
 

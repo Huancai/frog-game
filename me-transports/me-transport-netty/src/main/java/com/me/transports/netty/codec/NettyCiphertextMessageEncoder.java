@@ -5,7 +5,9 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToByteEncoder;
 
-
+/**
+ * @author wu_hc 【whuancai@163.com】
+ */
 final class NettyCiphertextMessageEncoder extends MessageToByteEncoder<Message> {
 
     NettyCiphertextMessageEncoder() {

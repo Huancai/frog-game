@@ -7,7 +7,7 @@ import java.util.Arrays;
 /**
  * 消息载体
  *
- * @author wu_hc <b> Jul 25, 201711:00:24 PM </b>
+ * @author wu_hc 【whuancai@163.com】
  */
 public final class Message {
 

@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * 工作队列抽象 ，对应一个线程
  *
- * @author wu_hc
+ * @author wu_hc 【whuancai@163.com】
  */
 public abstract class AbstractWorker implements Worker {
 
