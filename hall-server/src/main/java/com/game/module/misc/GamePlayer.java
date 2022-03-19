@@ -91,7 +91,7 @@ public class GamePlayer extends GameUnit {
     }
 
     public long getId() {
-        return 0;
+        return this.getPlayerEntity().getPlayerId();
     }
 
     public PlayerEntity getPlayerEntity() {
