@@ -12,16 +12,11 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.AttributeKey;
 
 /**
- * 消息处理器
- *
  * @author wu_hc 【whuancai@163.com】
  */
 public final class NettyConnectorHandler extends SimpleChannelInboundHandler<Message> {
 
     final static AttributeKey<NettyS2SSession> key = AttributeKey.valueOf(SessionKey.connector_session);
-    /**
-     *
-     */
     private final IOEventListener listener;
     private final Connector connector;
 

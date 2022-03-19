@@ -1,48 +1,40 @@
 package com.me.transports.netty;
 
 
+import com.me.transport.Connector;
+import com.me.transport.event.IOEvent;
+import com.me.transport.event.IOEventListener;
 import com.me.transports.netty.codec.NettyCodecFactory;
-import jdk.nashorn.internal.runtime.linker.Bootstrap;
+import io.netty.bootstrap.Bootstrap;
+import io.netty.channel.*;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.nio.NioSocketChannel;
+import lombok.extern.slf4j.Slf4j;
 
-import java.nio.channels.Channel;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
 /**
  * @author wu_hc 【whuancai@163.com】
  */
+@Slf4j
 public class NettySocketConnector implements Connector, IOEventListener {
 
-
-    /**
-     *
-     */
     private Bootstrap bootstrap;
 
-    /**
-     *
-     */
     private Channel channel;
 
+    private final List<IOEventListener> ioEventListeners = new LinkedList<>();
 
-    /**
-     * 网络事件事件监听者
-     */
-    private final List<IOEventListener> ioEventListeners = Lists.newArrayList();
-
-
-    /**
-     * 是否需要重连
-     */
     private boolean reConnect = true;
 
-    private UnresolvedAddress address;
+    private String host;
+    private int port;
 
     @Override
     public boolean doInit() {
-
-//		checkArgument(ioEventListeners.isEmpty(), "Connector ioEventListeners CAN NOT be a nil value!!");
-
         Bootstrap b = new Bootstrap();
         b.group(new NioEventLoopGroup(1)).channel(NioSocketChannel.class);
         b.option(ChannelOption.SO_KEEPALIVE, true);
@@ -54,6 +46,7 @@ public class NettySocketConnector implements Connector, IOEventListener {
                 ch.pipeline().addLast("handler", new NettyConnectorHandler(NettySocketConnector.this, NettySocketConnector.this));
             }
         });
+
         bootstrap = b;
         return true;
     }
@@ -63,15 +56,15 @@ public class NettySocketConnector implements Connector, IOEventListener {
         if (isActive())
             return true;
         try {
-            ChannelFuture future = bootstrap.connect(address.getHost(), address.getPort());
+            ChannelFuture future = bootstrap.connect(host, port);
             future.addListener(new ChannelFutureListener() {
                 @Override
                 public void operationComplete(ChannelFuture future) throws Exception {
                     if (future.isSuccess()) {
                         channel = future.channel();
-                        log.info("Connect to server[{}] successfully!", address.toString());
+                        log.info("Connect to server[{}] successfully!", getConnectKey());
                     } else {
-                        log.info("Failed to connect to server[{}], try connect after 5s", address.toString());
+                        log.info("Failed to connect to server[{}], try connect after 5s", getConnectKey());
                         future.channel().eventLoop().schedule(new Runnable() {
                             @Override
                             public void run() {
@@ -82,7 +75,7 @@ public class NettySocketConnector implements Connector, IOEventListener {
                 }
             });
         } catch (Exception e) {
-            log.error(String.format("连接服务器失败(IP:%s,PORT:%s)", address.getHost(), address.getPort()));
+            log.error(String.format("连接服务器失败(IP:%s,PORT:%s)", host, port));
             e.printStackTrace();
         }
 
@@ -117,23 +110,18 @@ public class NettySocketConnector implements Connector, IOEventListener {
 
     @Override
     public String getConnectKey() {
-        return this.address.toString();
+        return String.format("%s:%d", host, port);
     }
 
     public Channel getChannel() {
         return this.channel;
     }
 
-    /**
-     * @return the reConnect
-     */
     public boolean isReConnect() {
         return reConnect;
     }
 
-    /**
-     * @param reConnect the reConnect to set
-     */
+
     public void setReConnect(boolean reConnect) {
         this.reConnect = reConnect;
     }
@@ -146,8 +134,8 @@ public class NettySocketConnector implements Connector, IOEventListener {
 
     @Override
     public void onEvent(IOEvent ioEvent) {
-        for (int i = 0; i < ioEventListeners.size(); i++) {
-            ioEventListeners.get(i).onEvent(ioEvent);
+        for (IOEventListener ioEventListener : ioEventListeners) {
+            ioEventListener.onEvent(ioEvent);
         }
     }
 

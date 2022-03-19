@@ -67,7 +67,6 @@ public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession>
 
     @Override
     public void start(boolean sync) throws Exception {
-
 //        checkNotNull(bootstrap, "You need to invoke doInit before!!");
 
         ChannelFuture future;
@@ -93,20 +92,12 @@ public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession>
         bootstrap.childOption(ChannelOption.TCP_NODELAY, true);
     }
 
-    /**
-     * worker线程数量
-     *
-     * @return
-     */
+
     protected int workerCount() {
         return Runtime.getRuntime().availableProcessors() << 1;
     }
 
-    /**
-     * @param nThreads
-     * @param factory
-     * @return
-     */
+
     protected EventLoopGroup initEventLoopGroup(int nThreads, ThreadFactory factory) {
         return new NioEventLoopGroup(nThreads, factory);
     }
