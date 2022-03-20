@@ -1,10 +1,10 @@
 package com.me.transports.netty;
 
-import com.me.transport.Message;
-import com.me.transport.SessionKey;
-import com.me.transport.event.IOCustomEvent;
-import com.me.transport.event.IOEvent;
-import com.me.transport.event.IOEventListener;
+import com.me.transport.api.Message;
+import com.me.transport.api.SessionKey;
+import com.me.transport.api.event.IOCustomEvent;
+import com.me.transport.api.event.IOEvent;
+import com.me.transport.api.event.IOEventListener;
 import com.me.transports.netty.session.NettyC2SSession;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

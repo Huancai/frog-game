@@ -3,7 +3,7 @@
  */
 package com.me.transports.netty.codec;
 
-import com.me.transport.Message;
+import com.me.transport.api.Message;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import io.netty.handler.codec.MessageToByteEncoder;
 import io.netty.util.AttributeKey;

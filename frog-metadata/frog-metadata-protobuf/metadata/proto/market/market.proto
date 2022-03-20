@@ -1,0 +1,11 @@
+package market;
+option java_package = "com.me.metadata.pb.market";
+option java_outer_classname = "MarketMsgProto";
+
+import "comm.proto";
+
+message ItemProto{
+  required int64 id = 1;
+  optional string name = 2;
+  optional int32 tempId = 3;
+}

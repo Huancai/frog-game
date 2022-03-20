@@ -4,7 +4,7 @@
 package com.me.transports.netty.session;
 
 
-import com.me.transport.session.AbstractSession;
+import com.me.transport.api.session.AbstractSession;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;

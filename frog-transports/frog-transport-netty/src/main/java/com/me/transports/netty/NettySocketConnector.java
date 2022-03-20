@@ -1,9 +1,9 @@
 package com.me.transports.netty;
 
 
-import com.me.transport.Connector;
-import com.me.transport.event.IOEvent;
-import com.me.transport.event.IOEventListener;
+import com.me.transport.api.Connector;
+import com.me.transport.api.event.IOEvent;
+import com.me.transport.api.event.IOEventListener;
 import com.me.transports.netty.codec.NettyCodecFactory;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;

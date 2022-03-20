@@ -1,7 +1,0 @@
-package com.game.middleware.module;
-
-/**
- * @author wu_hc【whuancai@163.com】
- */
-public abstract class AbstractModule {
-}

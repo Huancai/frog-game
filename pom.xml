@@ -69,6 +69,11 @@
                 <version>${revision}</version>
             </dependency>
             <dependency>
+                <groupId>com.me.game</groupId>
+                <artifactId>frog-metadata-redis</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring.boot.version}</version>
@@ -85,8 +90,6 @@
         <module>frog-transports</module>
         <module>frog-spring-boot-starters</module>
         <module>frog-metadata</module>
-        <module>frog-metadata-protobuf</module>
-        <module>frog-metadata-redis</module>
     </modules>
 
 </project>

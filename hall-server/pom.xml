@@ -70,6 +70,10 @@
             <groupId>com.me.game</groupId>
             <artifactId>frog-metadata-protobuf</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.me.game</groupId>
+            <artifactId>frog-metadata-redis</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

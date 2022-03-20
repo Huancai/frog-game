@@ -1,7 +1,7 @@
 package com.me.transports.netty;
 
 
-import com.me.transport.AbstractSocketAcceptor;
+import com.me.transport.api.AbstractSocketAcceptor;
 import com.me.transports.netty.codec.NettyCodecFactory;
 import com.me.transports.netty.session.NettyC2SSession;
 import io.netty.bootstrap.ServerBootstrap;

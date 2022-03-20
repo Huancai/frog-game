@@ -1,0 +1,8 @@
+package common;
+option java_package = "com.me.metadata.pb";
+option java_outer_classname = "CommMsgProto";
+
+message ErrorProto{
+  optional int32 code = 1;
+  optional string tip = 2;
+}
