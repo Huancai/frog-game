@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>me-transports</artifactId>
+        <artifactId>frog-transports</artifactId>
         <groupId>com.me.game</groupId>
         <version>1.0.01</version>
     </parent>
 
-    <artifactId>me-transport-netty</artifactId>
+    <artifactId>frog-transport-netty</artifactId>
     <packaging>jar</packaging>
 
 
@@ -23,7 +23,7 @@
 
         <dependency>
             <groupId>com.game</groupId>
-            <artifactId>me-transports-api</artifactId>
+            <artifactId>frog-transports-api</artifactId>
             <version>0.0.1</version>
         </dependency>
 

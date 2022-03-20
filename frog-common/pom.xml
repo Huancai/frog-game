@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>game</artifactId>
+        <artifactId>frog</artifactId>
         <groupId>com.me.game</groupId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>me-common</artifactId>
+    <artifactId>frog-common</artifactId>
     <version>${revision}</version>
 
     <dependencies>
