@@ -86,6 +86,7 @@
         <module>frog-spring-boot-starters</module>
         <module>frog-metadata</module>
         <module>frog-metadata-protobuf</module>
+        <module>frog-metadata-redis</module>
     </modules>
 
 </project>

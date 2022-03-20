@@ -3,20 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>frog</artifactId>
+        <artifactId>frog-metadata</artifactId>
         <groupId>com.me.game</groupId>
         <version>1.0.01</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>frog-metadata</artifactId>
-    <packaging>pom</packaging>
-    <version>${revision}</version>
-    <modules>
-        <module>frog-metadata-database</module>
-        <module>frog-metadata-protobuf</module>
-        <module>frog-metadata-redis</module>
-    </modules>
+    <artifactId>frog-metadata-redis</artifactId>
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 
 </project>
