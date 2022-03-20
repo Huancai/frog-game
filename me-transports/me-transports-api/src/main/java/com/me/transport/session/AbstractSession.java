@@ -9,29 +9,33 @@ public abstract class AbstractSession implements Session {
 
     private static final AtomicLong ID_GEN = new AtomicLong(10);
     protected long sessionId;
-
-    private long activeTime;
+    private long lastInteractive;
+    private long createTime;
 
     @Override
     public long getSessionId() {
         return sessionId;
     }
 
-    protected final void genSessionId() {
+    public final void init() {
         this.sessionId = ID_GEN.incrementAndGet();
+        this.createTime = System.currentTimeMillis();
     }
 
 
-    public long getActiveTime() {
-        return activeTime;
-    }
-
-    public void setActiveTime(long activeTime) {
-        this.activeTime = activeTime;
+    @Override
+    public long getLastInteractive() {
+        return lastInteractive;
     }
 
     @Override
-    public void access() {
-        this.setActiveTime(System.currentTimeMillis());
+    public void interactive() {
+        this.lastInteractive = System.currentTimeMillis();
     }
+
+    @Override
+    public long getCreateTime() {
+        return createTime;
+    }
+
 }

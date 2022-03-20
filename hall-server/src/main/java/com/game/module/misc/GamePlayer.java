@@ -28,13 +28,22 @@ public class GamePlayer extends GameUnit {
 
     final Worker worker;
 
-    private Session session;
+    private final Session session;
 
     private final PlayerEntity playerEntity;
 
-    public GamePlayer(PlayerEntity playerEntity) {
+    public GamePlayer(PlayerEntity playerEntity, Session session) {
         this.playerEntity = playerEntity;
+        this.session = session;
         this.worker = workerGroup.next();
+    }
+
+    public void login() {
+
+    }
+
+    public void logout() {
+
     }
 
     @Override
@@ -70,13 +79,6 @@ public class GamePlayer extends GameUnit {
         worker.runInLoop(task);
     }
 
-    public Session getSession() {
-        return session;
-    }
-
-    public void setSession(Session session) {
-        this.session = session;
-    }
 
     public void send(Message message) {
         MsgSender.send(message, session);
@@ -100,5 +102,9 @@ public class GamePlayer extends GameUnit {
 
     public String info() {
         return StrUtil.format("player:{} - {}", playerEntity.getPlayerId(), playerEntity.getPlayerName());
+    }
+
+    public Worker getWorker() {
+        return worker;
     }
 }

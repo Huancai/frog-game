@@ -25,7 +25,7 @@ public final class NettyAcceptorHandler extends SimpleChannelInboundHandler<Mess
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Message message) throws Exception {
-        listener.onEvent(new IOCustomEvent(IOEvent.Event.READ, session(ctx), message));
+        listener.onEvent(new IOCustomEvent(IOEvent.Event.READ, getSession(ctx), message));
     }
 
     @Override
@@ -37,19 +37,19 @@ public final class NettyAcceptorHandler extends SimpleChannelInboundHandler<Mess
 
     @Override
     public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-        listener.onEvent(new IOCustomEvent(IOEvent.Event.UNREGISTERED, session(ctx)));
+        listener.onEvent(new IOCustomEvent(IOEvent.Event.UNREGISTERED, getSession(ctx)));
     }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        listener.onEvent(new IOCustomEvent(IOEvent.Event.EXCEPTION, session(ctx), cause));
+        listener.onEvent(new IOCustomEvent(IOEvent.Event.EXCEPTION, getSession(ctx), cause));
     }
 
     /**
      * @param ctx
      * @return
      */
-    private static NettyC2SSession session(ChannelHandlerContext ctx) {
+    private static NettyC2SSession getSession(ChannelHandlerContext ctx) {
         return ctx.channel().attr(key).get();
     }
 }

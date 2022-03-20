@@ -30,7 +30,21 @@ public interface Session {
      */
     long getSessionId();
 
-    void access();
+    /**
+     * 创建时间
+     *
+     * @return
+     */
+    long getCreateTime();
+
+    /**
+     * 上一次交互
+     *
+     * @return
+     */
+    long getLastInteractive();
+
+    void interactive();
 
     enum SessionException {
         FREQUENT, // 访问过于频繁
@@ -38,4 +52,5 @@ public interface Session {
         CHANNEL_NIL,
         ;
     }
+
 }
