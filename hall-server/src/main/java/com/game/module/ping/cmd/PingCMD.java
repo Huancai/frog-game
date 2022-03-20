@@ -1,7 +1,7 @@
 package com.game.module.ping.cmd;
 
 import com.game.core.cmd.AbstractCMD;
-import com.game.module.misc.GamePlayer;
+import com.game.module.misc.data.GamePlayer;
 import com.game.module.ping.data.PongData;
 import com.me.core.net.InCmd;
 import com.me.core.net.OutCmd;

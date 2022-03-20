@@ -2,7 +2,7 @@ package com.game.core.manager;
 
 import cn.hutool.core.util.ClassUtil;
 import com.game.core.cmd.AbstractCMD;
-import com.game.module.misc.GamePlayer;
+import com.game.module.misc.data.GamePlayer;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;

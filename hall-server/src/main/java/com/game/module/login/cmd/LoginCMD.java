@@ -1,7 +1,7 @@
 package com.game.module.login.cmd;
 
 import com.game.core.cmd.AbstractCMD;
-import com.game.module.misc.GamePlayer;
+import com.game.module.misc.data.GamePlayer;
 import com.me.core.net.InCmd;
 import com.me.metadata.pb.login.LoginMsgProto;
 import com.me.transport.Cmd;

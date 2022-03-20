@@ -1,7 +1,7 @@
 package com.game.middleware.component;
 
 
-import com.game.module.misc.GameUnit;
+import com.game.module.misc.data.GameUnit;
 
 /**
  * @author wu_hc【whuancai@163.com】

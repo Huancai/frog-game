@@ -1,4 +1,4 @@
-package com.game.module.misc;
+package com.game.module.misc.data;
 
 import cn.hutool.core.date.StopWatch;
 import cn.hutool.core.util.StrUtil;
@@ -24,7 +24,7 @@ import java.util.Set;
 @Slf4j
 public class GamePlayer extends GameUnit {
 
-    final static WorkerGroup workerGroup = DefaultWorkerGroup.newGroup("GAME-PLAYER", Runtime.getRuntime().availableProcessors());
+    final static WorkerGroup workerGroup = DefaultWorkerGroup.newGroup("GAME-PLAYER", Runtime.getRuntime().availableProcessors() << 1);
 
     final Worker worker;
 

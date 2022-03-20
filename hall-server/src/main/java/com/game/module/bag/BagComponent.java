@@ -3,7 +3,7 @@ package com.game.module.bag;
 import com.game.middleware.component.AbstractComponent;
 import com.game.middleware.component.ComponentType;
 import com.game.middleware.component.MeComponent;
-import com.game.module.misc.GameUnit;
+import com.game.module.misc.data.GameUnit;
 
 /**
  * @author wu_hc【whuancai@163.com】

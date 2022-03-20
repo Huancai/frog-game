@@ -1,4 +1,4 @@
-package com.game.module.misc;
+package com.game.module.misc.data;
 
 import com.game.middleware.component.AbstractComponent;
 import com.game.middleware.component.ComponentType;

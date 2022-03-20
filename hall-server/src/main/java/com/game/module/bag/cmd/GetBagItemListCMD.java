@@ -3,7 +3,7 @@ package com.game.module.bag.cmd;
 import com.game.core.cmd.AbstractCMD;
 import com.game.middleware.component.ComponentType;
 import com.game.module.bag.BagComponent;
-import com.game.module.misc.GamePlayer;
+import com.game.module.misc.data.GamePlayer;
 import com.google.protobuf.GeneratedMessage;
 
 /**

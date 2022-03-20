@@ -1,6 +1,6 @@
 package com.game.core.cmd;
 
-import com.game.module.misc.GamePlayer;
+import com.game.module.misc.data.GamePlayer;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;

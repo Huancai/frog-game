@@ -1,6 +1,6 @@
 package com.game.core.manager;
 
-import com.game.module.misc.GamePlayer;
+import com.game.module.misc.data.GamePlayer;
 import com.me.transport.session.Session;
 import lombok.extern.slf4j.Slf4j;
 

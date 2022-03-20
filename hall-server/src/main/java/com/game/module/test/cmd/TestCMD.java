@@ -1,7 +1,7 @@
 package com.game.module.test.cmd;
 
 import com.game.core.cmd.AbstractCMD;
-import com.game.module.misc.GamePlayer;
+import com.game.module.misc.data.GamePlayer;
 import com.me.core.net.InCmd;
 import com.me.core.net.OutCmd;
 import com.me.metadata.pb.test.TestMsgProto;
