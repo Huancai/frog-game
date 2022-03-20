@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>frog-transport-netty</artifactId>
+    <version>${revision}</version>
     <packaging>jar</packaging>
 
 
@@ -22,9 +23,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.game</groupId>
+            <groupId>com.me.game</groupId>
             <artifactId>frog-transports-api</artifactId>
-            <version>0.0.1</version>
         </dependency>
 
         <dependency>

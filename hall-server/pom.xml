@@ -57,7 +57,6 @@
         <dependency>
             <groupId>com.me.game</groupId>
             <artifactId>frog-transports-api</artifactId>
-            <version>0.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.me.game</groupId>
@@ -66,7 +65,6 @@
         <dependency>
             <groupId>com.me.game</groupId>
             <artifactId>frog-metadata</artifactId>
-            <version>1.0.01</version>
         </dependency>
     </dependencies>
 

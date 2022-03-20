@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>frog-transports-api</artifactId>
-    <version>0.0.1</version>
+    <version>${revision}</version>
     <build>
         <plugins>
             <plugin>
