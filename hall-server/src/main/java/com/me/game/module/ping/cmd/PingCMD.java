@@ -3,10 +3,10 @@ package com.me.game.module.ping.cmd;
 import com.me.game.common.cmd.AbstractCMD;
 import com.me.game.module.misc.data.GamePlayer;
 import com.me.game.module.ping.data.PongData;
-import com.me.game.common.net.InCmd;
-import com.me.game.common.net.OutCmd;
+import com.me.common.net.InCmd;
+import com.me.common.net.OutCmd;
 import com.me.metadata.pb.misc.MiscMsgProto;
-import com.me.game.common.net.Cmd;
+import com.me.common.net.Cmd;
 
 /**
  * @author wu_hc 【whuancai@163.com】

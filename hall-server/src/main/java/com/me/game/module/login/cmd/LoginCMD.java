@@ -2,9 +2,9 @@ package com.me.game.module.login.cmd;
 
 import com.me.game.common.cmd.AbstractCMD;
 import com.me.game.module.misc.data.GamePlayer;
-import com.me.game.common.net.InCmd;
+import com.me.common.net.InCmd;
 import com.me.metadata.pb.login.LoginMsgProto;
-import com.me.game.common.net.Cmd;
+import com.me.common.net.Cmd;
 
 /**
  * @author wu_hc 【whuancai@163.com】

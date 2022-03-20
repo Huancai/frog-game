@@ -6,7 +6,7 @@ import com.me.game.module.misc.data.GamePlayer;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
-import com.me.game.common.net.Cmd;
+import com.me.common.net.Cmd;
 import com.me.transport.api.Message;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.DisposableBean;
