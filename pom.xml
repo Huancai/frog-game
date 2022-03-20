@@ -60,10 +60,14 @@
 
             <dependency>
                 <groupId>com.me.game</groupId>
-                <artifactId>frog-metadata</artifactId>
+                <artifactId>frog-metadata-protobuf</artifactId>
                 <version>${revision}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.me.game</groupId>
+                <artifactId>frog-metadata-database</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -81,6 +85,7 @@
         <module>frog-transports</module>
         <module>frog-spring-boot-starters</module>
         <module>frog-metadata</module>
+        <module>frog-metadata-protobuf</module>
     </modules>
 
 </project>

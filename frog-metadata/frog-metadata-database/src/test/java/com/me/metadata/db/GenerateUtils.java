@@ -146,7 +146,7 @@ public class GenerateUtils {
             Table table = getTables(tn);
 
             Template template = FreeMarkerTemplateUtils.getTemplate("entity.ftl");
-            File file = new File(String.format("E:\\workspace\\me-game\\me-metadata\\src\\main\\java\\com\\me\\metadata\\db\\entity\\%s.java", table.getClassName()
+            File file = new File(String.format("E:\\workspace\\me-game\\frog-metadata\\src\\main\\java\\com\\me\\metadata\\db\\entity\\%s.java", table.getClassName()
             ));
             FileOutputStream fos = new FileOutputStream(file);
             Writer out = new BufferedWriter(new OutputStreamWriter(fos, "utf-8"), 10240);

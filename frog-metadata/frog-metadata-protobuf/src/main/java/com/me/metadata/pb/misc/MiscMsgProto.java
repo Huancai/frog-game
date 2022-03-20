@@ -34,7 +34,7 @@ public final class MiscMsgProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -75,14 +75,14 @@ public final class MiscMsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PingProto_descriptor;
+      return MiscMsgProto.internal_static_misc_PingProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PingProto_fieldAccessorTable
+      return MiscMsgProto.internal_static_misc_PingProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.me.metadata.pb.misc.MiscMsgProto.PingProto.class, com.me.metadata.pb.misc.MiscMsgProto.PingProto.Builder.class);
+              PingProto.class, Builder.class);
     }
 
     public static com.google.protobuf.Parser<PingProto> PARSER =
@@ -95,7 +95,7 @@ public final class MiscMsgProto {
       }
     };
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<PingProto> getParserForType() {
       return PARSER;
     }
@@ -129,59 +129,59 @@ public final class MiscMsgProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseFrom(
+    public static PingProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseFrom(
+    public static PingProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseFrom(byte[] data)
+    public static PingProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseFrom(
+    public static PingProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseFrom(java.io.InputStream input)
+    public static PingProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseFrom(
+    public static PingProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseDelimitedFrom(java.io.InputStream input)
+    public static PingProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseDelimitedFrom(
+    public static PingProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseFrom(
+    public static PingProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PingProto parseFrom(
+    public static PingProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -190,12 +190,12 @@ public final class MiscMsgProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.me.metadata.pb.misc.MiscMsgProto.PingProto prototype) {
+    public static Builder newBuilder(PingProto prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -206,17 +206,17 @@ public final class MiscMsgProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.me.metadata.pb.misc.MiscMsgProto.PingProtoOrBuilder {
+       implements PingProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PingProto_descriptor;
+        return MiscMsgProto.internal_static_misc_PingProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PingProto_fieldAccessorTable
+        return MiscMsgProto.internal_static_misc_PingProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.me.metadata.pb.misc.MiscMsgProto.PingProto.class, com.me.metadata.pb.misc.MiscMsgProto.PingProto.Builder.class);
+                PingProto.class, Builder.class);
       }
 
       // Construct using com.me.metadata.pb.misc.MiscMsgProto.PingProto.newBuilder()
@@ -248,38 +248,38 @@ public final class MiscMsgProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PingProto_descriptor;
+        return MiscMsgProto.internal_static_misc_PingProto_descriptor;
       }
 
-      public com.me.metadata.pb.misc.MiscMsgProto.PingProto getDefaultInstanceForType() {
-        return com.me.metadata.pb.misc.MiscMsgProto.PingProto.getDefaultInstance();
+      public PingProto getDefaultInstanceForType() {
+        return PingProto.getDefaultInstance();
       }
 
-      public com.me.metadata.pb.misc.MiscMsgProto.PingProto build() {
-        com.me.metadata.pb.misc.MiscMsgProto.PingProto result = buildPartial();
+      public PingProto build() {
+        PingProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.me.metadata.pb.misc.MiscMsgProto.PingProto buildPartial() {
-        com.me.metadata.pb.misc.MiscMsgProto.PingProto result = new com.me.metadata.pb.misc.MiscMsgProto.PingProto(this);
+      public PingProto buildPartial() {
+        PingProto result = new PingProto(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.me.metadata.pb.misc.MiscMsgProto.PingProto) {
-          return mergeFrom((com.me.metadata.pb.misc.MiscMsgProto.PingProto)other);
+        if (other instanceof PingProto) {
+          return mergeFrom((PingProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.me.metadata.pb.misc.MiscMsgProto.PingProto other) {
-        if (other == com.me.metadata.pb.misc.MiscMsgProto.PingProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(PingProto other) {
+        if (other == PingProto.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -292,11 +292,11 @@ public final class MiscMsgProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.me.metadata.pb.misc.MiscMsgProto.PingProto parsedMessage = null;
+        PingProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.me.metadata.pb.misc.MiscMsgProto.PingProto) e.getUnfinishedMessage();
+          parsedMessage = (PingProto) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -343,7 +343,7 @@ public final class MiscMsgProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -384,14 +384,14 @@ public final class MiscMsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PongProto_descriptor;
+      return MiscMsgProto.internal_static_misc_PongProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PongProto_fieldAccessorTable
+      return MiscMsgProto.internal_static_misc_PongProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.me.metadata.pb.misc.MiscMsgProto.PongProto.class, com.me.metadata.pb.misc.MiscMsgProto.PongProto.Builder.class);
+              PongProto.class, Builder.class);
     }
 
     public static com.google.protobuf.Parser<PongProto> PARSER =
@@ -404,7 +404,7 @@ public final class MiscMsgProto {
       }
     };
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<PongProto> getParserForType() {
       return PARSER;
     }
@@ -438,59 +438,59 @@ public final class MiscMsgProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseFrom(
+    public static PongProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseFrom(
+    public static PongProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseFrom(byte[] data)
+    public static PongProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseFrom(
+    public static PongProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseFrom(java.io.InputStream input)
+    public static PongProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseFrom(
+    public static PongProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseDelimitedFrom(java.io.InputStream input)
+    public static PongProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseDelimitedFrom(
+    public static PongProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseFrom(
+    public static PongProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.misc.MiscMsgProto.PongProto parseFrom(
+    public static PongProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -499,12 +499,12 @@ public final class MiscMsgProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.me.metadata.pb.misc.MiscMsgProto.PongProto prototype) {
+    public static Builder newBuilder(PongProto prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -515,17 +515,17 @@ public final class MiscMsgProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.me.metadata.pb.misc.MiscMsgProto.PongProtoOrBuilder {
+       implements PongProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PongProto_descriptor;
+        return MiscMsgProto.internal_static_misc_PongProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PongProto_fieldAccessorTable
+        return MiscMsgProto.internal_static_misc_PongProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.me.metadata.pb.misc.MiscMsgProto.PongProto.class, com.me.metadata.pb.misc.MiscMsgProto.PongProto.Builder.class);
+                PongProto.class, Builder.class);
       }
 
       // Construct using com.me.metadata.pb.misc.MiscMsgProto.PongProto.newBuilder()
@@ -557,38 +557,38 @@ public final class MiscMsgProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.me.metadata.pb.misc.MiscMsgProto.internal_static_misc_PongProto_descriptor;
+        return MiscMsgProto.internal_static_misc_PongProto_descriptor;
       }
 
-      public com.me.metadata.pb.misc.MiscMsgProto.PongProto getDefaultInstanceForType() {
-        return com.me.metadata.pb.misc.MiscMsgProto.PongProto.getDefaultInstance();
+      public PongProto getDefaultInstanceForType() {
+        return PongProto.getDefaultInstance();
       }
 
-      public com.me.metadata.pb.misc.MiscMsgProto.PongProto build() {
-        com.me.metadata.pb.misc.MiscMsgProto.PongProto result = buildPartial();
+      public PongProto build() {
+        PongProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.me.metadata.pb.misc.MiscMsgProto.PongProto buildPartial() {
-        com.me.metadata.pb.misc.MiscMsgProto.PongProto result = new com.me.metadata.pb.misc.MiscMsgProto.PongProto(this);
+      public PongProto buildPartial() {
+        PongProto result = new PongProto(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.me.metadata.pb.misc.MiscMsgProto.PongProto) {
-          return mergeFrom((com.me.metadata.pb.misc.MiscMsgProto.PongProto)other);
+        if (other instanceof PongProto) {
+          return mergeFrom((PongProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.me.metadata.pb.misc.MiscMsgProto.PongProto other) {
-        if (other == com.me.metadata.pb.misc.MiscMsgProto.PongProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(PongProto other) {
+        if (other == PongProto.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -601,11 +601,11 @@ public final class MiscMsgProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.me.metadata.pb.misc.MiscMsgProto.PongProto parsedMessage = null;
+        PongProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.me.metadata.pb.misc.MiscMsgProto.PongProto) e.getUnfinishedMessage();
+          parsedMessage = (PongProto) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -644,7 +644,7 @@ public final class MiscMsgProto {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\nmisc.proto\022\004misc\"\013\n\tPingProto\"\013\n\tPongP" +
       "rotoB\'\n\027com.me.metadata.pb.miscB\014MiscMsg" +
       "Proto"
@@ -659,13 +659,13 @@ public final class MiscMsgProto {
           internal_static_misc_PingProto_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_misc_PingProto_descriptor,
-              new java.lang.String[] { });
+              new String[] { });
           internal_static_misc_PongProto_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_misc_PongProto_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_misc_PongProto_descriptor,
-              new java.lang.String[] { });
+              new String[] { });
           return null;
         }
       };

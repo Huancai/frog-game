@@ -64,7 +64,11 @@
         </dependency>
         <dependency>
             <groupId>com.me.game</groupId>
-            <artifactId>frog-metadata</artifactId>
+            <artifactId>frog-metadata-database</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.me.game</groupId>
+            <artifactId>frog-metadata-protobuf</artifactId>
         </dependency>
     </dependencies>
 

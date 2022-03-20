@@ -29,7 +29,7 @@ public final class LoginMsgProto {
     /**
      * <code>required string userName = 2;</code>
      */
-    java.lang.String getUserName();
+    String getUserName();
     /**
      * <code>required string userName = 2;</code>
      */
@@ -44,7 +44,7 @@ public final class LoginMsgProto {
     /**
      * <code>required string passWorld = 3;</code>
      */
-    java.lang.String getPassWorld();
+    String getPassWorld();
     /**
      * <code>required string passWorld = 3;</code>
      */
@@ -74,7 +74,7 @@ public final class LoginMsgProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -131,14 +131,14 @@ public final class LoginMsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginReqProto_descriptor;
+      return LoginMsgProto.internal_static_login_LoginReqProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginReqProto_fieldAccessorTable
+      return LoginMsgProto.internal_static_login_LoginReqProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.me.metadata.pb.login.LoginMsgProto.LoginReqProto.class, com.me.metadata.pb.login.LoginMsgProto.LoginReqProto.Builder.class);
+              LoginReqProto.class, Builder.class);
     }
 
     public static com.google.protobuf.Parser<LoginReqProto> PARSER =
@@ -151,7 +151,7 @@ public final class LoginMsgProto {
       }
     };
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<LoginReqProto> getParserForType() {
       return PARSER;
     }
@@ -175,7 +175,7 @@ public final class LoginMsgProto {
 
     // required string userName = 2;
     public static final int USERNAME_FIELD_NUMBER = 2;
-    private java.lang.Object userName_;
+    private Object userName_;
     /**
      * <code>required string userName = 2;</code>
      */
@@ -185,14 +185,14 @@ public final class LoginMsgProto {
     /**
      * <code>required string userName = 2;</code>
      */
-    public java.lang.String getUserName() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getUserName() {
+      Object ref = userName_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           userName_ = s;
         }
@@ -204,11 +204,11 @@ public final class LoginMsgProto {
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+      Object ref = userName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         userName_ = b;
         return b;
       } else {
@@ -218,7 +218,7 @@ public final class LoginMsgProto {
 
     // required string passWorld = 3;
     public static final int PASSWORLD_FIELD_NUMBER = 3;
-    private java.lang.Object passWorld_;
+    private Object passWorld_;
     /**
      * <code>required string passWorld = 3;</code>
      */
@@ -228,14 +228,14 @@ public final class LoginMsgProto {
     /**
      * <code>required string passWorld = 3;</code>
      */
-    public java.lang.String getPassWorld() {
-      java.lang.Object ref = passWorld_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getPassWorld() {
+      Object ref = passWorld_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           passWorld_ = s;
         }
@@ -247,11 +247,11 @@ public final class LoginMsgProto {
      */
     public com.google.protobuf.ByteString
         getPassWorldBytes() {
-      java.lang.Object ref = passWorld_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+      Object ref = passWorld_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         passWorld_ = b;
         return b;
       } else {
@@ -324,59 +324,59 @@ public final class LoginMsgProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseFrom(
+    public static LoginReqProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseFrom(
+    public static LoginReqProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseFrom(byte[] data)
+    public static LoginReqProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseFrom(
+    public static LoginReqProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseFrom(java.io.InputStream input)
+    public static LoginReqProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseFrom(
+    public static LoginReqProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseDelimitedFrom(java.io.InputStream input)
+    public static LoginReqProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseDelimitedFrom(
+    public static LoginReqProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseFrom(
+    public static LoginReqProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parseFrom(
+    public static LoginReqProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -385,12 +385,12 @@ public final class LoginMsgProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.me.metadata.pb.login.LoginMsgProto.LoginReqProto prototype) {
+    public static Builder newBuilder(LoginReqProto prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -401,17 +401,17 @@ public final class LoginMsgProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.me.metadata.pb.login.LoginMsgProto.LoginReqProtoOrBuilder {
+       implements LoginReqProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginReqProto_descriptor;
+        return LoginMsgProto.internal_static_login_LoginReqProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginReqProto_fieldAccessorTable
+        return LoginMsgProto.internal_static_login_LoginReqProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.me.metadata.pb.login.LoginMsgProto.LoginReqProto.class, com.me.metadata.pb.login.LoginMsgProto.LoginReqProto.Builder.class);
+                LoginReqProto.class, Builder.class);
       }
 
       // Construct using com.me.metadata.pb.login.LoginMsgProto.LoginReqProto.newBuilder()
@@ -449,23 +449,23 @@ public final class LoginMsgProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginReqProto_descriptor;
+        return LoginMsgProto.internal_static_login_LoginReqProto_descriptor;
       }
 
-      public com.me.metadata.pb.login.LoginMsgProto.LoginReqProto getDefaultInstanceForType() {
-        return com.me.metadata.pb.login.LoginMsgProto.LoginReqProto.getDefaultInstance();
+      public LoginReqProto getDefaultInstanceForType() {
+        return LoginReqProto.getDefaultInstance();
       }
 
-      public com.me.metadata.pb.login.LoginMsgProto.LoginReqProto build() {
-        com.me.metadata.pb.login.LoginMsgProto.LoginReqProto result = buildPartial();
+      public LoginReqProto build() {
+        LoginReqProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.me.metadata.pb.login.LoginMsgProto.LoginReqProto buildPartial() {
-        com.me.metadata.pb.login.LoginMsgProto.LoginReqProto result = new com.me.metadata.pb.login.LoginMsgProto.LoginReqProto(this);
+      public LoginReqProto buildPartial() {
+        LoginReqProto result = new LoginReqProto(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -486,16 +486,16 @@ public final class LoginMsgProto {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.me.metadata.pb.login.LoginMsgProto.LoginReqProto) {
-          return mergeFrom((com.me.metadata.pb.login.LoginMsgProto.LoginReqProto)other);
+        if (other instanceof LoginReqProto) {
+          return mergeFrom((LoginReqProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.me.metadata.pb.login.LoginMsgProto.LoginReqProto other) {
-        if (other == com.me.metadata.pb.login.LoginMsgProto.LoginReqProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(LoginReqProto other) {
+        if (other == LoginReqProto.getDefaultInstance()) return this;
         if (other.hasId()) {
           setId(other.getId());
         }
@@ -515,15 +515,15 @@ public final class LoginMsgProto {
 
       public final boolean isInitialized() {
         if (!hasId()) {
-          
+
           return false;
         }
         if (!hasUserName()) {
-          
+
           return false;
         }
         if (!hasPassWorld()) {
-          
+
           return false;
         }
         return true;
@@ -533,11 +533,11 @@ public final class LoginMsgProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.me.metadata.pb.login.LoginMsgProto.LoginReqProto parsedMessage = null;
+        LoginReqProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.me.metadata.pb.login.LoginMsgProto.LoginReqProto) e.getUnfinishedMessage();
+          parsedMessage = (LoginReqProto) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -582,7 +582,7 @@ public final class LoginMsgProto {
       }
 
       // required string userName = 2;
-      private java.lang.Object userName_ = "";
+      private Object userName_ = "";
       /**
        * <code>required string userName = 2;</code>
        */
@@ -592,15 +592,15 @@ public final class LoginMsgProto {
       /**
        * <code>required string userName = 2;</code>
        */
-      public java.lang.String getUserName() {
-        java.lang.Object ref = userName_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+      public String getUserName() {
+        Object ref = userName_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           userName_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -608,11 +608,11 @@ public final class LoginMsgProto {
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
-        java.lang.Object ref = userName_;
+        Object ref = userName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           userName_ = b;
           return b;
         } else {
@@ -623,7 +623,7 @@ public final class LoginMsgProto {
        * <code>required string userName = 2;</code>
        */
       public Builder setUserName(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -656,7 +656,7 @@ public final class LoginMsgProto {
       }
 
       // required string passWorld = 3;
-      private java.lang.Object passWorld_ = "";
+      private Object passWorld_ = "";
       /**
        * <code>required string passWorld = 3;</code>
        */
@@ -666,15 +666,15 @@ public final class LoginMsgProto {
       /**
        * <code>required string passWorld = 3;</code>
        */
-      public java.lang.String getPassWorld() {
-        java.lang.Object ref = passWorld_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+      public String getPassWorld() {
+        Object ref = passWorld_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           passWorld_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -682,11 +682,11 @@ public final class LoginMsgProto {
        */
       public com.google.protobuf.ByteString
           getPassWorldBytes() {
-        java.lang.Object ref = passWorld_;
+        Object ref = passWorld_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           passWorld_ = b;
           return b;
         } else {
@@ -697,7 +697,7 @@ public final class LoginMsgProto {
        * <code>required string passWorld = 3;</code>
        */
       public Builder setPassWorld(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -776,7 +776,7 @@ public final class LoginMsgProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -823,14 +823,14 @@ public final class LoginMsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginRspProto_descriptor;
+      return LoginMsgProto.internal_static_login_LoginRspProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginRspProto_fieldAccessorTable
+      return LoginMsgProto.internal_static_login_LoginRspProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.me.metadata.pb.login.LoginMsgProto.LoginRspProto.class, com.me.metadata.pb.login.LoginMsgProto.LoginRspProto.Builder.class);
+              LoginRspProto.class, Builder.class);
     }
 
     public static com.google.protobuf.Parser<LoginRspProto> PARSER =
@@ -843,7 +843,7 @@ public final class LoginMsgProto {
       }
     };
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<LoginRspProto> getParserForType() {
       return PARSER;
     }
@@ -906,59 +906,59 @@ public final class LoginMsgProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseFrom(
+    public static LoginRspProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseFrom(
+    public static LoginRspProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseFrom(byte[] data)
+    public static LoginRspProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseFrom(
+    public static LoginRspProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseFrom(java.io.InputStream input)
+    public static LoginRspProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseFrom(
+    public static LoginRspProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseDelimitedFrom(java.io.InputStream input)
+    public static LoginRspProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseDelimitedFrom(
+    public static LoginRspProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseFrom(
+    public static LoginRspProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parseFrom(
+    public static LoginRspProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -967,12 +967,12 @@ public final class LoginMsgProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.me.metadata.pb.login.LoginMsgProto.LoginRspProto prototype) {
+    public static Builder newBuilder(LoginRspProto prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -983,17 +983,17 @@ public final class LoginMsgProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.me.metadata.pb.login.LoginMsgProto.LoginRspProtoOrBuilder {
+       implements LoginRspProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginRspProto_descriptor;
+        return LoginMsgProto.internal_static_login_LoginRspProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginRspProto_fieldAccessorTable
+        return LoginMsgProto.internal_static_login_LoginRspProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.me.metadata.pb.login.LoginMsgProto.LoginRspProto.class, com.me.metadata.pb.login.LoginMsgProto.LoginRspProto.Builder.class);
+                LoginRspProto.class, Builder.class);
       }
 
       // Construct using com.me.metadata.pb.login.LoginMsgProto.LoginRspProto.newBuilder()
@@ -1027,23 +1027,23 @@ public final class LoginMsgProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.me.metadata.pb.login.LoginMsgProto.internal_static_login_LoginRspProto_descriptor;
+        return LoginMsgProto.internal_static_login_LoginRspProto_descriptor;
       }
 
-      public com.me.metadata.pb.login.LoginMsgProto.LoginRspProto getDefaultInstanceForType() {
-        return com.me.metadata.pb.login.LoginMsgProto.LoginRspProto.getDefaultInstance();
+      public LoginRspProto getDefaultInstanceForType() {
+        return LoginRspProto.getDefaultInstance();
       }
 
-      public com.me.metadata.pb.login.LoginMsgProto.LoginRspProto build() {
-        com.me.metadata.pb.login.LoginMsgProto.LoginRspProto result = buildPartial();
+      public LoginRspProto build() {
+        LoginRspProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.me.metadata.pb.login.LoginMsgProto.LoginRspProto buildPartial() {
-        com.me.metadata.pb.login.LoginMsgProto.LoginRspProto result = new com.me.metadata.pb.login.LoginMsgProto.LoginRspProto(this);
+      public LoginRspProto buildPartial() {
+        LoginRspProto result = new LoginRspProto(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1056,16 +1056,16 @@ public final class LoginMsgProto {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.me.metadata.pb.login.LoginMsgProto.LoginRspProto) {
-          return mergeFrom((com.me.metadata.pb.login.LoginMsgProto.LoginRspProto)other);
+        if (other instanceof LoginRspProto) {
+          return mergeFrom((LoginRspProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.me.metadata.pb.login.LoginMsgProto.LoginRspProto other) {
-        if (other == com.me.metadata.pb.login.LoginMsgProto.LoginRspProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(LoginRspProto other) {
+        if (other == LoginRspProto.getDefaultInstance()) return this;
         if (other.hasStatus()) {
           setStatus(other.getStatus());
         }
@@ -1075,7 +1075,7 @@ public final class LoginMsgProto {
 
       public final boolean isInitialized() {
         if (!hasStatus()) {
-          
+
           return false;
         }
         return true;
@@ -1085,11 +1085,11 @@ public final class LoginMsgProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.me.metadata.pb.login.LoginMsgProto.LoginRspProto parsedMessage = null;
+        LoginRspProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.me.metadata.pb.login.LoginMsgProto.LoginRspProto) e.getUnfinishedMessage();
+          parsedMessage = (LoginRspProto) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1162,7 +1162,7 @@ public final class LoginMsgProto {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\013login.proto\022\005login\"@\n\rLoginReqProto\022\n\n" +
       "\002id\030\001 \002(\005\022\020\n\010userName\030\002 \002(\t\022\021\n\tpassWorld" +
       "\030\003 \002(\t\"\037\n\rLoginRspProto\022\016\n\006status\030\001 \002(\005B" +
@@ -1179,13 +1179,13 @@ public final class LoginMsgProto {
           internal_static_login_LoginReqProto_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_login_LoginReqProto_descriptor,
-              new java.lang.String[] { "Id", "UserName", "PassWorld", });
+              new String[] { "Id", "UserName", "PassWorld", });
           internal_static_login_LoginRspProto_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_login_LoginRspProto_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_login_LoginRspProto_descriptor,
-              new java.lang.String[] { "Status", });
+              new String[] { "Status", });
           return null;
         }
       };

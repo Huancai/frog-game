@@ -29,7 +29,7 @@ public final class TestMsgProto {
     /**
      * <code>optional string y = 2;</code>
      */
-    java.lang.String getY();
+    String getY();
     /**
      * <code>optional string y = 2;</code>
      */
@@ -59,7 +59,7 @@ public final class TestMsgProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -111,14 +111,14 @@ public final class TestMsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.me.metadata.pb.test.TestMsgProto.internal_static_test_HelloProto_descriptor;
+      return TestMsgProto.internal_static_test_HelloProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.me.metadata.pb.test.TestMsgProto.internal_static_test_HelloProto_fieldAccessorTable
+      return TestMsgProto.internal_static_test_HelloProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.me.metadata.pb.test.TestMsgProto.HelloProto.class, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder.class);
+              HelloProto.class, Builder.class);
     }
 
     public static com.google.protobuf.Parser<HelloProto> PARSER =
@@ -131,7 +131,7 @@ public final class TestMsgProto {
       }
     };
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<HelloProto> getParserForType() {
       return PARSER;
     }
@@ -155,7 +155,7 @@ public final class TestMsgProto {
 
     // optional string y = 2;
     public static final int Y_FIELD_NUMBER = 2;
-    private java.lang.Object y_;
+    private Object y_;
     /**
      * <code>optional string y = 2;</code>
      */
@@ -165,14 +165,14 @@ public final class TestMsgProto {
     /**
      * <code>optional string y = 2;</code>
      */
-    public java.lang.String getY() {
-      java.lang.Object ref = y_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getY() {
+      Object ref = y_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           y_ = s;
         }
@@ -184,11 +184,11 @@ public final class TestMsgProto {
      */
     public com.google.protobuf.ByteString
         getYBytes() {
-      java.lang.Object ref = y_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+      Object ref = y_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         y_ = b;
         return b;
       } else {
@@ -241,59 +241,59 @@ public final class TestMsgProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseFrom(
+    public static HelloProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseFrom(
+    public static HelloProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseFrom(byte[] data)
+    public static HelloProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseFrom(
+    public static HelloProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseFrom(java.io.InputStream input)
+    public static HelloProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseFrom(
+    public static HelloProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseDelimitedFrom(java.io.InputStream input)
+    public static HelloProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseDelimitedFrom(
+    public static HelloProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseFrom(
+    public static HelloProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.HelloProto parseFrom(
+    public static HelloProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -302,12 +302,12 @@ public final class TestMsgProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.me.metadata.pb.test.TestMsgProto.HelloProto prototype) {
+    public static Builder newBuilder(HelloProto prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -318,17 +318,17 @@ public final class TestMsgProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder {
+       implements HelloProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_HelloProto_descriptor;
+        return TestMsgProto.internal_static_test_HelloProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_HelloProto_fieldAccessorTable
+        return TestMsgProto.internal_static_test_HelloProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.me.metadata.pb.test.TestMsgProto.HelloProto.class, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder.class);
+                HelloProto.class, Builder.class);
       }
 
       // Construct using com.me.metadata.pb.test.TestMsgProto.HelloProto.newBuilder()
@@ -364,23 +364,23 @@ public final class TestMsgProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_HelloProto_descriptor;
+        return TestMsgProto.internal_static_test_HelloProto_descriptor;
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto getDefaultInstanceForType() {
-        return com.me.metadata.pb.test.TestMsgProto.HelloProto.getDefaultInstance();
+      public HelloProto getDefaultInstanceForType() {
+        return HelloProto.getDefaultInstance();
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto build() {
-        com.me.metadata.pb.test.TestMsgProto.HelloProto result = buildPartial();
+      public HelloProto build() {
+        HelloProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto buildPartial() {
-        com.me.metadata.pb.test.TestMsgProto.HelloProto result = new com.me.metadata.pb.test.TestMsgProto.HelloProto(this);
+      public HelloProto buildPartial() {
+        HelloProto result = new HelloProto(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -397,16 +397,16 @@ public final class TestMsgProto {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.me.metadata.pb.test.TestMsgProto.HelloProto) {
-          return mergeFrom((com.me.metadata.pb.test.TestMsgProto.HelloProto)other);
+        if (other instanceof HelloProto) {
+          return mergeFrom((HelloProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.me.metadata.pb.test.TestMsgProto.HelloProto other) {
-        if (other == com.me.metadata.pb.test.TestMsgProto.HelloProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(HelloProto other) {
+        if (other == HelloProto.getDefaultInstance()) return this;
         if (other.hasX()) {
           setX(other.getX());
         }
@@ -427,11 +427,11 @@ public final class TestMsgProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.me.metadata.pb.test.TestMsgProto.HelloProto parsedMessage = null;
+        HelloProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.me.metadata.pb.test.TestMsgProto.HelloProto) e.getUnfinishedMessage();
+          parsedMessage = (HelloProto) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -476,7 +476,7 @@ public final class TestMsgProto {
       }
 
       // optional string y = 2;
-      private java.lang.Object y_ = "";
+      private Object y_ = "";
       /**
        * <code>optional string y = 2;</code>
        */
@@ -486,15 +486,15 @@ public final class TestMsgProto {
       /**
        * <code>optional string y = 2;</code>
        */
-      public java.lang.String getY() {
-        java.lang.Object ref = y_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+      public String getY() {
+        Object ref = y_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           y_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -502,11 +502,11 @@ public final class TestMsgProto {
        */
       public com.google.protobuf.ByteString
           getYBytes() {
-        java.lang.Object ref = y_;
+        Object ref = y_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           y_ = b;
           return b;
         } else {
@@ -517,7 +517,7 @@ public final class TestMsgProto {
        * <code>optional string y = 2;</code>
        */
       public Builder setY(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -581,7 +581,7 @@ public final class TestMsgProto {
     /**
      * <code>required string userName = 2;</code>
      */
-    java.lang.String getUserName();
+    String getUserName();
     /**
      * <code>required string userName = 2;</code>
      */
@@ -596,7 +596,7 @@ public final class TestMsgProto {
     /**
      * <code>required string passWorld = 3;</code>
      */
-    java.lang.String getPassWorld();
+    String getPassWorld();
     /**
      * <code>required string passWorld = 3;</code>
      */
@@ -607,12 +607,12 @@ public final class TestMsgProto {
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> 
+    java.util.List<HelloProto>
         getHellosList();
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    com.me.metadata.pb.test.TestMsgProto.HelloProto getHellos(int index);
+    HelloProto getHellos(int index);
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
@@ -620,12 +620,12 @@ public final class TestMsgProto {
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    java.util.List<? extends com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> 
+    java.util.List<? extends HelloProtoOrBuilder>
         getHellosOrBuilderList();
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder getHellosOrBuilder(
+    HelloProtoOrBuilder getHellosOrBuilder(
         int index);
   }
   /**
@@ -655,7 +655,7 @@ public final class TestMsgProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -700,10 +700,10 @@ public final class TestMsgProto {
             }
             case 34: {
               if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                hellos_ = new java.util.ArrayList<com.me.metadata.pb.test.TestMsgProto.HelloProto>();
+                hellos_ = new java.util.ArrayList<HelloProto>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              hellos_.add(input.readMessage(com.me.metadata.pb.test.TestMsgProto.HelloProto.PARSER, extensionRegistry));
+              hellos_.add(input.readMessage(HelloProto.PARSER, extensionRegistry));
               break;
             }
           }
@@ -723,14 +723,14 @@ public final class TestMsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestReqProto_descriptor;
+      return TestMsgProto.internal_static_test_TestReqProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestReqProto_fieldAccessorTable
+      return TestMsgProto.internal_static_test_TestReqProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.me.metadata.pb.test.TestMsgProto.TestReqProto.class, com.me.metadata.pb.test.TestMsgProto.TestReqProto.Builder.class);
+              TestReqProto.class, Builder.class);
     }
 
     public static com.google.protobuf.Parser<TestReqProto> PARSER =
@@ -743,7 +743,7 @@ public final class TestMsgProto {
       }
     };
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<TestReqProto> getParserForType() {
       return PARSER;
     }
@@ -767,7 +767,7 @@ public final class TestMsgProto {
 
     // required string userName = 2;
     public static final int USERNAME_FIELD_NUMBER = 2;
-    private java.lang.Object userName_;
+    private Object userName_;
     /**
      * <code>required string userName = 2;</code>
      */
@@ -777,14 +777,14 @@ public final class TestMsgProto {
     /**
      * <code>required string userName = 2;</code>
      */
-    public java.lang.String getUserName() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getUserName() {
+      Object ref = userName_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           userName_ = s;
         }
@@ -796,11 +796,11 @@ public final class TestMsgProto {
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+      Object ref = userName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         userName_ = b;
         return b;
       } else {
@@ -810,7 +810,7 @@ public final class TestMsgProto {
 
     // required string passWorld = 3;
     public static final int PASSWORLD_FIELD_NUMBER = 3;
-    private java.lang.Object passWorld_;
+    private Object passWorld_;
     /**
      * <code>required string passWorld = 3;</code>
      */
@@ -820,14 +820,14 @@ public final class TestMsgProto {
     /**
      * <code>required string passWorld = 3;</code>
      */
-    public java.lang.String getPassWorld() {
-      java.lang.Object ref = passWorld_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getPassWorld() {
+      Object ref = passWorld_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           passWorld_ = s;
         }
@@ -839,11 +839,11 @@ public final class TestMsgProto {
      */
     public com.google.protobuf.ByteString
         getPassWorldBytes() {
-      java.lang.Object ref = passWorld_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+      Object ref = passWorld_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         passWorld_ = b;
         return b;
       } else {
@@ -853,17 +853,17 @@ public final class TestMsgProto {
 
     // repeated .test.HelloProto hellos = 4;
     public static final int HELLOS_FIELD_NUMBER = 4;
-    private java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> hellos_;
+    private java.util.List<HelloProto> hellos_;
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    public java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> getHellosList() {
+    public java.util.List<HelloProto> getHellosList() {
       return hellos_;
     }
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    public java.util.List<? extends com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> 
+    public java.util.List<? extends HelloProtoOrBuilder>
         getHellosOrBuilderList() {
       return hellos_;
     }
@@ -876,13 +876,13 @@ public final class TestMsgProto {
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    public com.me.metadata.pb.test.TestMsgProto.HelloProto getHellos(int index) {
+    public HelloProto getHellos(int index) {
       return hellos_.get(index);
     }
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    public com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder getHellosOrBuilder(
+    public HelloProtoOrBuilder getHellosOrBuilder(
         int index) {
       return hellos_.get(index);
     }
@@ -960,59 +960,59 @@ public final class TestMsgProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseFrom(
+    public static TestReqProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseFrom(
+    public static TestReqProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseFrom(byte[] data)
+    public static TestReqProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseFrom(
+    public static TestReqProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseFrom(java.io.InputStream input)
+    public static TestReqProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseFrom(
+    public static TestReqProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseDelimitedFrom(java.io.InputStream input)
+    public static TestReqProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseDelimitedFrom(
+    public static TestReqProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseFrom(
+    public static TestReqProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestReqProto parseFrom(
+    public static TestReqProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1021,12 +1021,12 @@ public final class TestMsgProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.me.metadata.pb.test.TestMsgProto.TestReqProto prototype) {
+    public static Builder newBuilder(TestReqProto prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -1041,17 +1041,17 @@ public final class TestMsgProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.me.metadata.pb.test.TestMsgProto.TestReqProtoOrBuilder {
+       implements TestReqProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestReqProto_descriptor;
+        return TestMsgProto.internal_static_test_TestReqProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestReqProto_fieldAccessorTable
+        return TestMsgProto.internal_static_test_TestReqProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.me.metadata.pb.test.TestMsgProto.TestReqProto.class, com.me.metadata.pb.test.TestMsgProto.TestReqProto.Builder.class);
+                TestReqProto.class, Builder.class);
       }
 
       // Construct using com.me.metadata.pb.test.TestMsgProto.TestReqProto.newBuilder()
@@ -1096,23 +1096,23 @@ public final class TestMsgProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestReqProto_descriptor;
+        return TestMsgProto.internal_static_test_TestReqProto_descriptor;
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.TestReqProto getDefaultInstanceForType() {
-        return com.me.metadata.pb.test.TestMsgProto.TestReqProto.getDefaultInstance();
+      public TestReqProto getDefaultInstanceForType() {
+        return TestReqProto.getDefaultInstance();
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.TestReqProto build() {
-        com.me.metadata.pb.test.TestMsgProto.TestReqProto result = buildPartial();
+      public TestReqProto build() {
+        TestReqProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.TestReqProto buildPartial() {
-        com.me.metadata.pb.test.TestMsgProto.TestReqProto result = new com.me.metadata.pb.test.TestMsgProto.TestReqProto(this);
+      public TestReqProto buildPartial() {
+        TestReqProto result = new TestReqProto(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1142,16 +1142,16 @@ public final class TestMsgProto {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.me.metadata.pb.test.TestMsgProto.TestReqProto) {
-          return mergeFrom((com.me.metadata.pb.test.TestMsgProto.TestReqProto)other);
+        if (other instanceof TestReqProto) {
+          return mergeFrom((TestReqProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.me.metadata.pb.test.TestMsgProto.TestReqProto other) {
-        if (other == com.me.metadata.pb.test.TestMsgProto.TestReqProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(TestReqProto other) {
+        if (other == TestReqProto.getDefaultInstance()) return this;
         if (other.hasId()) {
           setId(other.getId());
         }
@@ -1183,7 +1183,7 @@ public final class TestMsgProto {
               hellosBuilder_ = null;
               hellos_ = other.hellos_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              hellosBuilder_ = 
+              hellosBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getHellosFieldBuilder() : null;
             } else {
@@ -1197,15 +1197,15 @@ public final class TestMsgProto {
 
       public final boolean isInitialized() {
         if (!hasId()) {
-          
+
           return false;
         }
         if (!hasUserName()) {
-          
+
           return false;
         }
         if (!hasPassWorld()) {
-          
+
           return false;
         }
         return true;
@@ -1215,11 +1215,11 @@ public final class TestMsgProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.me.metadata.pb.test.TestMsgProto.TestReqProto parsedMessage = null;
+        TestReqProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.me.metadata.pb.test.TestMsgProto.TestReqProto) e.getUnfinishedMessage();
+          parsedMessage = (TestReqProto) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1264,7 +1264,7 @@ public final class TestMsgProto {
       }
 
       // required string userName = 2;
-      private java.lang.Object userName_ = "";
+      private Object userName_ = "";
       /**
        * <code>required string userName = 2;</code>
        */
@@ -1274,15 +1274,15 @@ public final class TestMsgProto {
       /**
        * <code>required string userName = 2;</code>
        */
-      public java.lang.String getUserName() {
-        java.lang.Object ref = userName_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+      public String getUserName() {
+        Object ref = userName_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           userName_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1290,11 +1290,11 @@ public final class TestMsgProto {
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
-        java.lang.Object ref = userName_;
+        Object ref = userName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           userName_ = b;
           return b;
         } else {
@@ -1305,7 +1305,7 @@ public final class TestMsgProto {
        * <code>required string userName = 2;</code>
        */
       public Builder setUserName(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1338,7 +1338,7 @@ public final class TestMsgProto {
       }
 
       // required string passWorld = 3;
-      private java.lang.Object passWorld_ = "";
+      private Object passWorld_ = "";
       /**
        * <code>required string passWorld = 3;</code>
        */
@@ -1348,15 +1348,15 @@ public final class TestMsgProto {
       /**
        * <code>required string passWorld = 3;</code>
        */
-      public java.lang.String getPassWorld() {
-        java.lang.Object ref = passWorld_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+      public String getPassWorld() {
+        Object ref = passWorld_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           passWorld_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1364,11 +1364,11 @@ public final class TestMsgProto {
        */
       public com.google.protobuf.ByteString
           getPassWorldBytes() {
-        java.lang.Object ref = passWorld_;
+        Object ref = passWorld_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           passWorld_ = b;
           return b;
         } else {
@@ -1379,7 +1379,7 @@ public final class TestMsgProto {
        * <code>required string passWorld = 3;</code>
        */
       public Builder setPassWorld(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1412,22 +1412,22 @@ public final class TestMsgProto {
       }
 
       // repeated .test.HelloProto hellos = 4;
-      private java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> hellos_ =
+      private java.util.List<HelloProto> hellos_ =
         java.util.Collections.emptyList();
       private void ensureHellosIsMutable() {
         if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          hellos_ = new java.util.ArrayList<com.me.metadata.pb.test.TestMsgProto.HelloProto>(hellos_);
+          hellos_ = new java.util.ArrayList<HelloProto>(hellos_);
           bitField0_ |= 0x00000008;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.me.metadata.pb.test.TestMsgProto.HelloProto, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder, com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> hellosBuilder_;
+          HelloProto, HelloProto.Builder, HelloProtoOrBuilder> hellosBuilder_;
 
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> getHellosList() {
+      public java.util.List<HelloProto> getHellosList() {
         if (hellosBuilder_ == null) {
           return java.util.Collections.unmodifiableList(hellos_);
         } else {
@@ -1447,7 +1447,7 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto getHellos(int index) {
+      public HelloProto getHellos(int index) {
         if (hellosBuilder_ == null) {
           return hellos_.get(index);
         } else {
@@ -1458,7 +1458,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder setHellos(
-          int index, com.me.metadata.pb.test.TestMsgProto.HelloProto value) {
+          int index, HelloProto value) {
         if (hellosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1475,7 +1475,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder setHellos(
-          int index, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder builderForValue) {
+          int index, HelloProto.Builder builderForValue) {
         if (hellosBuilder_ == null) {
           ensureHellosIsMutable();
           hellos_.set(index, builderForValue.build());
@@ -1488,7 +1488,7 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public Builder addHellos(com.me.metadata.pb.test.TestMsgProto.HelloProto value) {
+      public Builder addHellos(HelloProto value) {
         if (hellosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1505,7 +1505,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder addHellos(
-          int index, com.me.metadata.pb.test.TestMsgProto.HelloProto value) {
+          int index, HelloProto value) {
         if (hellosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1522,7 +1522,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder addHellos(
-          com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder builderForValue) {
+          HelloProto.Builder builderForValue) {
         if (hellosBuilder_ == null) {
           ensureHellosIsMutable();
           hellos_.add(builderForValue.build());
@@ -1536,7 +1536,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder addHellos(
-          int index, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder builderForValue) {
+          int index, HelloProto.Builder builderForValue) {
         if (hellosBuilder_ == null) {
           ensureHellosIsMutable();
           hellos_.add(index, builderForValue.build());
@@ -1550,7 +1550,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder addAllHellos(
-          java.lang.Iterable<? extends com.me.metadata.pb.test.TestMsgProto.HelloProto> values) {
+          Iterable<? extends HelloProto> values) {
         if (hellosBuilder_ == null) {
           ensureHellosIsMutable();
           super.addAll(values, hellos_);
@@ -1589,14 +1589,14 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder getHellosBuilder(
+      public HelloProto.Builder getHellosBuilder(
           int index) {
         return getHellosFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder getHellosOrBuilder(
+      public HelloProtoOrBuilder getHellosOrBuilder(
           int index) {
         if (hellosBuilder_ == null) {
           return hellos_.get(index);  } else {
@@ -1606,7 +1606,7 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public java.util.List<? extends com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> 
+      public java.util.List<? extends HelloProtoOrBuilder>
            getHellosOrBuilderList() {
         if (hellosBuilder_ != null) {
           return hellosBuilder_.getMessageOrBuilderList();
@@ -1617,31 +1617,31 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder addHellosBuilder() {
+      public HelloProto.Builder addHellosBuilder() {
         return getHellosFieldBuilder().addBuilder(
-            com.me.metadata.pb.test.TestMsgProto.HelloProto.getDefaultInstance());
+            HelloProto.getDefaultInstance());
       }
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder addHellosBuilder(
+      public HelloProto.Builder addHellosBuilder(
           int index) {
         return getHellosFieldBuilder().addBuilder(
-            index, com.me.metadata.pb.test.TestMsgProto.HelloProto.getDefaultInstance());
+            index, HelloProto.getDefaultInstance());
       }
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder> 
+      public java.util.List<HelloProto.Builder>
            getHellosBuilderList() {
         return getHellosFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.me.metadata.pb.test.TestMsgProto.HelloProto, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder, com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> 
+          HelloProto, HelloProto.Builder, HelloProtoOrBuilder>
           getHellosFieldBuilder() {
         if (hellosBuilder_ == null) {
           hellosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.me.metadata.pb.test.TestMsgProto.HelloProto, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder, com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder>(
+              HelloProto, HelloProto.Builder, HelloProtoOrBuilder>(
                   hellos_,
                   ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
@@ -1683,7 +1683,7 @@ public final class TestMsgProto {
     /**
      * <code>required string userName = 2;</code>
      */
-    java.lang.String getUserName();
+    String getUserName();
     /**
      * <code>required string userName = 2;</code>
      */
@@ -1698,7 +1698,7 @@ public final class TestMsgProto {
     /**
      * <code>required string passWorld = 3;</code>
      */
-    java.lang.String getPassWorld();
+    String getPassWorld();
     /**
      * <code>required string passWorld = 3;</code>
      */
@@ -1709,12 +1709,12 @@ public final class TestMsgProto {
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> 
+    java.util.List<HelloProto>
         getHellosList();
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    com.me.metadata.pb.test.TestMsgProto.HelloProto getHellos(int index);
+    HelloProto getHellos(int index);
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
@@ -1722,12 +1722,12 @@ public final class TestMsgProto {
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    java.util.List<? extends com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> 
+    java.util.List<? extends HelloProtoOrBuilder>
         getHellosOrBuilderList();
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder getHellosOrBuilder(
+    HelloProtoOrBuilder getHellosOrBuilder(
         int index);
 
     // optional string msg = 5;
@@ -1738,7 +1738,7 @@ public final class TestMsgProto {
     /**
      * <code>optional string msg = 5;</code>
      */
-    java.lang.String getMsg();
+    String getMsg();
     /**
      * <code>optional string msg = 5;</code>
      */
@@ -1772,7 +1772,7 @@ public final class TestMsgProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
@@ -1817,10 +1817,10 @@ public final class TestMsgProto {
             }
             case 34: {
               if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                hellos_ = new java.util.ArrayList<com.me.metadata.pb.test.TestMsgProto.HelloProto>();
+                hellos_ = new java.util.ArrayList<HelloProto>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              hellos_.add(input.readMessage(com.me.metadata.pb.test.TestMsgProto.HelloProto.PARSER, extensionRegistry));
+              hellos_.add(input.readMessage(HelloProto.PARSER, extensionRegistry));
               break;
             }
             case 42: {
@@ -1845,14 +1845,14 @@ public final class TestMsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestRspProto_descriptor;
+      return TestMsgProto.internal_static_test_TestRspProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestRspProto_fieldAccessorTable
+      return TestMsgProto.internal_static_test_TestRspProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.me.metadata.pb.test.TestMsgProto.TestRspProto.class, com.me.metadata.pb.test.TestMsgProto.TestRspProto.Builder.class);
+              TestRspProto.class, Builder.class);
     }
 
     public static com.google.protobuf.Parser<TestRspProto> PARSER =
@@ -1865,7 +1865,7 @@ public final class TestMsgProto {
       }
     };
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<TestRspProto> getParserForType() {
       return PARSER;
     }
@@ -1889,7 +1889,7 @@ public final class TestMsgProto {
 
     // required string userName = 2;
     public static final int USERNAME_FIELD_NUMBER = 2;
-    private java.lang.Object userName_;
+    private Object userName_;
     /**
      * <code>required string userName = 2;</code>
      */
@@ -1899,14 +1899,14 @@ public final class TestMsgProto {
     /**
      * <code>required string userName = 2;</code>
      */
-    public java.lang.String getUserName() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getUserName() {
+      Object ref = userName_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           userName_ = s;
         }
@@ -1918,11 +1918,11 @@ public final class TestMsgProto {
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+      Object ref = userName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         userName_ = b;
         return b;
       } else {
@@ -1932,7 +1932,7 @@ public final class TestMsgProto {
 
     // required string passWorld = 3;
     public static final int PASSWORLD_FIELD_NUMBER = 3;
-    private java.lang.Object passWorld_;
+    private Object passWorld_;
     /**
      * <code>required string passWorld = 3;</code>
      */
@@ -1942,14 +1942,14 @@ public final class TestMsgProto {
     /**
      * <code>required string passWorld = 3;</code>
      */
-    public java.lang.String getPassWorld() {
-      java.lang.Object ref = passWorld_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getPassWorld() {
+      Object ref = passWorld_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           passWorld_ = s;
         }
@@ -1961,11 +1961,11 @@ public final class TestMsgProto {
      */
     public com.google.protobuf.ByteString
         getPassWorldBytes() {
-      java.lang.Object ref = passWorld_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+      Object ref = passWorld_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         passWorld_ = b;
         return b;
       } else {
@@ -1975,17 +1975,17 @@ public final class TestMsgProto {
 
     // repeated .test.HelloProto hellos = 4;
     public static final int HELLOS_FIELD_NUMBER = 4;
-    private java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> hellos_;
+    private java.util.List<HelloProto> hellos_;
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    public java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> getHellosList() {
+    public java.util.List<HelloProto> getHellosList() {
       return hellos_;
     }
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    public java.util.List<? extends com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> 
+    public java.util.List<? extends HelloProtoOrBuilder>
         getHellosOrBuilderList() {
       return hellos_;
     }
@@ -1998,20 +1998,20 @@ public final class TestMsgProto {
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    public com.me.metadata.pb.test.TestMsgProto.HelloProto getHellos(int index) {
+    public HelloProto getHellos(int index) {
       return hellos_.get(index);
     }
     /**
      * <code>repeated .test.HelloProto hellos = 4;</code>
      */
-    public com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder getHellosOrBuilder(
+    public HelloProtoOrBuilder getHellosOrBuilder(
         int index) {
       return hellos_.get(index);
     }
 
     // optional string msg = 5;
     public static final int MSG_FIELD_NUMBER = 5;
-    private java.lang.Object msg_;
+    private Object msg_;
     /**
      * <code>optional string msg = 5;</code>
      */
@@ -2021,14 +2021,14 @@ public final class TestMsgProto {
     /**
      * <code>optional string msg = 5;</code>
      */
-    public java.lang.String getMsg() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getMsg() {
+      Object ref = msg_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
+        com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           msg_ = s;
         }
@@ -2040,11 +2040,11 @@ public final class TestMsgProto {
      */
     public com.google.protobuf.ByteString
         getMsgBytes() {
-      java.lang.Object ref = msg_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
+      Object ref = msg_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         msg_ = b;
         return b;
       } else {
@@ -2133,59 +2133,59 @@ public final class TestMsgProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
+    @Override
+    protected Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
 
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseFrom(
+    public static TestRspProto parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseFrom(
+    public static TestRspProto parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseFrom(byte[] data)
+    public static TestRspProto parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseFrom(
+    public static TestRspProto parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseFrom(java.io.InputStream input)
+    public static TestRspProto parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseFrom(
+    public static TestRspProto parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseDelimitedFrom(java.io.InputStream input)
+    public static TestRspProto parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseDelimitedFrom(
+    public static TestRspProto parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseFrom(
+    public static TestRspProto parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.me.metadata.pb.test.TestMsgProto.TestRspProto parseFrom(
+    public static TestRspProto parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2194,12 +2194,12 @@ public final class TestMsgProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.me.metadata.pb.test.TestMsgProto.TestRspProto prototype) {
+    public static Builder newBuilder(TestRspProto prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
@@ -2214,17 +2214,17 @@ public final class TestMsgProto {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.me.metadata.pb.test.TestMsgProto.TestRspProtoOrBuilder {
+       implements TestRspProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestRspProto_descriptor;
+        return TestMsgProto.internal_static_test_TestRspProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestRspProto_fieldAccessorTable
+        return TestMsgProto.internal_static_test_TestRspProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.me.metadata.pb.test.TestMsgProto.TestRspProto.class, com.me.metadata.pb.test.TestMsgProto.TestRspProto.Builder.class);
+                TestRspProto.class, Builder.class);
       }
 
       // Construct using com.me.metadata.pb.test.TestMsgProto.TestRspProto.newBuilder()
@@ -2271,23 +2271,23 @@ public final class TestMsgProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.me.metadata.pb.test.TestMsgProto.internal_static_test_TestRspProto_descriptor;
+        return TestMsgProto.internal_static_test_TestRspProto_descriptor;
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.TestRspProto getDefaultInstanceForType() {
-        return com.me.metadata.pb.test.TestMsgProto.TestRspProto.getDefaultInstance();
+      public TestRspProto getDefaultInstanceForType() {
+        return TestRspProto.getDefaultInstance();
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.TestRspProto build() {
-        com.me.metadata.pb.test.TestMsgProto.TestRspProto result = buildPartial();
+      public TestRspProto build() {
+        TestRspProto result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.me.metadata.pb.test.TestMsgProto.TestRspProto buildPartial() {
-        com.me.metadata.pb.test.TestMsgProto.TestRspProto result = new com.me.metadata.pb.test.TestMsgProto.TestRspProto(this);
+      public TestRspProto buildPartial() {
+        TestRspProto result = new TestRspProto(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2321,16 +2321,16 @@ public final class TestMsgProto {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.me.metadata.pb.test.TestMsgProto.TestRspProto) {
-          return mergeFrom((com.me.metadata.pb.test.TestMsgProto.TestRspProto)other);
+        if (other instanceof TestRspProto) {
+          return mergeFrom((TestRspProto)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.me.metadata.pb.test.TestMsgProto.TestRspProto other) {
-        if (other == com.me.metadata.pb.test.TestMsgProto.TestRspProto.getDefaultInstance()) return this;
+      public Builder mergeFrom(TestRspProto other) {
+        if (other == TestRspProto.getDefaultInstance()) return this;
         if (other.hasId()) {
           setId(other.getId());
         }
@@ -2362,7 +2362,7 @@ public final class TestMsgProto {
               hellosBuilder_ = null;
               hellos_ = other.hellos_;
               bitField0_ = (bitField0_ & ~0x00000008);
-              hellosBuilder_ = 
+              hellosBuilder_ =
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getHellosFieldBuilder() : null;
             } else {
@@ -2381,15 +2381,15 @@ public final class TestMsgProto {
 
       public final boolean isInitialized() {
         if (!hasId()) {
-          
+
           return false;
         }
         if (!hasUserName()) {
-          
+
           return false;
         }
         if (!hasPassWorld()) {
-          
+
           return false;
         }
         return true;
@@ -2399,11 +2399,11 @@ public final class TestMsgProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.me.metadata.pb.test.TestMsgProto.TestRspProto parsedMessage = null;
+        TestRspProto parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.me.metadata.pb.test.TestMsgProto.TestRspProto) e.getUnfinishedMessage();
+          parsedMessage = (TestRspProto) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2448,7 +2448,7 @@ public final class TestMsgProto {
       }
 
       // required string userName = 2;
-      private java.lang.Object userName_ = "";
+      private Object userName_ = "";
       /**
        * <code>required string userName = 2;</code>
        */
@@ -2458,15 +2458,15 @@ public final class TestMsgProto {
       /**
        * <code>required string userName = 2;</code>
        */
-      public java.lang.String getUserName() {
-        java.lang.Object ref = userName_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+      public String getUserName() {
+        Object ref = userName_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           userName_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2474,11 +2474,11 @@ public final class TestMsgProto {
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
-        java.lang.Object ref = userName_;
+        Object ref = userName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           userName_ = b;
           return b;
         } else {
@@ -2489,7 +2489,7 @@ public final class TestMsgProto {
        * <code>required string userName = 2;</code>
        */
       public Builder setUserName(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2522,7 +2522,7 @@ public final class TestMsgProto {
       }
 
       // required string passWorld = 3;
-      private java.lang.Object passWorld_ = "";
+      private Object passWorld_ = "";
       /**
        * <code>required string passWorld = 3;</code>
        */
@@ -2532,15 +2532,15 @@ public final class TestMsgProto {
       /**
        * <code>required string passWorld = 3;</code>
        */
-      public java.lang.String getPassWorld() {
-        java.lang.Object ref = passWorld_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+      public String getPassWorld() {
+        Object ref = passWorld_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           passWorld_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2548,11 +2548,11 @@ public final class TestMsgProto {
        */
       public com.google.protobuf.ByteString
           getPassWorldBytes() {
-        java.lang.Object ref = passWorld_;
+        Object ref = passWorld_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           passWorld_ = b;
           return b;
         } else {
@@ -2563,7 +2563,7 @@ public final class TestMsgProto {
        * <code>required string passWorld = 3;</code>
        */
       public Builder setPassWorld(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2596,22 +2596,22 @@ public final class TestMsgProto {
       }
 
       // repeated .test.HelloProto hellos = 4;
-      private java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> hellos_ =
+      private java.util.List<HelloProto> hellos_ =
         java.util.Collections.emptyList();
       private void ensureHellosIsMutable() {
         if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          hellos_ = new java.util.ArrayList<com.me.metadata.pb.test.TestMsgProto.HelloProto>(hellos_);
+          hellos_ = new java.util.ArrayList<HelloProto>(hellos_);
           bitField0_ |= 0x00000008;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.me.metadata.pb.test.TestMsgProto.HelloProto, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder, com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> hellosBuilder_;
+          HelloProto, HelloProto.Builder, HelloProtoOrBuilder> hellosBuilder_;
 
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto> getHellosList() {
+      public java.util.List<HelloProto> getHellosList() {
         if (hellosBuilder_ == null) {
           return java.util.Collections.unmodifiableList(hellos_);
         } else {
@@ -2631,7 +2631,7 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto getHellos(int index) {
+      public HelloProto getHellos(int index) {
         if (hellosBuilder_ == null) {
           return hellos_.get(index);
         } else {
@@ -2642,7 +2642,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder setHellos(
-          int index, com.me.metadata.pb.test.TestMsgProto.HelloProto value) {
+          int index, HelloProto value) {
         if (hellosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2659,7 +2659,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder setHellos(
-          int index, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder builderForValue) {
+          int index, HelloProto.Builder builderForValue) {
         if (hellosBuilder_ == null) {
           ensureHellosIsMutable();
           hellos_.set(index, builderForValue.build());
@@ -2672,7 +2672,7 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public Builder addHellos(com.me.metadata.pb.test.TestMsgProto.HelloProto value) {
+      public Builder addHellos(HelloProto value) {
         if (hellosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2689,7 +2689,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder addHellos(
-          int index, com.me.metadata.pb.test.TestMsgProto.HelloProto value) {
+          int index, HelloProto value) {
         if (hellosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2706,7 +2706,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder addHellos(
-          com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder builderForValue) {
+          HelloProto.Builder builderForValue) {
         if (hellosBuilder_ == null) {
           ensureHellosIsMutable();
           hellos_.add(builderForValue.build());
@@ -2720,7 +2720,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder addHellos(
-          int index, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder builderForValue) {
+          int index, HelloProto.Builder builderForValue) {
         if (hellosBuilder_ == null) {
           ensureHellosIsMutable();
           hellos_.add(index, builderForValue.build());
@@ -2734,7 +2734,7 @@ public final class TestMsgProto {
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
       public Builder addAllHellos(
-          java.lang.Iterable<? extends com.me.metadata.pb.test.TestMsgProto.HelloProto> values) {
+          Iterable<? extends HelloProto> values) {
         if (hellosBuilder_ == null) {
           ensureHellosIsMutable();
           super.addAll(values, hellos_);
@@ -2773,14 +2773,14 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder getHellosBuilder(
+      public HelloProto.Builder getHellosBuilder(
           int index) {
         return getHellosFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder getHellosOrBuilder(
+      public HelloProtoOrBuilder getHellosOrBuilder(
           int index) {
         if (hellosBuilder_ == null) {
           return hellos_.get(index);  } else {
@@ -2790,7 +2790,7 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public java.util.List<? extends com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> 
+      public java.util.List<? extends HelloProtoOrBuilder>
            getHellosOrBuilderList() {
         if (hellosBuilder_ != null) {
           return hellosBuilder_.getMessageOrBuilderList();
@@ -2801,31 +2801,31 @@ public final class TestMsgProto {
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder addHellosBuilder() {
+      public HelloProto.Builder addHellosBuilder() {
         return getHellosFieldBuilder().addBuilder(
-            com.me.metadata.pb.test.TestMsgProto.HelloProto.getDefaultInstance());
+            HelloProto.getDefaultInstance());
       }
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder addHellosBuilder(
+      public HelloProto.Builder addHellosBuilder(
           int index) {
         return getHellosFieldBuilder().addBuilder(
-            index, com.me.metadata.pb.test.TestMsgProto.HelloProto.getDefaultInstance());
+            index, HelloProto.getDefaultInstance());
       }
       /**
        * <code>repeated .test.HelloProto hellos = 4;</code>
        */
-      public java.util.List<com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder> 
+      public java.util.List<HelloProto.Builder>
            getHellosBuilderList() {
         return getHellosFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          com.me.metadata.pb.test.TestMsgProto.HelloProto, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder, com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder> 
+          HelloProto, HelloProto.Builder, HelloProtoOrBuilder>
           getHellosFieldBuilder() {
         if (hellosBuilder_ == null) {
           hellosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.me.metadata.pb.test.TestMsgProto.HelloProto, com.me.metadata.pb.test.TestMsgProto.HelloProto.Builder, com.me.metadata.pb.test.TestMsgProto.HelloProtoOrBuilder>(
+              HelloProto, HelloProto.Builder, HelloProtoOrBuilder>(
                   hellos_,
                   ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
@@ -2836,7 +2836,7 @@ public final class TestMsgProto {
       }
 
       // optional string msg = 5;
-      private java.lang.Object msg_ = "";
+      private Object msg_ = "";
       /**
        * <code>optional string msg = 5;</code>
        */
@@ -2846,15 +2846,15 @@ public final class TestMsgProto {
       /**
        * <code>optional string msg = 5;</code>
        */
-      public java.lang.String getMsg() {
-        java.lang.Object ref = msg_;
-        if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+      public String getMsg() {
+        Object ref = msg_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref)
               .toStringUtf8();
           msg_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2862,11 +2862,11 @@ public final class TestMsgProto {
        */
       public com.google.protobuf.ByteString
           getMsgBytes() {
-        java.lang.Object ref = msg_;
+        Object ref = msg_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString b =
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           msg_ = b;
           return b;
         } else {
@@ -2877,7 +2877,7 @@ public final class TestMsgProto {
        * <code>optional string msg = 5;</code>
        */
       public Builder setMsg(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2943,7 +2943,7 @@ public final class TestMsgProto {
   private static com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\ntest.proto\022\004test\"\"\n\nHelloProto\022\t\n\001x\030\001 " +
       "\001(\005\022\t\n\001y\030\002 \001(\t\"a\n\014TestReqProto\022\n\n\002id\030\001 \002" +
       "(\005\022\020\n\010userName\030\002 \002(\t\022\021\n\tpassWorld\030\003 \002(\t\022" +
@@ -2963,19 +2963,19 @@ public final class TestMsgProto {
           internal_static_test_HelloProto_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_test_HelloProto_descriptor,
-              new java.lang.String[] { "X", "Y", });
+              new String[] { "X", "Y", });
           internal_static_test_TestReqProto_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_test_TestReqProto_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_test_TestReqProto_descriptor,
-              new java.lang.String[] { "Id", "UserName", "PassWorld", "Hellos", });
+              new String[] { "Id", "UserName", "PassWorld", "Hellos", });
           internal_static_test_TestRspProto_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_test_TestRspProto_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_test_TestRspProto_descriptor,
-              new java.lang.String[] { "Id", "UserName", "PassWorld", "Hellos", "Msg", });
+              new String[] { "Id", "UserName", "PassWorld", "Hellos", "Msg", });
           return null;
         }
       };

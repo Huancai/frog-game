@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-tools/
+frog-metadata-database/tools/
 ### STS ###
 .apt_generated
 .classpath
