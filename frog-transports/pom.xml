@@ -3,17 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>me-transports</artifactId>
+    <artifactId>frog-transports</artifactId>
     <packaging>pom</packaging>
 
     <parent>
-        <artifactId>game</artifactId>
+        <artifactId>frog</artifactId>
         <groupId>com.me.game</groupId>
         <version>${revision}</version>
     </parent>
     <modules>
-        <module>me-transports-api</module>
-        <module>me-transport-netty</module>
+        <module>frog-transports-api</module>
+        <module>frog-transport-netty</module>
     </modules>
 
 

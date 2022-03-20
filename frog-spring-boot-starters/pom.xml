@@ -3,18 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>game</artifactId>
+        <artifactId>frog</artifactId>
         <groupId>com.me.game</groupId>
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>me-spring-boot-starters</artifactId>
+    <artifactId>frog-spring-boot-starters</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>me-transports-netty-spring-boot-starter</module>
+        <module>frog-transports-netty-spring-boot-starter</module>
     </modules>
 
 </project>

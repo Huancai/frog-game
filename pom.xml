@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.me.game</groupId>
-    <artifactId>game</artifactId>
+    <artifactId>frog</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
@@ -33,29 +33,29 @@
 
             <dependency>
                 <groupId>com.me.game</groupId>
-                <artifactId>me-common</artifactId>
+                <artifactId>frog-common</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.me.game</groupId>
-                <artifactId>me-transports-netty-spring-boot-starter</artifactId>
+                <artifactId>frog-transports-netty-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.me.game</groupId>
-                <artifactId>me-transports-api</artifactId>
-                <version>${project.version}</version>
+                <artifactId>frog-transports-api</artifactId>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.me.game</groupId>
-                <artifactId>me-transport-netty</artifactId>
-                <version>${project.version}</version>
+                <artifactId>frog-transport-netty</artifactId>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>com.me.game</groupId>
-                <artifactId>me-transports-netty-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
+                <artifactId>frog-transports-netty-spring-boot-starter</artifactId>
+                <version>${revision}</version>
             </dependency>
 
 
@@ -72,10 +72,10 @@
 
 
     <modules>
-        <module>me-common</module>
-        <module>me-transports</module>
-        <module>me-spring-boot-starters</module>
-        <module>me-metadata</module>
+        <module>frog-common</module>
+        <module>frog-transports</module>
+        <module>frog-spring-boot-starters</module>
+        <module>frog-metadata</module>
     </modules>
 
 </project>
