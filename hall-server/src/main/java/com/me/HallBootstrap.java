@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication/*(exclude = {DataSourceAutoConfiguration.class})*/
 @MapperScan(value = "com.me.metadata.db.mapper")
-public class AppBootstrap {
+public class HallBootstrap {
 
     public static void main(String[] args) {
-        SpringApplication.run(AppBootstrap.class, args);
+        SpringApplication.run(HallBootstrap.class, args);
     }
 
 }

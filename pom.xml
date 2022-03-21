@@ -85,11 +85,19 @@
     </dependencyManagement>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
     <modules>
         <module>frog-common</module>
         <module>frog-transports</module>
         <module>frog-spring-boot-starters</module>
         <module>frog-metadata</module>
+        <module>router-server</module>
     </modules>
 
 </project>
