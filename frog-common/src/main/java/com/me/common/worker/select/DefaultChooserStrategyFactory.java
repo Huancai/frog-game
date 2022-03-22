@@ -7,7 +7,6 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- *
  * @author wu_hc 【whuancai@163.com】
  */
 public final class DefaultChooserStrategyFactory implements ChooserStrategyFactory {
@@ -83,7 +82,8 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
     }
 
     /**
-     * 按注册数
+     * 按注册数，这里要特别注意，需要在使用端管理好注册取消注册，
+     * 否则会导致分配不均匀
      */
     private static final class BalanceEventLoopChooser implements EventLoopChooser {
         private final Worker[] executors;
