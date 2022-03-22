@@ -1,4 +1,4 @@
-package com.me.game;
+package com.me.game.data;
 
 import lombok.Data;
 
