@@ -27,3 +27,8 @@ mybatis:
   #开启驼峰命名
   configuration:
     map-underscore-to-camel-case: true
+
+# 自定义
+frog:
+  component-scan-package: com.me.game.module
+  cmd-scan-package: com.me.game.module

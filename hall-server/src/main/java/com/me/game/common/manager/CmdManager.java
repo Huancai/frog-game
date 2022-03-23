@@ -1,16 +1,18 @@
 package com.me.game.common.manager;
 
 import cn.hutool.core.util.ClassUtil;
-import com.me.game.common.cmd.AbstractCMD;
-import com.me.game.module.misc.data.GamePlayer;
 import com.google.protobuf.GeneratedMessage;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
 import com.me.common.net.Cmd;
+import com.me.game.common.cmd.AbstractCMD;
+import com.me.game.module.misc.data.GamePlayer;
 import com.me.transport.api.Message;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.ParameterizedType;
@@ -28,6 +30,9 @@ import java.util.Set;
 public class CmdManager implements InitializingBean, DisposableBean {
 
     private static final Map<Short, AbstractCMD> cmdMap = new HashMap<>();
+
+    @Autowired
+    Environment environment;
 
     /**
      * @param gamePlayer
@@ -54,7 +59,9 @@ public class CmdManager implements InitializingBean, DisposableBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        Set<Class<?>> cmdClasses = ClassUtil.scanPackageByAnnotation("com.me.game.module", Cmd.class);
+        String scanPackage = environment.getProperty("cmd-scan-package", "com.me.game.module");
+        log.info("CmdManager scanPackage:{}", scanPackage);
+        Set<Class<?>> cmdClasses = ClassUtil.scanPackageByAnnotation(scanPackage, Cmd.class);
         for (Class<?> cmdClass : cmdClasses) {
             Cmd cmd = cmdClass.getAnnotation(Cmd.class);
             if (Objects.isNull(cmd)) {
