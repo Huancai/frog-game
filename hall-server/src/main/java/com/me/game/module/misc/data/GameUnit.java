@@ -3,6 +3,8 @@ package com.me.game.module.misc.data;
 import com.me.game.middleware.component.AbstractComponent;
 import com.me.game.middleware.component.ComponentType;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -11,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class GameUnit {
 
-    protected final Map<ComponentType, AbstractComponent> components = new ConcurrentHashMap<>();
+    private final Map<ComponentType, AbstractComponent> components = new ConcurrentHashMap<>();
 
     public void initComponent() {
 
@@ -30,5 +32,9 @@ public class GameUnit {
 
     public void addComponent(ComponentType componentType, AbstractComponent component) {
         components.put(componentType, component);
+    }
+
+    public Collection<AbstractComponent> getAllComponents() {
+        return Collections.unmodifiableCollection(components.values());
     }
 }

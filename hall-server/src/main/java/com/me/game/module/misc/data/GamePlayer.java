@@ -1,15 +1,17 @@
 package com.me.game.module.misc.data;
 
 import cn.hutool.core.date.StopWatch;
+import cn.hutool.core.thread.NamedThreadFactory;
 import cn.hutool.core.util.StrUtil;
+import com.me.common.worker.DefaultWorkerGroup;
+import com.me.common.worker.SelfDriverQueue;
+import com.me.common.worker.Worker;
+import com.me.common.worker.WorkerGroup;
 import com.me.game.common.cmd.MsgSender;
 import com.me.game.common.manager.ManagerInit;
 import com.me.game.common.manager.SpringManager;
 import com.me.game.middleware.component.AbstractComponent;
 import com.me.game.middleware.component.MeComponent;
-import com.me.common.worker.DefaultWorkerGroup;
-import com.me.common.worker.Worker;
-import com.me.common.worker.WorkerGroup;
 import com.me.metadata.db.entity.PlayerEntity;
 import com.me.transport.api.Message;
 import com.me.transport.api.session.Session;
@@ -17,13 +19,28 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Constructor;
 import java.util.Set;
+import java.util.concurrent.Executor;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author wu_hc
  */
 @Slf4j
-public class GamePlayer extends GameUnit {
+public class GamePlayer extends GameUnit implements Runnable {
 
+    //DB线程
+    private static final Executor EXECUTOR = new ThreadPoolExecutor(
+            Runtime.getRuntime().availableProcessors() << 1,
+            Runtime.getRuntime().availableProcessors() << 1,
+            5,
+            TimeUnit.MINUTES,
+            new LinkedBlockingQueue<>(1 << 16),
+            new NamedThreadFactory("Component-thread", false));
+    protected final SelfDriverQueue selfDriverDBQueue = SelfDriverQueue.newQueue(EXECUTOR, "Component-QUEUE", 1 << 17);
+
+    //玩家业务线程
     final static WorkerGroup workerGroup = DefaultWorkerGroup.newGroup("GAME-PLAYER", Runtime.getRuntime().availableProcessors() << 1);
 
     final Worker worker;
@@ -106,5 +123,17 @@ public class GamePlayer extends GameUnit {
 
     public Worker getWorker() {
         return worker;
+    }
+
+    //执行玩家的入库操作
+    private void doSaveDB() {
+        for (AbstractComponent component : getAllComponents()) {
+            component.saveData();
+        }
+    }
+
+    @Override
+    public void run() {
+        doSaveDB();
     }
 }
