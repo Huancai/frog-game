@@ -2,7 +2,6 @@ package com.me.game.common.manager;
 
 import cn.hutool.core.util.ClassUtil;
 import com.google.protobuf.GeneratedMessage;
-import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Parser;
 import com.me.common.net.Cmd;
 import com.me.game.common.cmd.AbstractCMD;
@@ -52,7 +51,8 @@ public class CmdManager implements InitializingBean, DisposableBean {
             if (diff > 100) {
                 log.warn("execute cmd[{}] cost must time:[{}]ms", message.command(), diff);
             }
-        } catch (InvalidProtocolBufferException e) {
+        } catch (Exception e) {
+            log.error("Cmder doExecute error", e);
             e.printStackTrace();
         }
     }

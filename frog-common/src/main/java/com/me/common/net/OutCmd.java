@@ -11,4 +11,5 @@ public interface OutCmd {
      * pong
      */
     short PONG = 1;
+    short TIMESTAMP = 2;
 }

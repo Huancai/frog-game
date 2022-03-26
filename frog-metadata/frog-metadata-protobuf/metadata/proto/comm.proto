@@ -6,3 +6,11 @@ message ErrorProto{
   optional int32 code = 1;
   optional string tip = 2;
 }
+
+message EmptyProto {
+
+}
+
+message ServerTimestampProto{
+  required int64 timestamp = 1;
+}

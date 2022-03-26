@@ -18,4 +18,5 @@ public interface InCmd {
      */
     short LOGIN = 2;
 
+    short TIMESTAMP = 3;
 }
