@@ -1,11 +1,11 @@
 package com.me.game.module.test.cmd;
 
-import com.me.game.common.cmd.AbstractCMD;
-import com.me.game.module.misc.data.GamePlayer;
+import com.me.common.net.Cmd;
 import com.me.common.net.InCmd;
 import com.me.common.net.OutCmd;
+import com.me.game.common.cmd.AbstractCMD;
+import com.me.game.module.misc.data.GamePlayer;
 import com.me.metadata.pb.test.TestMsgProto;
-import com.me.common.net.Cmd;
 
 /**
  * @author wu_hc 【whuancai@163.com】
@@ -20,5 +20,10 @@ public class TestCMD extends AbstractCMD<TestMsgProto.TestReqProto> {
         builder.setUserName(message.getUserName());
         builder.setPassWorld(message.getPassWorld());
         player.send(OutCmd.TEST, builder);
+    }
+
+    @Cmd(code = 45)
+    public void test() {
+
     }
 }

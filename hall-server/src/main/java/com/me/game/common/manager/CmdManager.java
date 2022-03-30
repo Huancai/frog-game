@@ -11,15 +11,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
+import org.springframework.util.ReflectionUtils;
 
+import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author wu_hc 【whuancai@163.com】
@@ -29,6 +29,7 @@ import java.util.Set;
 public class CmdManager implements InitializingBean, DisposableBean {
 
     private static final Map<Short, AbstractCMD> cmdMap = new HashMap<>();
+    private static final Map<Short, Method> cmdMethodMap = new HashMap<>();
 
     @Autowired
     Environment environment;
@@ -90,6 +91,8 @@ public class CmdManager implements InitializingBean, DisposableBean {
             }
 
             cmdMap.put(cmd.code(), cmder);
+
+            cmdMethod(clazz);
             log.info("c --> s register ok,cmd:{}->class:{} .", cmd.code(), cmder.getClass());
         }
     }
@@ -97,5 +100,20 @@ public class CmdManager implements InitializingBean, DisposableBean {
     @Override
     public void destroy() throws Exception {
         cmdMap.clear();
+    }
+
+    private void cmdMethod(Class clazz) {
+        for (Method method : findAllMethod(clazz)) {
+            Cmd annotation = AnnotationUtils.findAnnotation(method, Cmd.class);
+            if (Objects.nonNull(annotation)) {
+                cmdMethodMap.put(annotation.code(), method);
+            }
+        }
+    }
+
+    private List<Method> findAllMethod(Class clazz) {
+        final List<Method> res = new LinkedList<>();
+        ReflectionUtils.doWithMethods(clazz, method -> res.add(method));
+        return res;
     }
 }
