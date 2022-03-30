@@ -22,7 +22,7 @@ public class TestCMD extends AbstractCMD<TestMsgProto.TestReqProto> {
         player.send(OutCmd.TEST, builder);
     }
 
-    @Cmd(code = 45)
+    @Cmd(code = 45,desc = "")
     public void test() {
 
     }
