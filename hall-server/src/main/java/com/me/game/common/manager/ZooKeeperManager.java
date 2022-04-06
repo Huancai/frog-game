@@ -4,7 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.framework.recipes.cache.ChildData;
 import org.apache.curator.framework.recipes.cache.NodeCache;
+import org.apache.curator.framework.recipes.cache.TreeCache;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooDefs;
@@ -44,16 +46,32 @@ public class ZooKeeperManager implements InitializingBean {
 
         //3简历连接
         client.start();
-        /**
-         * 想要实现watch一次注册n次监听的话，我们需要使用到curator里的一个NodeCache对象。
-         * 这个对象可以用来缓存节点数据，并且可以给节点添加nodeChange事件，当节点的数据发生变化就会触发这个事件
-         */
+
         //4 建立一个cache缓存    Curator之nodeCache一次注册，N次监听
         final NodeCache cache = new NodeCache(client, curServerPath);
         cache.start(true);
         cache.getListenable().addListener(() -> {
             String data = new String(cache.getCurrentData().getData());
 
+        });
+
+        //5节点变化
+        final TreeCache treeCache = new TreeCache(client, curServerPath);
+        treeCache.getListenable().addListener((cf, event) -> {
+            ChildData eventData = event.getData();
+            switch (event.getType()) {
+                case NODE_ADDED:
+                    log.warn(curServerPath + "节点添加" + eventData.getPath() + "\t添加数据为：" + new String(eventData.getData()));
+                    break;
+                case NODE_UPDATED:
+                    log.warn(eventData.getPath() + "节点数据更新\t更新数据为：" + new String(eventData.getData()) + "\t版本为：" + eventData.getStat().getVersion());
+                    break;
+                case NODE_REMOVED:
+                    log.warn(eventData.getPath() + "节点被删除");
+                    break;
+                default:
+                    break;
+            }
         });
 
         try {
