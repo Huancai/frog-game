@@ -23,7 +23,7 @@ public class ZooKeeperManager implements InitializingBean {
     @Autowired
     Environment environment;
     /**
-     *
+     * 客户端
      */
     private CuratorFramework client;
 
