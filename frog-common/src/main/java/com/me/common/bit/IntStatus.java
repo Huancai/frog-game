@@ -3,18 +3,22 @@ package com.me.common.bit;
 /**
  * @author wu_hc 【whuancai@163.com】
  */
-public final class IntStatus {
+public final class IntStatus<E extends IndexStatus> {
 
     /**
      * 状态
      */
     private int status;
 
+    public static IntStatus newStatus() {
+        return newStatus(0);
+    }
+
     /**
      * @param status
      * @return
      */
-    public static IntStatus newWithStatus(final int status) {
+    public static IntStatus newStatus(final int status) {
         IntStatus m = new IntStatus();
         m.status = status;
         return m;
@@ -32,7 +36,7 @@ public final class IntStatus {
      *
      * @param eTypes
      */
-    public int statusAdd(IndexStatus... eTypes) {
+    public int statusAdd(E... eTypes) {
         for (IndexStatus e : eTypes) {
             status = IntBits.setBitValue(status, e.index(), (byte) 1);
         }
@@ -44,7 +48,7 @@ public final class IntStatus {
      *
      * @param eTypes
      */
-    public int statusDel(IndexStatus... eTypes) {
+    public int statusDel(E... eTypes) {
         for (IndexStatus e : eTypes) {
             status = IntBits.setBitValue(status, e.index(), (byte) 0);
         }
@@ -57,7 +61,7 @@ public final class IntStatus {
      * @param eType
      * @return
      */
-    public boolean isStatusTrue(IndexStatus eType) {
+    public boolean isStatusTrue(E eType) {
         return IntBits.checkBitValue(status, eType.index());
     }
 
@@ -67,8 +71,8 @@ public final class IntStatus {
      * @param eTypes
      * @return
      */
-    public boolean statusAND(IndexStatus... eTypes) {
-        for (IndexStatus e : eTypes) {
+    public boolean statusAND(E... eTypes) {
+        for (E e : eTypes) {
             if (!IntBits.checkBitValue(status, e.index())) {
                 return false;
             }
@@ -82,8 +86,8 @@ public final class IntStatus {
      * @param eTypes
      * @return
      */
-    public boolean statusOR(IndexStatus... eTypes) {
-        for (IndexStatus e : eTypes) {
+    public boolean statusOR(E... eTypes) {
+        for (E e : eTypes) {
             if (IntBits.checkBitValue(status, e.index())) {
                 return true;
             }
