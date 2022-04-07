@@ -7,6 +7,8 @@ import cn.hutool.core.util.StrUtil;
 import java.util.*;
 
 /**
+ * String util
+ *
  * @author wu_hc 【whuancai@163.com】
  */
 public final class MeString {
