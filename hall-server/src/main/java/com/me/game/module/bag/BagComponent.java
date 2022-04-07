@@ -19,4 +19,10 @@ public class BagComponent extends AbstractComponent {
     public void prepareData() {
 
     }
+
+
+    @Override
+    public void saveData() {
+
+    }
 }

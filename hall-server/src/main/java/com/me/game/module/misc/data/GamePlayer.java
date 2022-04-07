@@ -41,26 +41,35 @@ public class GamePlayer extends GameUnit implements Runnable {
     protected final SelfDriverQueue selfDriverDBQueue = SelfDriverQueue.newQueue(EXECUTOR, "Component-QUEUE", 1 << 17);
 
     //玩家业务线程
-    final static WorkerGroup workerGroup = DefaultWorkerGroup.newGroup("GAME-PLAYER", Runtime.getRuntime().availableProcessors() << 1);
+    final static WorkerGroup workerGroup = DefaultWorkerGroup.newGroup(
+            "GAME-PLAYER",
+            Runtime.getRuntime().availableProcessors() << 1,
+            WorkerGroup.SelectStrategy.BALANCE);
 
+    //玩家分配的工作线程池
     final Worker worker;
 
     private final Session session;
 
     private final PlayerEntity playerEntity;
 
+    //玩家信息
+    private final String info;
+
     public GamePlayer(PlayerEntity playerEntity, Session session) {
         this.playerEntity = playerEntity;
         this.session = session;
         this.worker = workerGroup.next();
+        this.info = StrUtil.format("player:{} - {}", playerEntity.getPlayerId(), playerEntity.getPlayerName());
     }
 
-    public void login() {
+    public void onLogin() {
 
     }
 
-    public void logout() {
-
+    public void onLogout() {
+        this.worker.unRegister((o) -> {
+        });
     }
 
     @Override
@@ -118,7 +127,7 @@ public class GamePlayer extends GameUnit implements Runnable {
     }
 
     public String info() {
-        return StrUtil.format("player:{} - {}", playerEntity.getPlayerId(), playerEntity.getPlayerName());
+        return info;
     }
 
     public Worker getWorker() {

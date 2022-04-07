@@ -2,20 +2,17 @@ package com.me.game.middleware.component;
 
 
 import com.me.game.module.misc.data.GameUnit;
-import com.me.metadata.db.BaseEntity;
-
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author wu_hc【whuancai@163.com】
  */
 public abstract class AbstractComponent {
 
-
+    /**
+     * 组件拥有者
+     */
     protected GameUnit owner;
 
-    private final List<BaseEntity> updateEntityList = new LinkedList<>();
 
     public AbstractComponent(GameUnit owner) {
         this.owner = owner;
@@ -35,13 +32,7 @@ public abstract class AbstractComponent {
 
     }
 
-    protected final void trust(BaseEntity entity) {
-        if (entity.isUpdate()) {
-            updateEntityList.add(entity);
-        }
-    }
-
-    public void prepareSaveData() {
+    public void saveData() {
 
     }
 
