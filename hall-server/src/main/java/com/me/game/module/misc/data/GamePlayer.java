@@ -1,6 +1,8 @@
 package com.me.game.module.misc.data;
 
+import cn.hutool.core.convert.Convert;
 import cn.hutool.core.date.StopWatch;
+import cn.hutool.core.lang.ConsoleTable;
 import cn.hutool.core.thread.NamedThreadFactory;
 import cn.hutool.core.util.StrUtil;
 import com.me.common.worker.DefaultWorkerGroup;
@@ -136,9 +138,17 @@ public class GamePlayer extends GameUnit implements Runnable {
 
     //执行玩家的入库操作
     private void doSaveDB() {
+        ConsoleTable consoleTable = ConsoleTable.create().addHeader(new String[]{"Component", "Cost(ms)"});
         for (AbstractComponent component : getAllComponents()) {
+            long cur = System.currentTimeMillis();
             component.saveData();
+            long now = System.currentTimeMillis();
+            consoleTable.addBody(new String[]{
+                    component.getClass().getAnnotation(MeComponent.class).type() + "",
+                    Convert.toStr(now - cur
+                    )});
         }
+        log.info("GamePlayer:{} SaveData\n{}", info, consoleTable.toString());
     }
 
     @Override
