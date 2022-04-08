@@ -15,7 +15,7 @@ public class GameUnit {
 
     private final Map<ComponentType, AbstractComponent> components = new ConcurrentHashMap<>();
 
-    public void initComponent() {
+    protected void initComponent() {
 
     }
 

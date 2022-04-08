@@ -58,6 +58,7 @@ public class GamePlayer extends GameUnit implements Runnable {
     //玩家信息
     private final String info;
 
+
     public GamePlayer(PlayerEntity playerEntity, Session session) {
         this.playerEntity = playerEntity;
         this.session = session;
@@ -66,7 +67,16 @@ public class GamePlayer extends GameUnit implements Runnable {
     }
 
     public void onLogin() {
+        initComponent();
+        sendLoginRsp();
+    }
 
+    /**
+     * 登录返回
+     */
+    private void sendLoginRsp() {
+        Message message = Message.create(1);
+        send(message);
     }
 
     public void onLogout() {
@@ -75,7 +85,7 @@ public class GamePlayer extends GameUnit implements Runnable {
     }
 
     @Override
-    public void initComponent() {
+    protected void initComponent() {
 
         StopWatch stopWatch = StopWatch.create(String.format("player:%s initComponent！", info()));
         Set<Class<? extends AbstractComponent>> componentClasses = SpringManager.getBean(ManagerInit.class).getComponentClasses();
@@ -138,15 +148,17 @@ public class GamePlayer extends GameUnit implements Runnable {
 
     //执行玩家的入库操作
     private void doSaveDB() {
-        ConsoleTable consoleTable = ConsoleTable.create().addHeader(new String[]{"Component", "Cost(ms)"});
+        ConsoleTable consoleTable = ConsoleTable.create().addHeader(new String[]{"Index", "Component", "Cost(ms)"});
+        int index = 0;
         for (AbstractComponent component : getAllComponents()) {
             long cur = System.currentTimeMillis();
             component.saveData();
             long now = System.currentTimeMillis();
             consoleTable.addBody(new String[]{
-                    component.getClass().getAnnotation(MeComponent.class).type() + "",
-                    Convert.toStr(now - cur
-                    )});
+                    Convert.toStr(index++),
+                    Convert.toStr(component.getClass().getAnnotation(MeComponent.class).type()),
+                    Convert.toStr(now - cur)
+            });
         }
         log.info("GamePlayer:{} SaveData\n{}", info, consoleTable.toString());
     }
