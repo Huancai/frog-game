@@ -1,5 +1,6 @@
 package com.me.game.module.misc.data;
 
+import com.me.common.event.EventSource;
 import com.me.game.middleware.component.AbstractComponent;
 import com.me.game.middleware.component.ComponentType;
 
@@ -11,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author wu_hc
  */
-public class GameUnit {
+public class GameUnit extends EventSource {
 
     private final Map<ComponentType, AbstractComponent> components = new ConcurrentHashMap<>();
 

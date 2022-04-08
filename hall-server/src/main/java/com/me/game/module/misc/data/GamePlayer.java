@@ -4,6 +4,8 @@ import cn.hutool.core.convert.Convert;
 import cn.hutool.core.date.StopWatch;
 import cn.hutool.core.lang.ConsoleTable;
 import cn.hutool.core.util.StrUtil;
+import com.me.common.event.Event;
+import com.me.common.event.IEventListener;
 import com.me.common.worker.DefaultWorkerGroup;
 import com.me.common.worker.Worker;
 import com.me.common.worker.WorkerGroup;
@@ -25,7 +27,7 @@ import java.util.Set;
  * @author wu_hc
  */
 @Slf4j
-public class GamePlayer extends GameUnit implements Runnable {
+public class GamePlayer extends GameUnit implements Runnable, IEventListener {
 
     //玩家业务线程
     final static WorkerGroup workerGroup = DefaultWorkerGroup.newGroup(
@@ -158,5 +160,10 @@ public class GamePlayer extends GameUnit implements Runnable {
      */
     public boolean isOnline() {
         return Objects.nonNull(session) && session.isActive();
+    }
+
+    @Override
+    public void onEvent(Event event) {
+
     }
 }
