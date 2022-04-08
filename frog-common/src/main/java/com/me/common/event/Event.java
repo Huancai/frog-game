@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author wu_hc 【whuancai@163.com】
  */
-public class Event {
+public final class Event {
 
     /**
      * 事件类型
@@ -84,22 +84,23 @@ public class Event {
      *
      * @return 自定义参数
      */
-    public Object getData() {
-        return data;
+    public <T> T getData() {
+        return (T) data;
     }
 
     /**
      * @param index
      * @return
      */
-    public Object getData(int index) {
+    public <T> T getData(int index) {
         if (index >= 0 && index < datas.size()) {
-            return datas.get(index);
+            return (T) datas.get(index);
         }
         return null;
     }
 
     /**
+     *
      */
     public EventSource getCurrentEventSource() {
         return currentEventSource;
@@ -107,7 +108,6 @@ public class Event {
 
     /**
      * 获得当前事件源
-     *
      */
     public void setCurrentEventSource(EventSource currentEventSource) {
         this.currentEventSource = currentEventSource;

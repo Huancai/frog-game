@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author wu_hc 【whuancai@163.com】
  */
 @SpringBootApplication
-public class RouterBoostrap {
+public class RouterApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(RouterBoostrap.class, args);
+        SpringApplication.run(RouterApp.class, args);
     }
 }
 
