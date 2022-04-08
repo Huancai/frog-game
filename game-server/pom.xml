@@ -8,10 +8,10 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>hall-server</artifactId>
+    <artifactId>game-server</artifactId>
     <packaging>jar</packaging>
-    <name>hall-server</name>
-    <description>hall-server</description>
+    <name>game-server</name>
+    <description>game-server</description>
 
 
     <dependencies>

@@ -1,4 +1,4 @@
-package com.me;
+package com.me.game;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

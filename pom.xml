@@ -98,6 +98,7 @@
         <module>frog-spring-boot-starters</module>
         <module>frog-metadata</module>
         <module>router-server</module>
+        <module>game-server</module>
     </modules>
 
 </project>
