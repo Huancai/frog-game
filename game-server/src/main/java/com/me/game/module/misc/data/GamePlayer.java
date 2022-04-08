@@ -14,6 +14,7 @@ import com.me.game.common.manager.ManagerInit;
 import com.me.game.common.manager.SpringManager;
 import com.me.game.middleware.component.AbstractComponent;
 import com.me.game.middleware.component.MeComponent;
+import com.me.game.module.misc.type.ENetEvent;
 import com.me.metadata.db.entity.PlayerEntity;
 import com.me.transport.api.Message;
 import com.me.transport.api.session.Session;
@@ -51,6 +52,10 @@ public class GamePlayer extends GameUnit implements Runnable, IEventListener {
         this.session = session;
         this.worker = workerGroup.next();
         this.info = StrUtil.format("player:{} - {}", playerEntity.getPlayerId(), playerEntity.getPlayerName());
+    }
+
+    private void initListener() {
+        addListener(ENetEvent.OPEN, this);
     }
 
     public void doLogin() {
@@ -164,6 +169,8 @@ public class GamePlayer extends GameUnit implements Runnable, IEventListener {
 
     @Override
     public void onEvent(Event event) {
+        if (event.getEventType() == ENetEvent.CLOSE) {
 
+        }
     }
 }
