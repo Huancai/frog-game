@@ -8,7 +8,7 @@ import com.me.game.module.misc.data.GameUnit;
 /**
  * @author wu_hc【whuancai@163.com】
  */
-@MeComponent(type = ComponentType.BAG, desc = "背包组件")
+@MeComponent(type = ComponentType.BAG, order = 11, desc = "背包组件")
 public class BagComponent extends AbstractComponent {
 
     public BagComponent(GameUnit owner) {

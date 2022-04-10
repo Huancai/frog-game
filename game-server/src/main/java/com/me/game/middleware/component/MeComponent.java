@@ -11,7 +11,25 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface MeComponent {
+
+    /**
+     * 类型
+     *
+     * @return
+     */
     ComponentType type();
 
+    /**
+     * 描述
+     *
+     * @return
+     */
     String desc() default "";
+
+    /**
+     * 初始化顺序
+     *
+     * @return
+     */
+    int order() default Integer.MAX_VALUE - 1;
 }

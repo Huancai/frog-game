@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
  * @author wu_hc 【whuancai@163.com】
  */
 @Slf4j
-@Component
+//@Component
 public class ZooKeeperManager implements InitializingBean {
 
     @Autowired

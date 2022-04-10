@@ -13,7 +13,7 @@ import java.util.Objects;
 /**
  * @author wu_hc 【whuancai@163.com】
  */
-@MeComponent(type = ComponentType.TEST, desc = "test component")
+@MeComponent(type = ComponentType.TEST, order = 10,desc = "test component")
 public class TestComponent extends AbstractComponent {
 
     private TestEntity testEntity;
