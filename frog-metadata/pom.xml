@@ -11,7 +11,6 @@
 
     <artifactId>frog-metadata</artifactId>
     <packaging>pom</packaging>
-    <version>${revision}</version>
     <modules>
         <module>frog-metadata-database</module>
         <module>frog-metadata-protobuf</module>
