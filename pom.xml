@@ -6,7 +6,7 @@
 
     <groupId>com.me.game</groupId>
     <artifactId>frog</artifactId>
-    <version>${frog.version}</version>
+    <version>1.0.01</version>
     <packaging>pom</packaging>
 
     <developers>

@@ -1,6 +1,6 @@
 @echo off
 echo.
-echo [信息] 打包Web工程，生成war/jar包文件。
+echo 鍑嗗寮�濮嬫墦鍖協rog-game
 echo.
 
 %~d0
