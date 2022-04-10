@@ -1,5 +1,6 @@
 package com.me.game.common.manager;
 
+import cn.hutool.core.lang.ConsoleTable;
 import cn.hutool.core.util.ClassUtil;
 import com.google.common.collect.Lists;
 import com.me.game.middleware.component.AbstractComponent;
@@ -29,6 +30,9 @@ public class ManagerInit implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
+
+        ConsoleTable table = ConsoleTable.create().addHeader("Component", "Class");
+
         String scanPackage = environment.getProperty("frog.component-scan-package", "com.me.game.module");
         log.info("ManagerInit scanPackage:{}", scanPackage);
         Set<Class<?>> classSet = ClassUtil.scanPackageByAnnotation(scanPackage, MeComponent.class);
@@ -40,7 +44,9 @@ public class ManagerInit implements InitializingBean {
         for (Class<? extends AbstractComponent> componentClass : list) {
             componentClasses.add(componentClass);
             log.info("ManagerInit > {}", componentClass);
+            table.addBody(componentClass.getAnnotation(MeComponent.class).type().toString(), componentClass.getName());
         }
+        log.info("Component Info:\n{}", table.toString());
     }
 
     public Set<Class<? extends AbstractComponent>> getComponentClasses() {
