@@ -1,4 +1,4 @@
-package com.me.game.middleware.component;
+package com.me.game.middleware.module;
 
 /**
  * @author wu_hc 【whuancai@163.com】

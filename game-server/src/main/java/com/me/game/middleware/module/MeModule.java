@@ -1,4 +1,4 @@
-package com.me.game.middleware.component;
+package com.me.game.middleware.module;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

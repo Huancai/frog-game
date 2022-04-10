@@ -15,8 +15,8 @@ public interface PlayerMapper {
     @Select("SELECT * FROM t_player")
     List<PlayerEntity> selectAll();
 
-    @Select("SELECT * FROM t_player WHERE unionId=#{unionId}")
-    PlayerEntity getOne(String unionId);
+    @Select("SELECT * FROM t_player WHERE wxUnionid=#{wxUnionid}")
+    PlayerEntity getOne(String wxUnionid);
 
 
     int getAllCount();

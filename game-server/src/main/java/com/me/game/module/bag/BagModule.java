@@ -1,8 +1,8 @@
 package com.me.game.module.bag;
 
-import com.me.game.middleware.component.MeModule;
-import com.me.game.middleware.component.ModuleType;
 import com.me.game.middleware.module.AbstractModule;
+import com.me.game.middleware.module.MeModule;
+import com.me.game.middleware.module.ModuleType;
 
 /**
  * @author wu_hc

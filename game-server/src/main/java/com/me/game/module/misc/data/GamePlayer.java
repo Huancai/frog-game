@@ -28,13 +28,13 @@ import java.util.Set;
  * @author wu_hc
  */
 @Slf4j
-public class GamePlayer extends GameUnit implements Runnable, IEventListener {
+public class GamePlayer extends GameUnit implements IEventListener {
 
     //玩家业务线程
     final static WorkerGroup workerGroup = DefaultWorkerGroup.newGroup(
             "GAME-PLAYER",
             Runtime.getRuntime().availableProcessors() << 1,
-            WorkerGroup.SelectStrategy.BALANCE);
+            WorkerGroup.SelectStrategy.ROUND);
 
     //玩家分配的工作线程池
     final Worker worker;
@@ -64,6 +64,13 @@ public class GamePlayer extends GameUnit implements Runnable, IEventListener {
     }
 
     /**
+     * 登录完成
+     */
+    private void loginOK() {
+        //SAVE mapper to redis
+    }
+
+    /**
      * 登录返回
      */
     private void sendLoginRsp() {
@@ -72,14 +79,12 @@ public class GamePlayer extends GameUnit implements Runnable, IEventListener {
     }
 
     public void doLogout() {
-        this.worker.unRegister((o) -> {
-        });
     }
 
     @Override
     protected void initComponent() {
 
-        StopWatch stopWatch = StopWatch.create(String.format("player:%s initComponent！", info()));
+        StopWatch stopWatch = StopWatch.create(String.format("player:%s initComponent", info()));
         Set<Class<? extends AbstractComponent>> componentClasses = SpringManager.getBean(ManagerInit.class).getComponentClasses();
         for (Class<? extends AbstractComponent> componentClass : componentClasses) {
             try {
@@ -139,26 +144,22 @@ public class GamePlayer extends GameUnit implements Runnable, IEventListener {
     }
 
     //执行玩家的入库操作
-    private void doSaveDB() {
-        ConsoleTable consoleTable = ConsoleTable.create().addHeader(new String[]{"Index", "Component", "Cost(ms)"});
+    public void doSaveDB() {
+        ConsoleTable consoleTable = ConsoleTable.create().addHeader("Index", "Component", "Cost(ms)");
         int index = 0;
         for (AbstractComponent component : getAllComponents()) {
             long cur = System.currentTimeMillis();
             component.saveData();
             long now = System.currentTimeMillis();
-            consoleTable.addBody(new String[]{
+            consoleTable.addBody(
                     Convert.toStr(index++),
                     Convert.toStr(component.getClass().getAnnotation(MeComponent.class).type()),
                     Convert.toStr(now - cur)
-            });
+            );
         }
         log.info("GamePlayer:{} SaveData\n{}", info, consoleTable.toString());
     }
 
-    @Override
-    public void run() {
-        doSaveDB();
-    }
 
     /**
      * 是否在线

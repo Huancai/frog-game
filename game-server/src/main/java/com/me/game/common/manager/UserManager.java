@@ -2,6 +2,7 @@ package com.me.game.common.manager;
 
 import cn.hutool.core.thread.NamedThreadFactory;
 import com.me.game.module.misc.data.GamePlayer;
+import com.me.game.module.misc.task.SaveTask;
 import com.me.metadata.db.entity.PlayerEntity;
 import com.me.metadata.db.mapper.PlayerMapper;
 import com.me.transport.api.session.Session;
@@ -57,9 +58,13 @@ public class UserManager {
         DB_SCHEDULE.scheduleAtFixedRate(() -> {
             for (Map.Entry<String, GamePlayer> gamePlayerEntry : players.entrySet()) {
                 GamePlayer gamePlayer = gamePlayerEntry.getValue();
-                DB_EXECUTOR.execute(gamePlayer);
+                DB_EXECUTOR.execute(new SaveTask(gamePlayer.getPlayerEntity().getWxUnionid()));
             }
         }, 3, 3, TimeUnit.MINUTES);
+    }
+
+    public GamePlayer getGamePlayer(String wxUnionId) {
+        return players.get(wxUnionId);
     }
 }
 

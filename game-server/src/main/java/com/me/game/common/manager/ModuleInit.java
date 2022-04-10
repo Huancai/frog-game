@@ -1,10 +1,12 @@
 package com.me.game.common.manager;
 
+import cn.hutool.core.convert.Convert;
+import cn.hutool.core.lang.ConsoleTable;
 import cn.hutool.core.util.ClassUtil;
 import cn.hutool.core.util.StrUtil;
 import com.google.common.collect.Lists;
-import com.me.game.middleware.component.MeModule;
-import com.me.game.middleware.component.ModuleType;
+import com.me.game.middleware.module.MeModule;
+import com.me.game.middleware.module.ModuleType;
 import com.me.game.middleware.module.AbstractModule;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.DisposableBean;
@@ -41,8 +43,12 @@ public class ModuleInit implements InitializingBean, DisposableBean {
         for (Class<?> aClass : classSet) {
             list.add((Class<? extends AbstractModule>) aClass);
         }
+        ConsoleTable table = ConsoleTable.create().addHeader("Module", "Class", "Cost(ms)");
         list.sort(Comparator.comparingInt(c -> c.getAnnotation(MeModule.class).order()));
         for (Class<? extends AbstractModule> moduleClass : list) {
+
+            long cur = System.currentTimeMillis();
+
             AbstractModule abstractModule = moduleClass.newInstance();
             abstractModule.start();
             ModuleType type = moduleClass.getAnnotation(MeModule.class).type();
@@ -53,7 +59,12 @@ public class ModuleInit implements InitializingBean, DisposableBean {
                 throw new RuntimeException(StrUtil.format("duplicate module type:{}", type));
             }
             orderModules.add(abstractModule);
+
+            long now = System.currentTimeMillis();
+            table.addBody(type.name(), moduleClass.getName(), Convert.toStr(now - cur));
         }
+
+        log.info("Module Info:\n{}", table.toString());
     }
 
     @Override
