@@ -10,9 +10,7 @@
     </parent>
 
     <artifactId>frog-transport-netty</artifactId>
-    <version>${revision}</version>
     <packaging>jar</packaging>
-
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->

@@ -6,7 +6,7 @@
 
     <groupId>com.me.game</groupId>
     <artifactId>frog</artifactId>
-    <version>${revision}</version>
+    <version>${frog.version}</version>
     <packaging>pom</packaging>
 
     <developers>
@@ -19,7 +19,7 @@
     </developers>
 
     <properties>
-        <revision>1.0.01</revision>
+        <frog.version>1.0.01</frog.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>1.8</java.version>
@@ -34,44 +34,44 @@
             <dependency>
                 <groupId>com.me.game</groupId>
                 <artifactId>frog-common</artifactId>
-                <version>${revision}</version>
+                <version>${frog.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.me.game</groupId>
                 <artifactId>frog-transports-netty-spring-boot-starter</artifactId>
-                <version>${revision}</version>
+                <version>${frog.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.me.game</groupId>
                 <artifactId>frog-transports-api</artifactId>
-                <version>${revision}</version>
+                <version>${frog.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.me.game</groupId>
                 <artifactId>frog-transport-netty</artifactId>
-                <version>${revision}</version>
+                <version>${frog.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.me.game</groupId>
                 <artifactId>frog-transports-netty-spring-boot-starter</artifactId>
-                <version>${revision}</version>
+                <version>${frog.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.me.game</groupId>
                 <artifactId>frog-metadata-protobuf</artifactId>
-                <version>${revision}</version>
+                <version>${frog.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.me.game</groupId>
                 <artifactId>frog-metadata-database</artifactId>
-                <version>${revision}</version>
+                <version>${frog.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.me.game</groupId>
                 <artifactId>frog-metadata-redis</artifactId>
-                <version>${revision}</version>
+                <version>${frog.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -101,4 +101,43 @@
         <module>game-server</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>

@@ -5,12 +5,10 @@
     <parent>
         <artifactId>frog</artifactId>
         <groupId>com.me.game</groupId>
-        <version>${revision}</version>
+        <version>1.0.01</version>
     </parent>
 
     <artifactId>frog-common</artifactId>
-    <version>${revision}</version>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.lmax/disruptor -->
         <dependency>
@@ -49,34 +47,5 @@
         </dependency>
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.0.2</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>jar-no-fork</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

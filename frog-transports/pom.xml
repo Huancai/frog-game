@@ -9,12 +9,12 @@
     <parent>
         <artifactId>frog</artifactId>
         <groupId>com.me.game</groupId>
-        <version>${revision}</version>
+        <version>1.0.01</version>
     </parent>
+
     <modules>
         <module>frog-transports-api</module>
         <module>frog-transport-netty</module>
     </modules>
-
 
 </project>
