@@ -83,7 +83,7 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
 
     /**
      * 按注册数，这里要特别注意，需要在使用端管理好注册取消注册，
-     * 否则会导致分配不均匀
+     * 否则会导致分配不均匀，使用端合理使用，则个模式是work分配最均匀的
      */
     private static final class BalanceEventLoopChooser implements EventLoopChooser {
         private final Worker[] executors;

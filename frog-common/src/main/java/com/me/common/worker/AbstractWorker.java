@@ -86,17 +86,11 @@ public abstract class AbstractWorker implements Worker {
     /**
      * @param task
      */
-    static void executeTask(final Runnable task) {
-
-        long c = System.currentTimeMillis();
+    static void safeExecute(final Runnable task) {
         try {
             task.run();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if (System.currentTimeMillis() - c > 200) {
-            //log
-        }
     }
-
 }

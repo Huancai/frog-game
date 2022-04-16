@@ -4,19 +4,21 @@ import com.me.common.worker.Worker;
 import com.me.common.worker.WorkerGroup.SelectStrategy;
 
 /**
+ * 选择策略工厂
+ *
  * @author wu_hc 【whuancai@163.com】
  */
 public interface ChooserStrategyFactory {
 
     /**
-     * @param executors
+     * @param executors 工作线程数组
      * @return
      */
     EventLoopChooser newChooser(Worker[] executors);
 
     /**
-     * @param executors
-     * @param strategy
+     * @param executors 工作线程数组
+     * @param strategy  策略
      * @return
      */
     EventLoopChooser newChooser(Worker[] executors, SelectStrategy strategy);
