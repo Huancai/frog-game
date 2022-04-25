@@ -16,7 +16,7 @@ public abstract class AbstractSession implements Session {
     private AtomicLong sendAdder = new AtomicLong();
 
     @Override
-    public long getSessionId() {
+    public long getId() {
         return sessionId;
     }
 
@@ -41,11 +41,11 @@ public abstract class AbstractSession implements Session {
         return createTime;
     }
 
-    public long increWrite(long size) {
+    public long increaseWrite(long size) {
         return writeAdder.addAndGet(size);
     }
 
-    public long increSend(long size) {
+    public long increaseSend(long size) {
         return sendAdder.addAndGet(size);
     }
 

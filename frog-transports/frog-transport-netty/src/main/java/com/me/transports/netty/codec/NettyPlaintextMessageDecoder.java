@@ -33,8 +33,7 @@ final class NettyPlaintextMessageDecoder extends ByteToMessageDecoder {
             body = new byte[length];
             in.readBytes(body);
         }
-        Message message = Message.create(cmd);
-        message.setBody(body);
+        Message message = Message.create(cmd, body);
         out.add(message);
     }
 }

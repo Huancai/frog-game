@@ -59,7 +59,7 @@ public abstract class AbstractNettySession extends AbstractSession {
     }
 
     @Override
-    public void shutdownGracefully() {
+    public void close() {
         if (isActive()) {
             channel.close();
         }

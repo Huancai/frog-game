@@ -35,11 +35,11 @@ public class SessionManager {
     }
 
     public void sessionCreated(Session session) {
-        allSession.put(session.getSessionId(), session);
+        allSession.put(session.getId(), session);
     }
 
     public void sessionFree(Session session) {
-        Session remove = allSession.remove(session.getSessionId());
+        Session remove = allSession.remove(session.getId());
         if (Objects.nonNull(remove)) {
 
         }

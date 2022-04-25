@@ -20,7 +20,7 @@ public interface Session {
     /**
      * 关闭连接
      */
-    void shutdownGracefully();
+    void close();
 
 
     /**
@@ -28,7 +28,7 @@ public interface Session {
      *
      * @return
      */
-    long getSessionId();
+    long getId();
 
     /**
      * 创建时间
@@ -49,11 +49,4 @@ public interface Session {
     long sendBytes();
 
     long writeBytes();
-    enum SessionException {
-        FREQUENT, // 访问过于频繁
-        SEND_ERR, // 发送失败
-        CHANNEL_NIL,
-        ;
-    }
-
 }

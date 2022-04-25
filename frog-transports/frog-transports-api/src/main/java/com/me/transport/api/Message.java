@@ -3,6 +3,7 @@ package com.me.transport.api;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * 消息载体
@@ -71,8 +72,13 @@ public final class Message {
     public byte[] toByteArray() {
         ByteBuffer buffer = bytedBuffer.get();
         try {
-            buffer.putInt(command);
-            buffer.put(body);
+            buffer.putShort(command);
+            if (Objects.nonNull(body)) {
+                buffer.putShort((short) body.length);
+                buffer.put(body);
+            } else {
+                buffer.putShort((short) 0);
+            }
             buffer.flip();
             return buffer.array();
         } finally {
