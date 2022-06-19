@@ -15,6 +15,6 @@ public final class GetBagItemListCMD extends AbstractCMD<GeneratedMessage> {
     @Override
     protected void execute(GamePlayer player, GeneratedMessage message) {
 
-        BagComponent component = player.getComponent(ComponentType.BAG);
+        BagComponent component = player.getComponent(BagComponent.class);
     }
 }

@@ -12,12 +12,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface MeComponent {
 
-    /**
-     * 类型
-     *
-     * @return
-     */
-    ComponentType type();
+
+    Class<? extends AbstractComponent>[] dependent() default {};
 
     /**
      * 描述
@@ -32,4 +28,5 @@ public @interface MeComponent {
      * @return
      */
     int order() default Integer.MAX_VALUE - 1;
+
 }

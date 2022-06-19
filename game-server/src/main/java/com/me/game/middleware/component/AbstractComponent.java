@@ -14,6 +14,11 @@ public abstract class AbstractComponent {
     protected GameUnit owner;
 
 
+    /**
+     * 序号
+     */
+    private int order;
+
     public AbstractComponent(GameUnit owner) {
         this.owner = owner;
     }
@@ -44,5 +49,13 @@ public abstract class AbstractComponent {
      */
     public final <T extends GameUnit> T getOwner() {
         return (T) owner;
+    }
+
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
     }
 }

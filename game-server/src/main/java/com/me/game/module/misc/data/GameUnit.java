@@ -2,7 +2,6 @@ package com.me.game.module.misc.data;
 
 import com.me.common.event.EventSource;
 import com.me.game.middleware.component.AbstractComponent;
-import com.me.game.middleware.component.ComponentType;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -14,31 +13,18 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class GameUnit extends EventSource {
 
-    private final Map<ComponentType, AbstractComponent> components = new ConcurrentHashMap<>();
-    private final Map<Class<?>, AbstractComponent> componentsC = new ConcurrentHashMap<>();
+    private final Map<Class<?>, AbstractComponent> components = new ConcurrentHashMap<>();
 
     protected void initComponent() {
 
     }
 
-    /**
-     * 拿到组件
-     *
-     * @param componentType
-     * @param <T>
-     * @return
-     */
-    public <T extends AbstractComponent> T getComponent(ComponentType componentType) {
-        return (T) components.get(componentType);
-    }
-
     public <T extends AbstractComponent> T getComponent(Class<T> clazz) {
-        return clazz.cast(componentsC.get(clazz));
+        return clazz.cast(components.get(clazz));
     }
 
-    public void addComponent(ComponentType componentType, AbstractComponent component) {
-        components.put(componentType, component);
-        componentsC.put(component.getClass(), component);
+    public void addComponent(Class<?> clazz, AbstractComponent component) {
+        components.put(clazz, component);
     }
 
     public Collection<AbstractComponent> getAllComponents() {

@@ -4,7 +4,6 @@ import com.me.common.net.Cmd;
 import com.me.common.net.InCmd;
 import com.me.common.net.OutCmd;
 import com.me.game.common.cmd.AbstractCMD;
-import com.me.game.middleware.component.ComponentType;
 import com.me.game.module.misc.data.GamePlayer;
 import com.me.game.module.test.TestComponent;
 import com.me.game.module.test.data.TestData;
@@ -18,7 +17,7 @@ public class TestCMD extends AbstractCMD<TestMsgProto.TestReqProto> {
     @Override
     protected void execute(GamePlayer player, TestMsgProto.TestReqProto message) {
 
-        TestComponent testComponent = player.getComponent(ComponentType.TEST);
+        TestComponent testComponent = player.getComponent(TestComponent.class);
         TestData testData = testComponent.doTest();
 
         TestMsgProto.TestRspProto.Builder builder = TestMsgProto.TestRspProto.newBuilder();
@@ -29,8 +28,4 @@ public class TestCMD extends AbstractCMD<TestMsgProto.TestReqProto> {
         player.send(OutCmd.TEST, builder);
     }
 
-    @Cmd(code = 45, desc = "")
-    public void test() {
-
-    }
 }

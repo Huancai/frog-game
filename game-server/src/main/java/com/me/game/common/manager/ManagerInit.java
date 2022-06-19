@@ -44,7 +44,7 @@ public class ManagerInit implements InitializingBean {
         for (Class<? extends AbstractComponent> componentClass : list) {
             componentClasses.add(componentClass);
             log.info("ManagerInit > {}", componentClass);
-            table.addBody(componentClass.getAnnotation(MeComponent.class).type().toString(), componentClass.getName());
+            table.addBody(componentClass.getSimpleName(), componentClass.getName());
         }
         log.info("Component Info:\n{}", table.toString());
     }

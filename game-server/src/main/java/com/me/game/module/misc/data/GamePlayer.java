@@ -89,12 +89,13 @@ public class GamePlayer extends GameUnit implements IEventListener {
         for (Class<? extends AbstractComponent> componentClass : componentClasses) {
             try {
                 MeComponent meComponent = componentClass.getAnnotation(MeComponent.class);
-                stopWatch.start(String.format("component:%s", meComponent.type()));
+                stopWatch.start(String.format("component:%s", componentClass.getSimpleName()));
                 Constructor<? extends AbstractComponent> constructor = componentClass.getConstructor(GameUnit.class);
                 AbstractComponent component = constructor.newInstance(this);
+                component.setOrder(meComponent.order());
                 component.prepareData();
                 component.afterPrepareData();
-                addComponent(meComponent.type(), component);
+                addComponent(componentClass, component);
                 stopWatch.stop();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -153,7 +154,7 @@ public class GamePlayer extends GameUnit implements IEventListener {
             long now = System.currentTimeMillis();
             consoleTable.addBody(
                     Convert.toStr(index++),
-                    Convert.toStr(component.getClass().getAnnotation(MeComponent.class).type()),
+                    Convert.toStr(component.getClass().getSimpleName()),
                     Convert.toStr(now - cur)
             );
         }
