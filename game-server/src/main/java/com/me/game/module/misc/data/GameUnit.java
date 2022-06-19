@@ -15,6 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class GameUnit extends EventSource {
 
     private final Map<ComponentType, AbstractComponent> components = new ConcurrentHashMap<>();
+    private final Map<Class<?>, AbstractComponent> componentsC = new ConcurrentHashMap<>();
 
     protected void initComponent() {
 
@@ -31,11 +32,17 @@ public class GameUnit extends EventSource {
         return (T) components.get(componentType);
     }
 
+    public <T extends AbstractComponent> T getComponent(Class<T> clazz) {
+        return clazz.cast(componentsC.get(clazz));
+    }
+
     public void addComponent(ComponentType componentType, AbstractComponent component) {
         components.put(componentType, component);
+        componentsC.put(component.getClass(), component);
     }
 
     public Collection<AbstractComponent> getAllComponents() {
         return Collections.unmodifiableCollection(components.values());
     }
+
 }
