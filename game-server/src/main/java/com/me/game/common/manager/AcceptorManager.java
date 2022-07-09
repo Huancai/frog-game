@@ -49,11 +49,11 @@ public class AcceptorManager implements InitializingBean, DisposableBean, IOEven
             return;
         }
 
-        if (ioEvent.event() == IOEvent.Event.REGISTERED) { //注册事件
+        if (ioEvent.event() == IOEvent.Event.ACTIVE) { //注册事件
             return;
         }
 
-        if (ioEvent.event() == IOEvent.Event.UNREGISTERED) { //失效事件
+        if (ioEvent.event() == IOEvent.Event.INACTIVE) { //失效事件
             return;
         }
     }

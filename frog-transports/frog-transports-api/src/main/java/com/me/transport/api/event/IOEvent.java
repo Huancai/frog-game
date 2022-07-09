@@ -26,6 +26,6 @@ public interface IOEvent {
     Object attachment();
 
     enum Event {
-        READ, REGISTERED, UNREGISTERED, EXCEPTION;
+        READ, ACTIVE, INACTIVE, EXCEPTION;
     }
 }

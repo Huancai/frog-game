@@ -32,12 +32,12 @@ public final class NettyAcceptorHandler extends SimpleChannelInboundHandler<Mess
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
         NettyC2SSession session = new NettyC2SSession(ctx.channel());
         ctx.channel().attr(key).set(session);
-        listener.onEvent(new IOCustomEvent(IOEvent.Event.REGISTERED, session));
+        listener.onEvent(new IOCustomEvent(IOEvent.Event.ACTIVE, session));
     }
 
     @Override
     public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-        listener.onEvent(new IOCustomEvent(IOEvent.Event.UNREGISTERED, getSession(ctx)));
+        listener.onEvent(new IOCustomEvent(IOEvent.Event.INACTIVE, getSession(ctx)));
     }
 
     @Override
