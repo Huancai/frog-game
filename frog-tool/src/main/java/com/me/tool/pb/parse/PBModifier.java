@@ -1,4 +1,4 @@
-package com.me.tool.pb;
+package com.me.tool.pb.parse;
 
 /**
  * @author wu_hc 【whuancai@163.com】
