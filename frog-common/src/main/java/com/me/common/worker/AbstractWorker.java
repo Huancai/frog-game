@@ -1,14 +1,15 @@
 package com.me.common.worker;
 
+import com.me.common.worker.api.Worker;
+
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 
 /**
- * 工作队列抽象 ，对应一个线程
- *
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 public abstract class AbstractWorker implements Worker {
 
@@ -86,9 +87,10 @@ public abstract class AbstractWorker implements Worker {
     /**
      * @param task
      */
-    static void safeExecute(final Runnable task) {
+    final void safeExecute(final Runnable task) {
         try {
             task.run();
+            completeTaskCount.incrementAndGet();
         } catch (Exception e) {
             e.printStackTrace();
         }

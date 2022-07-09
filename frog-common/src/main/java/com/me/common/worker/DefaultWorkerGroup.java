@@ -1,10 +1,13 @@
 package com.me.common.worker;
 
+import com.me.common.worker.api.Worker;
+import com.me.common.worker.api.WorkerGroup;
 import com.me.common.worker.select.ChooserStrategyFactory;
 import com.me.common.worker.select.DefaultChooserStrategyFactory;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 public class DefaultWorkerGroup implements WorkerGroup {
 
@@ -72,6 +75,11 @@ public class DefaultWorkerGroup implements WorkerGroup {
     @Override
     public Worker next() {
         return chooser.next();
+    }
+
+    @Override
+    public Worker next(int hash) {
+        return chooser.next(hash);
     }
 
     @Override

@@ -10,7 +10,8 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 @Slf4j
 public final class SelfDriverQueue implements Runnable, Executor {

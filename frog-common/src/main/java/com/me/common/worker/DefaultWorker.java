@@ -1,6 +1,7 @@
 package com.me.common.worker;
 
 import cn.hutool.core.util.StrUtil;
+import com.me.common.worker.api.Worker;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Queue;
@@ -9,7 +10,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 @Slf4j
 public final class DefaultWorker extends AbstractWorker implements Worker {
@@ -66,8 +68,9 @@ public final class DefaultWorker extends AbstractWorker implements Worker {
     @Override
     public void runInLoop(Runnable task) {
         boolean result = taskQueue.offer(task);
-        submitTaskCount.incrementAndGet();
-        if (!result) {
+        if (result) {
+            submitTaskCount.incrementAndGet();
+        } else {
             log.error("##### thread[{}]--- NOR task Queue full!! ---#####", Thread.currentThread().getName());
         }
     }
@@ -75,8 +78,9 @@ public final class DefaultWorker extends AbstractWorker implements Worker {
     @Override
     public void runInPriLoop(Runnable task) {
         boolean result = priorityQueue.offer(task);
-        submitTaskCount.incrementAndGet();
-        if (!result) {
+        if (result) {
+            submitTaskCount.incrementAndGet();
+        } else {
             log.error("##### thread[{}]--- PRI task Queue error!! ----#####", Thread.currentThread().getName());
         }
     }
@@ -110,12 +114,10 @@ public final class DefaultWorker extends AbstractWorker implements Worker {
             Runnable task;
             while ((task = priorityQueue.poll()) != null) {
                 safeExecute(task);
-                completeTaskCount.incrementAndGet();
             }
             task = taskQueue.take();
             if (null != task) {
                 safeExecute(task);
-                completeTaskCount.incrementAndGet();
             }
         }
     }

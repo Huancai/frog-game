@@ -1,13 +1,14 @@
 package com.me.common.worker.select;
 
-import com.me.common.worker.Worker;
-import com.me.common.worker.WorkerGroup.SelectStrategy;
+import com.me.common.worker.api.Worker;
+import com.me.common.worker.api.WorkerGroup.SelectStrategy;
 
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 public final class DefaultChooserStrategyFactory implements ChooserStrategyFactory {
 
@@ -62,6 +63,11 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
         public Worker next() {
             return executors[idx.getAndIncrement() & executors.length - 1];
         }
+
+        @Override
+        public Worker next(int hash) {
+            return executors[hash % executors.length];
+        }
     }
 
     /**
@@ -78,6 +84,11 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
         @Override
         public Worker next() {
             return executors[Math.abs(idx.getAndIncrement() % executors.length)];
+        }
+
+        @Override
+        public Worker next(int hash) {
+            return executors[hash % executors.length];
         }
     }
 
@@ -103,6 +114,10 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
             return excutor;
         }
 
+        @Override
+        public Worker next(int hash) {
+            return executors[hash % executors.length];
+        }
     }
 
     /**
@@ -118,6 +133,11 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
         @Override
         public Worker next() {
             return executors[ThreadLocalRandom.current().nextInt(executors.length)];
+        }
+
+        @Override
+        public Worker next(int hash) {
+            return executors[hash % executors.length];
         }
     }
 }

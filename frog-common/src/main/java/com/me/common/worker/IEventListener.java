@@ -1,7 +1,8 @@
 package com.me.common.worker;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 public interface IEventListener {
     /**

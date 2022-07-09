@@ -1,12 +1,11 @@
 package com.me.common.worker.select;
 
-import com.me.common.worker.Worker;
-import com.me.common.worker.WorkerGroup.SelectStrategy;
+import com.me.common.worker.api.Worker;
+import com.me.common.worker.api.WorkerGroup.SelectStrategy;
 
 /**
- * 选择策略工厂
- *
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 public interface ChooserStrategyFactory {
 
@@ -29,5 +28,9 @@ public interface ChooserStrategyFactory {
     interface EventLoopChooser {
 
         Worker next();
+
+        default Worker next(int hash) {
+            return next();
+        }
     }
 }

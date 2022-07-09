@@ -64,4 +64,18 @@ public class ProtobufFieldDesc {
     public String toString() {
         return StrUtil.format("{} {} {} = {};", modifier, type, fieldName, seqId);
     }
+
+    enum Modifier {
+        OPTIONAL, REQUIRED, REPEATED;
+
+        public static Modifier of(String def) {
+            for (Modifier value : Modifier.values()) {
+                if(value.toString().equalsIgnoreCase(def)){
+                    return value;
+                }
+            }
+
+            return null;
+        }
+    }
 }

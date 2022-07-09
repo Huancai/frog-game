@@ -1,7 +1,11 @@
-package com.me.common.worker;
+package com.me.common.worker.api;
+
+
+import com.me.common.worker.IEventListener;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 public interface Worker {
 

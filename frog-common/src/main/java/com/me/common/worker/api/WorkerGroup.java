@@ -1,9 +1,10 @@
-package com.me.common.worker;
+package com.me.common.worker.api;
 
 /**
  * 处理线程组
  *
- * @author wu_hc 【whuancai@163.com】
+ * @author wuhuancai
+ * @mail whuancai@163.com
  */
 public interface WorkerGroup {
 
@@ -13,6 +14,12 @@ public interface WorkerGroup {
      * @return
      */
     Worker next();
+
+    /**
+     * @param hash
+     * @return
+     */
+    Worker next(int hash);
 
     /**
      * 返回分配策略
