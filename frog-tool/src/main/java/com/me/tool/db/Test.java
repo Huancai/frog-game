@@ -1,4 +1,4 @@
-package com.me.metadata.db;
+package com.me.tool.db;
 
 /**
  * @author wu_hc

@@ -1,4 +1,4 @@
-package com.me.metadata.db.model;
+package com.me.tool.db.model;
 
 import lombok.Data;
 

@@ -1,7 +1,8 @@
-package com.me.metadata.db;
+package com.me.tool.db;
 
-import com.me.metadata.db.model.Filed;
-import com.me.metadata.db.model.Table;
+import cn.hutool.core.util.StrUtil;
+import com.me.tool.db.model.Filed;
+import com.me.tool.db.model.Table;
 import freemarker.template.Template;
 
 import java.io.*;
@@ -138,6 +139,10 @@ public class GenerateUtils {
 
     public static void main(String[] args) throws Exception {
 
+        //E:\workspace\me-game\frog-metadata\frog-metadata-database\src\main\java\com\me\metadata\db\entity\PlayerEntity.java
+
+        String getenv = System.getProperty("user.dir");
+        System.out.println(getenv);
         Set<String> tables = new HashSet<>();
         for (String tableName : tableNames) {
             tables.add(tableName);
@@ -145,9 +150,9 @@ public class GenerateUtils {
         for (String tn : tables) {
             Table table = getTables(tn);
 
+            String fileName = StrUtil.format("{}/frog-metadata/frog-metadata-database/src/main/java/com/me/metadata/db/entity/{}.java",getenv,table.getClassName());
             Template template = FreeMarkerTemplateUtils.getTemplate("entity.ftl");
-            File file = new File(String.format("src/main/java/com/me/metadata/db/entity/%s.java", table.getClassName()
-            ));
+            File file = new File(fileName);
             FileOutputStream fos = new FileOutputStream(file);
             Writer out = new BufferedWriter(new OutputStreamWriter(fos, "utf-8"), 10240);
             template.process(table, out);

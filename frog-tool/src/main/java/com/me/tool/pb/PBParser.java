@@ -27,7 +27,7 @@ public final class PBParser {
         LinkedList<ProtobufMsgDesc> msgDescList = new LinkedList<>();
 
         StrBuilder strBuilder = new StrBuilder();
-        List<String> strings = FileUtil.readLines("test.proto", Charset.defaultCharset());
+        List<String> strings = FileUtil.readLines("proto/test.proto", Charset.defaultCharset());
         for (String string : strings) {
             String str = string.trim();
             if (StrUtil.isBlank(str)) {

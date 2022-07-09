@@ -80,17 +80,17 @@ public class PlayerEntity extends BaseEntity {
     private String customizeToken;
 
     /**
-     *
+     * 
      */
     private String registerIp;
 
     /**
-     *
+     * 
      */
     private String userName;
 
     /**
-     *
+     * 
      */
     private String passWord;
 
@@ -348,7 +348,7 @@ public class PlayerEntity extends BaseEntity {
     }
 
     /**
-     *
+     * 
      */
     public void setRegisterIp(String registerIp) {
         if (Objects.equals(this.registerIp, registerIp)) {
@@ -359,14 +359,14 @@ public class PlayerEntity extends BaseEntity {
     }
 
     /**
-     *
+     * 
      */
     public String getRegisterIp() {
         return this.registerIp;
     }
 
     /**
-     *
+     * 
      */
     public void setUserName(String userName) {
         if (Objects.equals(this.userName, userName)) {
@@ -377,14 +377,14 @@ public class PlayerEntity extends BaseEntity {
     }
 
     /**
-     *
+     * 
      */
     public String getUserName() {
         return this.userName;
     }
 
     /**
-     *
+     * 
      */
     public void setPassWord(String passWord) {
         if (Objects.equals(this.passWord, passWord)) {
@@ -395,7 +395,7 @@ public class PlayerEntity extends BaseEntity {
     }
 
     /**
-     *
+     * 
      */
     public String getPassWord() {
         return this.passWord;
