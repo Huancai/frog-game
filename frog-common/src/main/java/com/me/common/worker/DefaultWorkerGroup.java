@@ -24,7 +24,7 @@ public class DefaultWorkerGroup implements WorkerGroup {
     /**
      * 选择器
      */
-    private final ChooserStrategyFactory.EventLoopChooser chooser;
+    private final ChooserStrategyFactory.WorkerChooser chooser;
 
     /**
      * @param prefix

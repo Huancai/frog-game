@@ -10,22 +10,22 @@ import com.me.common.worker.api.WorkerGroup.SelectStrategy;
 public interface ChooserStrategyFactory {
 
     /**
-     * @param executors 工作线程数组
+     * @param workers 工作线程数组
      * @return
      */
-    EventLoopChooser newChooser(Worker[] executors);
+    WorkerChooser newChooser(Worker[] workers);
 
     /**
-     * @param executors 工作线程数组
+     * @param workers 工作线程数组
      * @param strategy  策略
      * @return
      */
-    EventLoopChooser newChooser(Worker[] executors, SelectStrategy strategy);
+    WorkerChooser newChooser(Worker[] workers, SelectStrategy strategy);
 
     /**
      * 选择策略器
      */
-    interface EventLoopChooser {
+    interface WorkerChooser {
 
         Worker next();
 

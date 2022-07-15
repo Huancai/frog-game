@@ -25,22 +25,22 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
     }
 
     @Override
-    public EventLoopChooser newChooser(Worker[] executors) {
-        return newChooser(executors, SelectStrategy.ROUND);
+    public WorkerChooser newChooser(Worker[] workers) {
+        return newChooser(workers, SelectStrategy.ROUND);
     }
 
     @Override
-    public EventLoopChooser newChooser(Worker[] executors, SelectStrategy strategy) {
+    public WorkerChooser newChooser(Worker[] workers, SelectStrategy strategy) {
         if (SelectStrategy.ROUND == strategy) {
-            if (isPowerOfTwo(executors.length)) {
-                return new PowerOfTowEventLoopChooser(executors);
+            if (isPowerOfTwo(workers.length)) {
+                return new PowerOfTowWorkerChooser(workers);
             } else {
-                return new GenericEventLoopChooser(executors);
+                return new GenericWorkerChooser(workers);
             }
         } else if (SelectStrategy.BALANCE == strategy) {
-            return new BalanceEventLoopChooser(executors);
+            return new BalanceWorkerChooser(workers);
         } else {
-            return new RandomEventLoopChooser(executors);
+            return new RandomWorkerChooser(workers);
         }
     }
 
@@ -51,33 +51,33 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
     /**
      * 二次方
      */
-    private static final class PowerOfTowEventLoopChooser implements EventLoopChooser {
+    private static final class PowerOfTowWorkerChooser implements WorkerChooser {
         private final AtomicInteger idx = new AtomicInteger();
-        private final Worker[] executors;
+        private final Worker[] workers;
 
-        PowerOfTowEventLoopChooser(Worker[] executors) {
-            this.executors = executors;
+        PowerOfTowWorkerChooser(Worker[] workers) {
+            this.workers = workers;
         }
 
         @Override
         public Worker next() {
-            return executors[idx.getAndIncrement() & executors.length - 1];
+            return workers[idx.getAndIncrement() & workers.length - 1];
         }
 
         @Override
         public Worker next(int hash) {
-            return executors[hash % executors.length];
+            return workers[hash % workers.length];
         }
     }
 
     /**
      * 顺序
      */
-    private static final class GenericEventLoopChooser implements EventLoopChooser {
+    private static final class GenericWorkerChooser implements WorkerChooser {
         private final AtomicInteger idx = new AtomicInteger();
         private final Worker[] executors;
 
-        GenericEventLoopChooser(Worker[] executors) {
+        GenericWorkerChooser(Worker[] executors) {
             this.executors = executors;
         }
 
@@ -96,10 +96,10 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
      * 按注册数，这里要特别注意，需要在使用端管理好注册取消注册，
      * 否则会导致分配不均匀，使用端合理使用，则个模式是work分配最均匀的
      */
-    private static final class BalanceEventLoopChooser implements EventLoopChooser {
+    private static final class BalanceWorkerChooser implements WorkerChooser {
         private final Worker[] executors;
 
-        BalanceEventLoopChooser(Worker[] executors) {
+        BalanceWorkerChooser(Worker[] executors) {
             this.executors = executors;
         }
 
@@ -120,13 +120,14 @@ public final class DefaultChooserStrategyFactory implements ChooserStrategyFacto
         }
     }
 
+
     /**
      * 随机
      */
-    private static final class RandomEventLoopChooser implements EventLoopChooser {
+    private static final class RandomWorkerChooser implements WorkerChooser {
         private final Worker[] executors;
 
-        RandomEventLoopChooser(Worker[] executors) {
+        RandomWorkerChooser(Worker[] executors) {
             this.executors = executors;
         }
 
