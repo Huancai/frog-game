@@ -2,7 +2,6 @@ package com.me.tool.pb;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.system.SystemUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,18 +14,20 @@ import java.util.List;
 public class PbBuilder {
 
     public static void main(String[] args) {
-        List<File> protoFiles = get_all_proto_files("proto");
-        if (protoFiles.isEmpty()) {
-            return;
-        }
-        String userDir = System.getProperty("user.dir");
-        String outPath = StrUtil.format("{}/frog-metadata/frog-metadata-protobuf/src/main/java", userDir);
 
+
+        String userDir = System.getProperty("user.dir");
+        String protobufProjPath = StrUtil.format("{}/frog-metadata/frog-metadata-protobuf", userDir);
+        String protoPath = StrUtil.format("{}/proto", protobufProjPath);
+        String protoCmdPath = StrUtil.format("{}/protoc-2.5.0-win32/protoc.exe", protobufProjPath);
+        String protoOutPath = StrUtil.format("{}/src/main/java", protobufProjPath);
+
+        List<File> protoFiles = get_all_proto_files(protoPath);
         for (File protoFile : protoFiles) {
-            String cmd = StrUtil.format("{}/protoc -I={} --java_out={} {}", FileUtil.getAbsolutePath("proto"),FileUtil.getAbsolutePath("proto"), outPath, protoFile.getAbsolutePath());
+            String cmd = StrUtil.format("{} -I={} --java_out={} {}", protoCmdPath, protoPath, protoOutPath, protoFile.getAbsolutePath());
             System.out.println(cmd);
             try {
-                Process exec = Runtime.getRuntime().exec(cmd);
+                Runtime.getRuntime().exec(cmd);
             } catch (IOException e) {
                 e.printStackTrace();
             }
