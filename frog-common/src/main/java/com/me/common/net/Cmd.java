@@ -21,6 +21,13 @@ public @interface Cmd {
     short code();
 
     /**
+     * 是否异步，这里异步就不会在玩家工作线程执行，适用于查询操作，不适用增删改操作
+     *
+     * @return
+     */
+    boolean async() default false;
+
+    /**
      * @return
      */
     String desc() default "";
