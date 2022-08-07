@@ -5,28 +5,29 @@ import java.util.Map;
 
 public class Filed {
 
-    static final Map<String, String> map = new HashMap<>();
+    static final Map<String, String> map = new HashMap<String, String>() {
+        {
+            map.put("tinyint", "boolean");
+            map.put("bool", "boolean");
+            map.put("tinyint", "int");
+            map.put("smallint", "int");
 
-    static {
-        map.put("tinyint", "boolean");
-        map.put("bool", "boolean");
-        map.put("tinyint", "int");
-        map.put("smallint", "int");
+            map.put("bigint", "long");
+            map.put("int", "int");
+            map.put("varchar", "String");
+            map.put("text", "String");
+            map.put("char", "String");
+            map.put("mediumtext", "String");
+            map.put("longtext", "String");
+            map.put("datetime", "java.util.Date");
+            map.put("timestamp", "java.util.Date");
+            map.put("blob", "byte[]");
+            map.put("longblob", "byte[]");
+            map.put("mediumblob", "byte[]");
+            map.put("decimal", "java.math.BigDecimal");
+        }
+    };
 
-        map.put("bigint", "long");
-        map.put("int", "int");
-        map.put("varchar", "String");
-        map.put("text", "String");
-        map.put("char", "String");
-        map.put("mediumtext", "String");
-        map.put("longtext", "String");
-        map.put("datetime", "java.util.Date");
-        map.put("timestamp", "java.util.Date");
-        map.put("blob", "byte[]");
-        map.put("longblob", "byte[]");
-        map.put("mediumblob", "byte[]");
-        map.put("decimal", "java.math.BigDecimal");
-    }
 
     private String name;
     private String comment;
