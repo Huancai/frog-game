@@ -19,6 +19,13 @@ def get_all_proto_files(proto_file_path):
                 L.append(os.path.join(root, file))
     return L
 
+def is_grpc_file(proto_full_path):
+    path = os.path.normpath(proto_full_path)
+    all_folder = path.split(os.sep)
+    for folder in all_folder:
+        if(folder == 'grpc'):
+            return True
+    return False
 
 if __name__ == "__main__":
     #local var
@@ -33,7 +40,12 @@ if __name__ == "__main__":
         print("No proto file modify,If u want to compile all proto file,run: python pb_builder.py all")
     else:
         for f in compile_proto_files:
-            cmd = 'protoc -I=%s --java_out=%s %s' % (proto_file_path,out_path,f);
+            is_grpc = is_grpc_file(f)
+            cmd = None
+            if is_grpc:
+                cmd = 'protoc --plugin=protoc-gen-grpc-java=protoc-gen-grpc-java-1.45.1-windows-x86_64.exe -I=%s --grpc-java_out=%s %s' % (import_patch,out_path,f)
+            else:
+                cmd = 'protoc -I=%s --java_out=%s %s' % (proto_file_path,out_path,f)
             os.system(cmd)
             print(cmd)
         print ("Generate Finish!!!")

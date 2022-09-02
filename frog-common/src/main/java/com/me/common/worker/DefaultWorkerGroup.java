@@ -44,7 +44,7 @@ public class DefaultWorkerGroup implements WorkerGroup {
     }
 
     /**
-     * @param prefix
+     * @param prefix 
      * @param workerCount
      * @param strategy
      * @return

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package grpc;
+
+option java_package = "com.me.metadata.pb.grpc.test";
+option java_outer_classname = "TestGrpcMsgProto";
+
+service TestService{
+  rpc test(TestReqMsg) returns(TestRspMsg){}
+}
+
+//消息体，请求类 ReqMsg
+message TestReqMsg {
+  int32 id = 1;
+}
+
+//消息体，返回类 RspMsg
+message TestRspMsg {
+  int32 id = 1;
+  string userName = 2;
+}
