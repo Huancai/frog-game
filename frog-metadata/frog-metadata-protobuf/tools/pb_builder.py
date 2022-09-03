@@ -32,7 +32,7 @@ if __name__ == "__main__":
     input_args = sys.argv[1:]
     cur_path = os.getcwd()
     out_path = os.path.join(cur_path,'../','src','main','java')
-    proto_file_path = os.path.join(cur_path,'../','com.me.metadata','proto')
+    proto_file_path = os.path.join(cur_path,'../','proto')
 
     compile_proto_files = get_all_proto_files(proto_file_path)
 
@@ -43,7 +43,7 @@ if __name__ == "__main__":
             is_grpc = is_grpc_file(f)
             cmd = None
             if is_grpc:
-                cmd = 'protoc --plugin=protoc-gen-grpc-java=protoc-gen-grpc-java-1.45.1-windows-x86_64.exe -I=%s --grpc-java_out=%s %s' % (import_patch,out_path,f)
+                cmd = 'protoc3 --plugin=protoc-gen-grpc-java=protoc-gen-grpc-java-1.45.1-windows-x86_64.exe -I=%s --grpc-java_out=%s %s' % (proto_file_path,out_path,f)
             else:
                 cmd = 'protoc -I=%s --java_out=%s %s' % (proto_file_path,out_path,f)
             os.system(cmd)
