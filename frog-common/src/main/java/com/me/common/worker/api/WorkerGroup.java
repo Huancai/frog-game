@@ -46,6 +46,6 @@ public interface WorkerGroup {
      * 选择策略
      */
     enum SelectStrategy {
-        ROUND, BALANCE, RANDOM;
+        ROUND, BALANCE, RANDOM, REMAINING
     }
 }

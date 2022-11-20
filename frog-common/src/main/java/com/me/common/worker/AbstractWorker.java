@@ -26,13 +26,15 @@ public abstract class AbstractWorker implements Worker {
     /**
      * 提交的任务数量
      */
-    protected AtomicLong submitTaskCount = new AtomicLong(0);
+    protected final AtomicLong submitTaskCount = new AtomicLong(0);
 
     /**
      * 完成的任务数量
      */
-    protected AtomicLong completeTaskCount = new AtomicLong(0);
+    protected final AtomicLong completeTaskCount = new AtomicLong(0);
 
+
+    protected final AtomicLong totalTimeCount = new AtomicLong(0);
     /**
      * ID
      */
@@ -84,13 +86,26 @@ public abstract class AbstractWorker implements Worker {
         return completeTaskCount.get();
     }
 
+    @Override
+    public long getTotalTime() {
+        return totalTimeCount.get();
+    }
+
+    @Override
+    public long getAvgTime() {
+        return getTotalTime() / completeTaskCount.get();
+    }
+
     /**
      * @param task
      */
     final void safeExecute(final Runnable task) {
         try {
+            long t1 = System.currentTimeMillis();
             task.run();
+            long diff = System.currentTimeMillis() - t1;
             completeTaskCount.incrementAndGet();
+            totalTimeCount.addAndGet(diff);
         } catch (Exception e) {
             e.printStackTrace();
         }

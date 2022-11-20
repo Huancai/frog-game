@@ -64,4 +64,18 @@ public interface Worker {
      * @return
      */
     long getCompletedTaskCount();
+
+    /**
+     * 已经执行的任务总耗时
+     *
+     * @return
+     */
+    long getTotalTime();
+
+    /**
+     * 已经执行的任务平均耗时
+     *
+     * @return
+     */
+    long getAvgTime();
 }
