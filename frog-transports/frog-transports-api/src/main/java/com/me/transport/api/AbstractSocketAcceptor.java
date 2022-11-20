@@ -23,7 +23,6 @@ public abstract class AbstractSocketAcceptor<T extends Session> implements Accep
     protected final List<IOEventListener> ioEventListeners = new LinkedList<IOEventListener>();
 
     /**
-     * @param inetPort
      */
     public AbstractSocketAcceptor(int inetPort) {
         this(inetPort, null);
@@ -55,9 +54,6 @@ public abstract class AbstractSocketAcceptor<T extends Session> implements Accep
         start(true);
     }
 
-    /**
-     * @return
-     */
     @Override
     public final List<IOEventListener> listener() {
         return this.ioEventListeners;

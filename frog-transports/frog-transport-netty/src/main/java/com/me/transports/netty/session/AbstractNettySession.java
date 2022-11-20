@@ -21,7 +21,7 @@ public abstract class AbstractNettySession extends AbstractSession {
     protected final Channel channel;
 
     /**
-     * @param channel
+     * @param channel 会话
      */
     public AbstractNettySession(Channel channel) {
         this.channel = channel;
@@ -32,7 +32,7 @@ public abstract class AbstractNettySession extends AbstractSession {
     /**
      * 发送数据[c:request,s:response]
      *
-     * @param message
+     * @param message 消息
      */
     @Override
     public final void send(final Object message) {

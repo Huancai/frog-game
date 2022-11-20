@@ -78,7 +78,7 @@ public final class SelfDriverQueue implements Runnable, Executor {
 
 
     /**
-     * @param task
+     * @param task 可执行任务单元
      */
     public int addTask(final Runnable task) {
         checkNotNull(task, "task is nil value ");

@@ -8,12 +8,12 @@ public interface Session {
     /**
      * 发送数据
      *
-     * @param message
+     * @param message 消息包
      */
     void send(final Object message);
 
     /**
-     * @return
+     * @return 是否存货
      */
     boolean isActive();
 
@@ -24,23 +24,20 @@ public interface Session {
 
 
     /**
-     * 会话ID
      *
-     * @return
+     * @return 会话ID
      */
     long getId();
 
     /**
-     * 创建时间
      *
-     * @return
+     * @return 会话创建时间
      */
     long getCreateTime();
 
     /**
-     * 上一次交互
      *
-     * @return
+     * @return 上一次交互
      */
     long getLastInteractive();
 

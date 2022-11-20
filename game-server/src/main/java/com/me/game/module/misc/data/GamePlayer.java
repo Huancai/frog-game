@@ -98,7 +98,6 @@ public class GamePlayer extends GameUnit implements IEventListener {
                 addComponent(componentClass, component);
                 stopWatch.stop();
             } catch (Exception e) {
-                e.printStackTrace();
                 log.error("player:{} initComponent error", info(), e);
             }
         }

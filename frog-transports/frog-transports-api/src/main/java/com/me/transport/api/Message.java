@@ -29,25 +29,16 @@ public final class Message {
      */
     private static final ThreadLocal<ByteBuffer> bytedBuffer = ThreadLocal.withInitial(() -> ByteBuffer.allocate(Short.MAX_VALUE));
 
-    /**
-     * @param command
-     */
     private Message(int command) {
         this.command = (short) command;
     }
 
-    /**
-     * @param command
-     * @param body
-     */
+
     private Message(int command, byte[] body) {
         this.command = (short) command;
         this.body = body;
     }
 
-    /**
-     * @return
-     */
     public static Message create(final int command) {
         if (command < Short.MIN_VALUE || command > Short.MAX_VALUE) {
             throw new IllegalArgumentException(String.format("command illegal[%s]", command));
@@ -55,9 +46,7 @@ public final class Message {
         return new Message(command);
     }
 
-    /**
-     * @return
-     */
+
     public static Message create(final int command, byte[] body) {
         if (command < Short.MIN_VALUE || command > Short.MAX_VALUE) {
             throw new IllegalArgumentException(String.format("command illegal[%s]", command));
@@ -66,9 +55,6 @@ public final class Message {
     }
 
 
-    /**
-     * @return
-     */
     public byte[] toByteArray() {
         ByteBuffer buffer = bytedBuffer.get();
         try {
@@ -86,9 +72,7 @@ public final class Message {
         }
     }
 
-    /**
-     * @return
-     */
+
     public short command() {
         return this.command;
     }

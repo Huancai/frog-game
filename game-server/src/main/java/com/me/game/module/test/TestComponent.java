@@ -32,8 +32,8 @@ public class TestComponent extends AbstractComponent {
     public void saveData() {
         final TestMapper testMapper = SpringManager.getBean(TestMapper.class);
         if (Objects.nonNull(testEntity) && testEntity.isUpdate()) {
-            testMapper.update(this.testEntity);
             this.testEntity.clean();
+            testMapper.update(this.testEntity);
         }
     }
 

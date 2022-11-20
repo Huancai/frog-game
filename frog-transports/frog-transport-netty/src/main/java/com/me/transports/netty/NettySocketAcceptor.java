@@ -25,9 +25,6 @@ import java.util.concurrent.ThreadFactory;
 @Slf4j
 public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession> {
 
-    /**
-     * @param inetPort
-     */
     public NettySocketAcceptor(int inetPort) {
         super(inetPort);
     }

@@ -22,7 +22,7 @@
 唯知于心中方寸之地，自得其乐，此生亦足  
 矣。  
 摘自-《知乎》
-
+![2](http://assets.processon.com/chart_image/621c3afd1efad40767350553.png)
 
 
 [comment]: <> (|工程|说明|)
