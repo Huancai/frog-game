@@ -15,7 +15,7 @@
     <modules>
         <module>frog-transports-api</module>
         <module>frog-transport-netty</module>
-        <module>frog-transport-grpc</module>
+<!--        <module>frog-transport-grpc</module>-->
     </modules>
 
 </project>

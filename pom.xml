@@ -100,6 +100,7 @@
         <module>router-server</module>
         <module>game-server</module>
         <module>frog-tool</module>
+        <module>frog-rpc</module>
     </modules>
 
     <build>
