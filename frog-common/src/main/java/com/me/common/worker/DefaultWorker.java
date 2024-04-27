@@ -32,26 +32,15 @@ public final class DefaultWorker extends AbstractWorker implements Worker {
      */
     private EventWorker worker;
 
-    /**
-     * @param prefix
-     */
+
     public DefaultWorker(final String prefix) {
         this(prefix, -1);
     }
 
-    /**
-     * @param prefix
-     * @param index
-     */
     public DefaultWorker(final String prefix, final int index) {
         this(prefix, index, 1 << 14);
     }
 
-    /**
-     * @param prefix
-     * @param index
-     * @param capacity
-     */
     public DefaultWorker(final String prefix, final int index, int capacity) {
         super(ID_GENERATOR.incrementAndGet());
         if (capacity <= 0)

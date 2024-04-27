@@ -26,38 +26,26 @@ public class DefaultWorkerGroup implements WorkerGroup {
      */
     private final ChooserStrategyFactory.WorkerChooser chooser;
 
-    /**
-     * @param prefix
-     * @return
-     */
+
     public static DefaultWorkerGroup newGroup(String prefix) {
         return new DefaultWorkerGroup(prefix, Runtime.getRuntime().availableProcessors(), SelectStrategy.ROUND);
     }
 
-    /**
-     * @param prefix
-     * @param workerCount
-     * @return
-     */
+
     public static DefaultWorkerGroup newGroup(String prefix, int workerCount) {
         return new DefaultWorkerGroup(prefix, workerCount, SelectStrategy.ROUND);
     }
 
     /**
-     * @param prefix 
-     * @param workerCount
-     * @param strategy
-     * @return
+     * @param prefix      前缀
+     * @param workerCount 工作线程数量
+     * @param strategy    线程分配策略
      */
     public static DefaultWorkerGroup newGroup(String prefix, int workerCount, SelectStrategy strategy) {
         return new DefaultWorkerGroup(prefix, workerCount, strategy);
     }
 
-    /**
-     * @param prefix
-     * @param workerCount
-     * @param strategy
-     */
+
     private DefaultWorkerGroup(String prefix, int workerCount, SelectStrategy strategy) {
         if (workerCount <= 0) {
             throw new IllegalArgumentException("create event loop group,size must more than zero!");
@@ -90,8 +78,8 @@ public class DefaultWorkerGroup implements WorkerGroup {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("DefaultWorkerGroup >");
-        for (int i = 0; i < executors.length; i++) {
-            sb.append(executors[i].toString()).append("\n");
+        for (Worker executor : executors) {
+            sb.append(executor.toString()).append("\n");
         }
         return sb.toString();
     }
