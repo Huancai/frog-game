@@ -1,6 +1,8 @@
 
 package com.me.transport.api;
 
+import lombok.Setter;
+
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.Objects;
@@ -22,7 +24,8 @@ public final class Message {
     /**
      * 包体字节流
      */
-    private byte[] body;
+    @Setter
+    private byte[] body = new byte[0];
 
     /**
      * 重复利用
@@ -79,10 +82,6 @@ public final class Message {
 
     public byte[] body() {
         return this.body;
-    }
-
-    public void setBody(byte[] body) {
-        this.body = body;
     }
 
     @Override

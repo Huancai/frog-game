@@ -55,10 +55,7 @@ public final class NettyConnectorHandler extends SimpleChannelInboundHandler<Mes
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
     }
 
-    /**
-     * @param ctx
-     * @return
-     */
+
     private static NettyS2SSession getSession(ChannelHandlerContext ctx) {
         return ctx.channel().attr(key).get();
     }

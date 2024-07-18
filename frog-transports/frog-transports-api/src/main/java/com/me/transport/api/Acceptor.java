@@ -30,8 +30,7 @@ public interface Acceptor {
     void start() throws Exception;
 
     /**
-     * @param sync
-     * @throws Exception
+     *
      */
     void start(boolean sync) throws Exception;
 

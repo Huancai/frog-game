@@ -20,7 +20,8 @@ import java.util.concurrent.ThreadFactory;
 
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wu_hc
+ * @mail whuancai@163.com
  */
 @Slf4j
 public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession> {
@@ -83,8 +84,6 @@ public class NettySocketAcceptor extends AbstractSocketAcceptor<NettyC2SSession>
 
     /**
      * 初始化连接参数
-     *
-     * @param bootstrap
      */
     protected void initAcceptorOption(final ServerBootstrap bootstrap) {
         bootstrap.option(ChannelOption.SO_RCVBUF, 1024 * 64);

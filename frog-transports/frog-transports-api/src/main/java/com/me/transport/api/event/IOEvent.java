@@ -4,24 +4,23 @@ package com.me.transport.api.event;
 import com.me.transport.api.session.Session;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wu_hc
+ * @mail whuancai@163.com
  */
 public interface IOEvent {
 
     /**
-     * IO事件
-     *
-     * @return
+     * @return IO事件
      */
     Event event();
 
     /**
-     * @return
+     * @return 会话
      */
     Session session();
 
     /**
-     * @return
+     * @return 附带信息
      */
     Object attachment();
 

@@ -4,7 +4,8 @@ package com.me.transport.api.event;
 import com.me.transport.api.session.Session;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wu_hc
+ * @mail whuancai@163.com
  */
 public final class IOCustomEvent implements IOEvent {
 
@@ -13,8 +14,8 @@ public final class IOCustomEvent implements IOEvent {
     private final Object attachment;
 
     /**
-     * @param event
-     * @param session
+     * @param event   事件
+     * @param session 会话
      */
     public IOCustomEvent(Event event, Session session) {
         this(event, session, null);

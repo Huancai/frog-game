@@ -45,10 +45,7 @@ public final class NettyAcceptorHandler extends SimpleChannelInboundHandler<Mess
         listener.onEvent(new IOCustomEvent(IOEvent.Event.EXCEPTION, getSession(ctx), cause));
     }
 
-    /**
-     * @param ctx
-     * @return
-     */
+
     private static NettyC2SSession getSession(ChannelHandlerContext ctx) {
         return ctx.channel().attr(key).get();
     }

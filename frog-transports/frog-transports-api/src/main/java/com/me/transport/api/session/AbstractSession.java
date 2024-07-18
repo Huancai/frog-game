@@ -3,7 +3,8 @@ package com.me.transport.api.session;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * @author wu_hc 【whuancai@163.com】
+ * @author wu_hc
+ * @mail whuancai@163.com
  */
 public abstract class AbstractSession implements Session {
 
@@ -12,8 +13,8 @@ public abstract class AbstractSession implements Session {
     private long lastInteractive;
     private long createTime;
 
-    private AtomicLong writeAdder = new AtomicLong();
-    private AtomicLong sendAdder = new AtomicLong();
+    private final AtomicLong writeAdder = new AtomicLong();
+    private final AtomicLong sendAdder = new AtomicLong();
 
     @Override
     public long getId() {

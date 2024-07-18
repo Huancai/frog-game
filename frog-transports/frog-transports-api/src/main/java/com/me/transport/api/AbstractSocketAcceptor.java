@@ -20,9 +20,10 @@ public abstract class AbstractSocketAcceptor<T extends Session> implements Accep
     /**
      * 网络事件事件监听者
      */
-    protected final List<IOEventListener> ioEventListeners = new LinkedList<IOEventListener>();
+    protected final List<IOEventListener> ioEventListeners = new LinkedList<>();
 
     /**
+     *
      */
     public AbstractSocketAcceptor(int inetPort) {
         this(inetPort, null);
