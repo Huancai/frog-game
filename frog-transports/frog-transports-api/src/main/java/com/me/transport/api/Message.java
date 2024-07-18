@@ -27,7 +27,7 @@ public final class Message {
     /**
      * 重复利用
      */
-    private static final ThreadLocal<ByteBuffer> bytedBuffer = ThreadLocal.withInitial(() -> ByteBuffer.allocate(Short.MAX_VALUE));
+    private static final ThreadLocal<ByteBuffer> byteBuffer = ThreadLocal.withInitial(() -> ByteBuffer.allocate(Short.MAX_VALUE));
 
     private Message(int command) {
         this.command = (short) command;
@@ -56,7 +56,7 @@ public final class Message {
 
 
     public byte[] toByteArray() {
-        ByteBuffer buffer = bytedBuffer.get();
+        ByteBuffer buffer = byteBuffer.get();
         try {
             buffer.putShort(command);
             if (Objects.nonNull(body)) {
