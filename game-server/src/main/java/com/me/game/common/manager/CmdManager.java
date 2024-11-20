@@ -38,9 +38,8 @@ public class CmdManager implements InitializingBean, DisposableBean {
     Environment environment;
 
     /**
-     * @param gamePlayer
-     * @param message
-     * @return
+     * @param gamePlayer 玩家对象
+     * @param message    消息
      */
     public void doExecuteCMD(GamePlayer gamePlayer, Message message) {
         CmderWrap wrap = cmdMap.get(message.command());
@@ -57,7 +56,7 @@ public class CmdManager implements InitializingBean, DisposableBean {
         }
     }
 
-    public void doExecuteCMD_(AbstractCMD cmder, GamePlayer gamePlayer, Message message) {
+    public void doExecuteCMD_(AbstractCMD<?> cmder, GamePlayer gamePlayer, Message message) {
         try {
             long cur = System.currentTimeMillis();
             cmder.doExecute(gamePlayer, message);
@@ -67,10 +66,10 @@ public class CmdManager implements InitializingBean, DisposableBean {
             }
         } catch (Exception e) {
             log.error("Cmder doExecute error", e);
-            e.printStackTrace();
         }
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void afterPropertiesSet() throws Exception {
         String scanPackage = environment.getProperty("cmd-scan-package", "com.me.game.module");
@@ -115,7 +114,7 @@ public class CmdManager implements InitializingBean, DisposableBean {
         cmdMap.clear();
     }
 
-    private void cmdMethod(Class clazz) {
+    private void cmdMethod(Class<?> clazz) {
         for (Method method : findAllMethod(clazz)) {
             Cmd annotation = AnnotationUtils.findAnnotation(method, Cmd.class);
             if (Objects.nonNull(annotation)) {
@@ -124,9 +123,10 @@ public class CmdManager implements InitializingBean, DisposableBean {
         }
     }
 
-    private List<Method> findAllMethod(Class clazz) {
+    private List<Method> findAllMethod(Class<?> clazz) {
         final List<Method> res = new LinkedList<>();
-        ReflectionUtils.doWithMethods(clazz, method -> res.add(method));
+        ReflectionUtils.doWithMethods(clazz, res::add);
         return res;
     }
+
 }
